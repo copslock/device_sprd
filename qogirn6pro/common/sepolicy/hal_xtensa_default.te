@@ -1,0 +1,34 @@
+type hal_xtensa_default, domain;
+type hal_xtensa_default_exec, exec_type, vendor_file_type, file_type;
+
+typeattribute hal_xtensa_default hal_neuralnetworks_server;
+typeattribute hal_xtensa_default halserverdomain;
+
+#typeattribute hal_xtensa_default halclientdomain;
+typeattribute hal_xtensa_default hal_neuralnetworks;
+init_daemon_domain(hal_xtensa_default);
+
+hal_client_domain(hal_xtensa_default, hal_allocator);
+
+allow hal_xtensa_default vendor_xtensa_prop:file { open read getattr map };
+allow hal_xtensa_default xtensa_device:chr_file { read write open ioctl map };
+#allow hal_xtensa_default vendor_xtensa_data_file:dir { search add_name write };
+#allow hal_xtensa_default vendor_xtensa_data_file:file { open read write create getattr setattr map };
+
+allow hal_xtensa_default hwservicemanager_prop:file { read open getattr map};
+allow hal_xtensa_default hidl_base_hwservice:hwservice_manager { add };
+allow hal_xtensa_default hwservicemanager:binder { call transfer };
+allow hal_xtensa_default hal_neuralnetworks_hwservice:hwservice_manager { add };
+
+allow hal_xtensa_default vndbinder_device:chr_file {  open read write ioctl map } ;
+allow hal_xtensa_default vndservicemanager:binder { call transfer };
+allow hal_xtensa_default vdsp_vndservice:service_manager{ find };
+allow hal_xtensa_default vdspserver:binder{ call transfer };
+allow hal_xtensa_default ion_device:chr_file{ read write open ioctl };
+allow hal_xtensa_default dev_vdsp:chr_file { open read write ioctl};
+allow hal_xtensa_default device:chr_file { ioctl };
+allow hal_xtensa_default device:dir rw_dir_perms;
+#allow hal_xtensa_default vendor_data_file:file{ read    };
+#allow hal_xtensa_default exported3_system_prop:file {  read  };
+
+

@@ -1,0 +1,5 @@
+type ims_bridged, domain;
+type ims_bridged_exec, exec_type, file_type, system_file_type;
+
+
+

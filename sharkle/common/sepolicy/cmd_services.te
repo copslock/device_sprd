@@ -1,0 +1,6 @@
+allow cmd_services logcat_exec:file {map};
+#allow cmd_services cmd_services:capability {dac_read_search dac_override};
+allow cmd_services hprof_file:dir {read};
+
+allow cmd_services exfat:dir {  read open write add_name create search remove_name rmdir rename};
+allow cmd_services exfat:file {  create read write open getattr unlink map rename append};

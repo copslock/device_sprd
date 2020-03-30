@@ -1,0 +1,4 @@
+typeattribute aprd coredomain;
+init_daemon_domain(aprd)
+
+allow aprd hal_allocator_default:file { read getattr open };

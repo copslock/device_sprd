@@ -1,0 +1,4 @@
+user=_app seinfo=platform name=com.android.modemnotifier domain=sprd_radio_app type=app_data_file levelFrom=user
+user=system seinfo=platform name=com.sprd.engineermode domain=sprd_engineermode_app type=app_data_file levelFrom=user
+user=_app seinfo=platform name=com.spreadtrum.sgps domain=sprd_sgps_app type=app_data_file levelFrom=user
+user=system seinfo=platform name=com.sprd.bmte.coulomb domain=sprd_coulomb_app type=app_data_file levelFrom=user

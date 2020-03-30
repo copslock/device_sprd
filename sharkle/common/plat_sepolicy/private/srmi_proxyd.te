@@ -1,0 +1,3 @@
+typeattribute srmi_proxyd coredomain;
+
+init_daemon_domain(srmi_proxyd)

@@ -1,0 +1,65 @@
+
+
+#============= hwservicemanager ============== 2017-08-02-13-24-29 added by genSepolicy script
+allow hwservicemanager thermald:binder transfer;
+allow hwservicemanager thermald:dir search;
+allow hwservicemanager thermald:file { read open };
+allow hwservicemanager thermald:process getattr;
+
+#add for log
+allow hwservicemanager log_service:dir {  search };
+allow hwservicemanager log_service:file {  read open };
+allow hwservicemanager log_service:process {  getattr };
+allow hwservicemanager log_service:binder {  transfer call };
+allow hwservicemanager hal_log_default:binder {  call };
+allow hwservicemanager hal_log_default:dir {  search };
+allow hwservicemanager hal_log_default:file {  read open };
+allow hwservicemanager hal_log_default:process {  getattr };
+allow hwservicemanager mlogservice:dir { search };
+allow hwservicemanager mlogservice:file {read open };
+allow hwservicemanager mlogservice:process { getattr };
+allow hwservicemanager mlogservice:binder {transfer call };
+allow hwservicemanager hal_cplog_connmgr_default:binder {  call };
+allow hwservicemanager hal_cplog_connmgr_default:dir {  search };
+allow hwservicemanager hal_cplog_connmgr_default:file {  read open };
+allow hwservicemanager hal_cplog_connmgr_default:process {  getattr };
+allow hwservicemanager modemlog_connmgr_service:dir {  search };
+allow hwservicemanager modemlog_connmgr_service:file {  read open };
+allow hwservicemanager modemlog_connmgr_service:process {  getattr };
+allow hwservicemanager modemlog_connmgr_service:binder { transfer call };
+# add for cmd_service screencap cmd
+allow hwservicemanager cmd_services:dir { search };
+allow hwservicemanager cmd_services:file { read open };
+allow hwservicemanager cmd_services:process { getattr };
+allow hwservicemanager cmd_services:binder { transfer };
+
+#allow hwservicemanager hostapd:binder { call };
+#allow hwservicemanager hostapd:dir { search };
+#allow hwservicemanager hostapd:file { read open };
+#allow hwservicemanager hostapd:process { getattr };
+
+#add for connmgr
+allow hwservicemanager hal_connmgr_default:binder {  call };
+allow hwservicemanager hal_connmgr_default:dir {  search };
+allow hwservicemanager hal_connmgr_default:file {  read open };
+allow hwservicemanager hal_connmgr_default:process {  getattr };
+
+#add for aprd
+allow hwservicemanager aprd:dir {  search };
+allow hwservicemanager aprd:file {  read open };
+allow hwservicemanager aprd:process {  getattr };
+allow hwservicemanager aprd:binder {  transfer call };
+allow hwservicemanager hal_aprd_default:binder { transfer call };
+allow hwservicemanager hal_aprd_default:dir {  search };
+allow hwservicemanager hal_aprd_default:file {  read open };
+allow hwservicemanager hal_aprd_default:process {  getattr };
+
+#add for sprd_networkcontrol
+allow hwservicemanager hal_network_default:binder {  call };
+allow hwservicemanager hal_network_default:dir {  search };
+allow hwservicemanager hal_network_default:file {  read open };
+allow hwservicemanager hal_network_default:process {  getattr };
+allow hwservicemanager sprd_networkcontrol:dir {  search };
+allow hwservicemanager sprd_networkcontrol:file {  read open };
+allow hwservicemanager sprd_networkcontrol:process {  getattr };
+allow hwservicemanager sprd_networkcontrol:binder {  transfer call };

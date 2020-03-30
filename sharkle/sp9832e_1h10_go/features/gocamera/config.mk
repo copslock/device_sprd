@@ -1,0 +1,13 @@
+ADDITIONAL_BUILD_PROPERTIES += \
+    persist.sys.cam.zsl=false \
+    persist.sys.cam.quick=false \
+    persist.sys.cam.filter.version=0 \
+    persist.sys.cam.wideangle=0 \
+    persist.sys.cam.slow_motion=false \
+    persist.sys.cam.3dnr=false \
+    persist.sys.cam.continue_photo=false \
+    persist.sys.cam.ai_detect=false \
+    persist.sys.cam.interval=false \
+    persist.sys.cam.normalhdr=false \
+    persist.sys.cam.freeze_display=false \
+    persist.sys.cam.filter.version=0

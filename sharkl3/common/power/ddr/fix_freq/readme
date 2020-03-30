@@ -1,0 +1,29 @@
+
+
+
+一、功能:固定ddr的频率
+
+二、用法:
+连接adb切换root进入shell
+adb root
+adb remount
+adb shell
+./vendor/bin/power/ddr/fix_freq/fix_ddr_freq
+
+三、示例
+s9863a1h10:/vendor/bin/power/ddr/fix_freq # ./fix_ddr_freq
+./fix_ddr_freq
+ddr avalible freq:
+160     233     311     400     533     622     800     933
+input fix freq
+311
+311
+cur_freq:311
+
+三、备注:
+1、只适用于userdebug版本
+
+
+
+
+

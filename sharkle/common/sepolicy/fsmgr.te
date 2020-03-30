@@ -1,0 +1,3 @@
+allow fsmgr mmcblk_device:blk_file { read write getattr open ioctl };
+allowxperm fsmgr mmcblk_device:blk_file ioctl { 0x127c   0x125e};
+allow fsmgr dm_device:blk_file { getattr };

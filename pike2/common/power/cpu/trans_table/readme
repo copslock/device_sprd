@@ -1,0 +1,29 @@
+
+
+一、功能
+统计一段时间cpu频点变换表
+
+二、用法
+连接adb进入shell
+./vendor/bin/power/cpu/trans_table/cpu_trans_table -t 60
+-t   后面接的是测试时间(默认60s)以s为单位
+
+三、示例
+sp7731e_1h10:/ # ./vendor/bin/power/cpu/trans_table/cpu_trans_table -t 60
+accumulate_time is 60
+        768000  900000  1000000 1100000 1150000 1200000 1300000
+768000  2739    6       0       0       0       0       26
+900000  3       3       1       1       0       0       3
+1000000 2       0       0       0       0       0       1
+1100000 1       0       0       0       0       1       1
+1150000 0       0       0       0       0       0       1
+1200000 0       0       0       0       0       1       2
+1300000 27      2       2       2       1       1       172
+
+
+四、备注
+1、适用于user版本和userdebug版本
+
+
+
+

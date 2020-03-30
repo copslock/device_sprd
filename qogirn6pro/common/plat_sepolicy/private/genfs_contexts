@@ -1,0 +1,1 @@
+genfscon proc /sprd_minidump/ u:object_r:proc_minidump_gesture:s0

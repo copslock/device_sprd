@@ -1,0 +1,14 @@
+allow log_service hal_log_hwservice:hwservice_manager {find};
+allow log_service ylog:unix_stream_socket {connectto read write};
+allow log_service hwservicemanager_prop:file {  read open getattr };
+allow log_service hwservicemanager:binder {  call transfer };
+allow log_service system_data_file:dir { open read };
+allow log_service ylog_prop:file {  read open getattr };
+allow log_service cmd_services:unix_stream_socket { connectto read write };
+allow log_service property_socket:sock_file {  write }; #"log_service"
+allow log_service init:unix_stream_socket {  connectto }; #"log_service"
+get_prop(log_service, vendor_systemdebuggerd_prop);
+get_prop(log_service, vold_prop);
+get_prop(log_service, vendor_sys_prop);
+set_prop(log_service, system_prop);
+

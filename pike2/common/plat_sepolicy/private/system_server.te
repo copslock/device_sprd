@@ -1,0 +1,16 @@
+#porting double-Tcard
+allow system_server vold_prop:property_service set;
+allow system_server vold_prop:file {read open getattr};
+
+#for performance
+allow system_server performancemanager_service:service_manager find;
+binder_call(system_server, performancemanager)
+
+# add for ssense
+allow system_server ssense_service:service_manager { add find };
+
+#for ifaa
+allow system_server ifaa_service:service_manager { add };
+
+#add for networkadapter
+allow system_server cndaemon_socket:sock_file { write };

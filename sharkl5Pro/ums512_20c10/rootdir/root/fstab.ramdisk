@@ -1,0 +1,7 @@
+#Dynamic partitions fstab file
+#<dev> <mnt_point> <type> <mnt_flags options>  <fs_mgr_flags>
+
+system /system ext4 ro,barrier=1 wait,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+vendor /vendor ext4 ro,barrier=1 wait,avb=vbmeta_vendor,logical,first_stage_mount
+product /product ext4 ro,barrier=1 wait,avb=vbmeta,logical,first_stage_mount
+/dev/block/platform/soc/soc:ap-apb/71400000.sdio/by-name/metadata /metadata    ext4 nodev,noatime,nosuid,errors=panic wait,formattable,first_stage_mount

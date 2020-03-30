@@ -1,0 +1,23 @@
+type mlogservice, domain;
+type mlogservice_exec, exec_type,vendor_file_type, file_type;
+type mlogservice_data, file_type, data_file_type;
+type mlogservice_config_file, file_type, data_file_type;
+
+init_daemon_domain(mlogservice)
+
+allow mlogservice spipe_device:chr_file {read write open};
+
+allow mlogservice init:unix_stream_socket connectto;
+allow mlogservice slogmodem_vendor:unix_stream_socket connectto;
+allow mlogservice hal_cplog_connmgr_default:unix_stream_socket { connectto };
+allow mlogservice modem_control:unix_stream_socket { connectto read write};
+
+allow mlogservice mlogservice_config_file : dir { add_name search write unlink remove_name read };
+allow mlogservice mlogservice_config_file : file {create getattr open read write unlink};
+allow mlogservice tty_device:chr_file {open read write};
+allow mlogservice hwservicemanager_prop:file { open read getattr map };
+allow mlogservice hwservicemanager:binder { call transfer };
+allow mlogservice rild:binder call;
+allow mlogservice hal_extRadio_hwservice:hwservice_manager find;
+allow mlogservice vendor_sys_prop:property_service set;
+set_prop(mlogservice, vendor_sys_prop);

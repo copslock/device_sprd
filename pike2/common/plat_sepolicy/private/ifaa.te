@@ -1,0 +1,2 @@
+typeattribute ifaa coredomain;
+init_daemon_domain(ifaa)

@@ -1,0 +1,4 @@
+typeattribute dataLogDaemon coredomain;
+
+init_daemon_domain(dataLogDaemon)
+

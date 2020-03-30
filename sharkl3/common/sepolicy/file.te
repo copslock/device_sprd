@@ -1,0 +1,99 @@
+#Type for engpc
+type engpc_data, file_type, data_file_type;
+
+
+#debugfs
+type debugfs_sipc, fs_type, debugfs_type;
+type debugfs_pinctrl, fs_type, debugfs_type;
+#for volte
+type vce_data_file,file_type, data_file_type;
+
+#add for EngineerMode to set MIPI Log
+type sysfs_mipi, fs_type, sysfs_type;
+
+#EngineerMode for behavior
+type userinfo_file,file_type, data_file_type, core_data_file_type;
+
+#thermald
+type thermald_data_file,file_type, data_file_type;
+
+#add for EngineerMode to set ipa
+type sysfs_ipa, fs_type, sysfs_type;
+
+
+#Type for prodnv file
+type prod_file,file_type;
+type cali_save_file,file_type;
+type srt_socket,file_type, mlstrustedobject;
+type embmsd_socket,file_type, mlstrustedobject;
+type oem_file,file_type;
+type mmitest_file,file_type, data_file_type, core_data_file_type;
+type cg_file,file_type, data_file_type, core_data_file_type;
+type gnss_file, file_type, data_file_type;
+
+#for gnss sysfs
+type sysfs_gnss, fs_type, sysfs_type;
+
+#for bluetooth sysfs
+type sysfs_bluetooth_file, fs_type, sysfs_type;
+
+#Type for mlog
+type mlog_file,file_type, data_file_type;
+
+#for factory to Calibration
+type sysfs_sensor, fs_type,sysfs_type;
+
+#for lcd flash
+type sysfs_lcd, fs_type,sysfs_type;
+
+#type for count
+type count_socket,file_type , mlstrustedobject;
+
+#sdcard_external
+#type sdcard_external, sdcard_type, fs_type, mlstrustedobject;
+#typealias vfat alias sdcard_external;
+
+
+# type for proc files
+type proc_irq, fs_type;
+type proc_kernel_sched, fs_type;
+type proc_wifi_dbg, fs_type;
+type proc_mini_dump, fs_type, proc_type;
+type proc_pubcpiram, fs_type, proc_type;
+type proc_aoniram, fs_type, proc_type;
+type proc_pmicmem, fs_type, proc_type;
+type ylog_lite_file,file_type, data_file_type;
+type ubootlog_block_device, file_type;
+
+# type for sprd audio hal
+type sprd_audio_file, file_type, data_file_type;
+
+# type for ims_bridged
+type sysfs_imsbrd, fs_type,sysfs_type;
+
+
+# type for camera data file
+type vendor_camera_data_file, file_type, data_file_type;
+
+#add for ota update emmc boot0&1 partition
+type sysfs_emmcboot_forcero, fs_type,sysfs_type;
+
+type debugfs_binder, fs_type, debugfs_type;
+
+#for sensorhub data
+type sensorhub_data_file, file_type;
+
+#type for charge
+type battery_file, file_type;
+#for ddr dfs
+type sysfs_ddr_dfs, fs_type, sysfs_type;
+
+#for memtrack
+type debugfs_ion, fs_type, debugfs_type;
+type debugfs_pvr, fs_type, debugfs_type;
+
+# For dpu
+type sysfs_dpu, fs_type, sysfs_type;
+
+# For stat
+type sysfs_stat, fs_type,sysfs_type;

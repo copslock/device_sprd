@@ -1,0 +1,34 @@
+
+
+
+一、功能：查看一段时间的帧率
+
+二、用法
+连接adb进入shell
+adb shell
+./vendor/bin/power/frame/fps_sf -t 1
+-t 时长(默认1min)以分钟为单位
+
+三、示例
+sp9832e_1h10:/vendor/bin/power/frame # ./fps_sf
+./fps_sf
+accumulate_time is 60
+fps: 13.23
+fps: 38.17
+fps: 17.31
+fps: 23.15
+fps: 54.39
+fps: 50.96
+fps: 24.66
+fps: 1.00
+fps: 7.02
+fps: 53.04
+fps: 9.96
+fps: 45.43
+fps: 17.96
+
+三、备注
+1、user和userdebug版本均可用
+
+
+

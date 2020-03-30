@@ -1,0 +1,11 @@
+allow uncrypt mmcblk_device:blk_file { open write };
+allow uncrypt system_app_data_file:dir {read};
+allow uncrypt system_app_data_file:file {read};
+
+# For GOTA
+allow uncrypt self:capability { fowner sys_admin };
+allow uncrypt ota_package_file:file { write };
+# For inner local ota update in /data/meida/0
+allow uncrypt media_rw_data_file:file { open getattr read ioctl write };
+allow uncrypt media_rw_data_file:dir { open getattr read search };
+allow uncrypt metadata_file:dir { search };

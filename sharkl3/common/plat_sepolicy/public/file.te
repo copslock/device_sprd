@@ -1,0 +1,8 @@
+type dsd_socket,file_type, mlstrustedobject;
+type cndaemon_socket,file_type, mlstrustedobject;
+#type netd_socket, file_type, coredomain_socket;
+type ylog_file,file_type, data_file_type, core_data_file_type;
+typeattribute coredump_file mlstrustedobject;
+type apr_data_file,file_type, data_file_type, core_data_file_type;
+type proc_minidump_gesture, fs_type,proc_type;
+type hprof_file,file_type, data_file_type, core_data_file_type;

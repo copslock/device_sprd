@@ -1,0 +1,88 @@
+
+
+
+
+一、功能
+统计cpu、gpu、ddr的loading信息
+
+二、用法
+连接adb切换root进入shell
+adb shell
+adb remount
+adb shell
+./vendor/bin/power/loadings/tool/loading -ct 60 -gt 60 -dt 60
+
+三、示例
+s9863a1h10:/vendor/bin/power/loadings # ./tool/loading -ct 60 -gt 60 -dt 60
+/tool/loading -ct 60 -gt 60 -dt 60
+cpu_time is 60
+
+        768000  884000  1000000 1100000 1200000 online  offline
+cpu0    33.36%  0.06%   0.09%   0.86%   22.40%  56.76%  43.24%
+cpu1    25.41%  0.04%   0.06%   0.66%   17.06%  43.23%  56.77%
+cpu2    15.74%  0.03%   0.04%   0.41%   10.57%  26.78%  73.22%
+cpu3    9.06%   0.02%   0.02%   0.23%   6.08%   15.41%  84.59%
+        58.77%  0.10%   0.15%   1.52%   39.47%
+sum:1342262.88
+
+        768000  1050000 1225000 1400000 1500000 1570000 online  offline
+cpu4    2.64%   0.00%   0.00%   0.00%   0.01%   0.04%   2.70%   97.30%
+cpu5    0.15%   0.00%   0.00%   0.00%   0.00%   0.00%   0.16%   99.84%
+cpu6    0.11%   0.00%   0.00%   0.00%   0.00%   0.00%   0.12%   99.88%
+cpu7    0.01%   0.00%   0.00%   0.00%   0.00%   0.00%   0.01%   99.99%
+        97.88%  0.02%   0.00%   0.12%   0.52%   1.47%
+sum:23354.01
+
+SUM:1365616.89
+
+gpu_time is 60(s)
+256: 78.67%      utilisation:32.24%
+384: 0.25%       utilisation:7.33%
+550: 21.08%      utilisation:33.19%
+Averag GPU Utilisation : 32.38%
+
+accummulate_time is 60(s)
+160:           0.00%
+233:           4.08%
+311:           93.42%
+400:           1.11%
+533:           0.00%
+622:           1.05%
+800:           0.26%
+933:           0.08%
+
+unit:10ms
+theory_bw = 1280000     1864000 2488000 3200000 4264000 4976000 6400000 7464000
+overflow  = 448000 652400 870800 1120000 1492400 1741600 2240000 4294967295
+underflow = 0 348000 552400 770800 1020000 1020000 1641600 2140000
+
+
+sp7731e_1h10:/ # ./vendor/bin/power/loadings/tool/loading -ct 60 -gt 60 -dt 60
+
+cpu_loading:
+accummulate_time is 60(s)
+
+        768000  900000  1000000 1100000 1150000 1200000 1300000 online  offline
+faile open the file /sys/devices/system/cpu/cpu0/online
+cpu0    19.49   20.66   10.66   5.58    1.24    1.30    13.53   72.47   27.53
+cpu1    20.15   21.36   11.03   5.77    1.29    1.35    14.00   74.94   25.06
+cpu2    19.42   20.59   10.63   5.56    1.24    1.30    13.49   72.23   27.77
+cpu3    23.17   24.56   12.67   6.63    1.48    1.55    16.09   86.15   13.85
+freq    26.89   28.51   14.71   7.70    1.72    1.80    18.68
+sum:2993675.61kHZ
+
+
+gpu_loading:
+accummulate_time is 60(s)
+polling interval is 50(ms)
+counts is 1200
+cat: /d/pvr/status: No such file or directory
+cat: /d/pvr/status: No such file or directory
+cat: /d/pvr/status: No such file or directory
+
+
+四、备注
+1、只限userdebug使用
+
+
+

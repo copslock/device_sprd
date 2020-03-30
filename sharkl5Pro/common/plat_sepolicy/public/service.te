@@ -1,0 +1,25 @@
+# add for performance
+type performancemanager_service, service_manager_type;
+type performance_fw_service, app_api_service, ephemeral_app_api_service, system_server_service, service_manager_type;
+
+# add for CCSA
+type security_service, app_api_service, system_server_service, service_manager_type;
+
+type networkadapter_service,    app_api_service, system_server_service, service_manager_type;
+
+type connectionEx_service,      system_server_service, service_manager_type;
+
+# For volte video call
+type vce_service,               service_manager_type;
+type addon_service,             system_server_service, service_manager_type;
+
+# add for Power
+type powerguru_service,         system_server_service, service_manager_type;
+type power_ex_service,          system_server_service, service_manager_type;
+
+# add for ssense
+type ssense_service,            system_server_service, service_manager_type;
+
+#for unisoc ai
+type unisoc_ai_service, service_manager_type;
+

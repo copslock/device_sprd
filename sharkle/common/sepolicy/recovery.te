@@ -1,0 +1,15 @@
+allow recovery vfat:dir { create open read search write add_name remove_name };
+allow recovery vfat:file { open read getattr create write setattr rename unlink map};
+allow recovery sysfs_power:dir { search read open };
+allow recovery sysfs_power:file { read open getattr};
+allow recovery rootfs:file { open read getattr };
+allow recovery sysfs_fs_ext4_features:dir { search };
+allow recovery tmpfs:dir { search };
+allow recovery cache_file:dir { search };
+allow recovery sysfs_fs_ext4_features:file { read };
+allow recovery exfat:dir { create open read search write add_name remove_name };
+allow recovery exfat:file { open read getattr create write setattr rename unlink map};
+allow recovery kernel:system {module_request};
+allow recovery gpu_device:chr_file { open read write ioctl map};
+allow recovery mmcblk_device:blk_file { ioctl };
+allowxperm recovery mmcblk_device:blk_file ioctl { 0x1278 0x127a };

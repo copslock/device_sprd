@@ -1,0 +1,1 @@
+allow shell ylog:unix_stream_socket connectto;

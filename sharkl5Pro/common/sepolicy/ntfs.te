@@ -1,0 +1,7 @@
+# type mkntfs, domain;
+# type mkntfs_exec, exec_type, file_type;
+type ntfsfix, domain;
+type ntfsfix_exec, exec_type, file_type, system_file_type;
+type ntfs3g, domain;
+type ntfs3g_exec, exec_type, file_type, system_file_type;
+

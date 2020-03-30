@@ -1,0 +1,10 @@
+type hal_broadcastradio_ext,hal_broadcastradio,domain;
+hal_server_domain(hal_broadcastradio_ext, hal_broadcastradio)
+
+type hal_broadcastradio_ext_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_broadcastradio_ext)
+
+allow hal_broadcastradio_ext hal_extbroadcastradio_hwservice:hwservice_manager {find add};
+#allow hal_broadcastradio_ext broadcastradio:unix_stream_socket { connectto };
+allow hal_broadcastradio_ext system_server:binder {call};
+allow hal_broadcastradio_ext fm_device:chr_file {read write open ioctl};

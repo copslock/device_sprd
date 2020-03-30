@@ -1,0 +1,6 @@
+#ZRAM
+allow toolbox zram_block_device:blk_file { open read write getattr };
+
+# For prod_file
+allow toolbox prod_file:dir { getattr relabelfrom relabelto };
+allow toolbox self:capability fowner;

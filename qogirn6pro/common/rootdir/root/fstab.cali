@@ -1,0 +1,12 @@
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+# <src>                                         <mnt_point>  <type>  <mnt_flags and options>             <fs_mgr_flags>
+
+/dev/block/platform/soc/soc:ap-apb/71400000.sdio/by-name/cache    /cache       ext4 noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,check
+/devices/platform/soc/soc:aon/5fff0000.usb/musb-hdrc.*.auto/usb*      auto         vfat defaults voldmanaged=usbdisk:auto
+/devices/platform/soc/soc:ap-apb/71100000.sdio/mmc_host/mmc1/mmc1:*/block/mmcblk1      auto         vfat defaults voldmanaged=sdcard0:auto,noemulatedsd,encryptable=footer
+/dev/block/platform/soc/soc:ap-apb/71400000.sdio/by-name/prodnv   /mnt/vendor ext4 noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,check
+# Should after mount prodnv for prodnv wholly occupying /mnt/vendor
+/dev/block/platform/soc/soc:ap-apb/71400000.sdio/by-name/socko /mnt/vendor/socko ext4 ro,noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,avb=socko,check
+/dev/block/platform/soc/soc:ap-apb/71400000.sdio/by-name/odmko /mnt/vendor/odmko ext4 ro,noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,avb=odmko,check

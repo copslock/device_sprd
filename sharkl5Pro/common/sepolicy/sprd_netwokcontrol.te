@@ -1,0 +1,23 @@
+allow sprd_networkcontrol hal_network_hwservice:hwservice_manager { find };
+
+allow sprd_networkcontrol hwservicemanager_prop:file { read open getattr map };
+allow sprd_networkcontrol hwservicemanager:binder { call transfer };
+allow sprd_networkcontrol system_data_file:dir { open read };
+
+allow sprd_networkcontrol cmd_services:unix_stream_socket { connectto read write };
+allow sprd_networkcontrol property_socket:sock_file { write };
+allow sprd_networkcontrol init:unix_stream_socket { connectto };
+allow sprd_networkcontrol ext_data:unix_stream_socket { connectto };
+
+get_prop(sprd_networkcontrol, vendor_systemdebuggerd_prop);
+get_prop(sprd_networkcontrol, vold_prop);
+get_prop(sprd_networkcontrol, vendor_sys_prop);
+set_prop(sprd_networkcontrol, system_prop);
+
+allow sprd_networkcontrol shell_exec:file { read open execute execute_no_trans getattr map };
+allow sprd_networkcontrol self:capability { net_admin net_raw sys_module };
+allow sprd_networkcontrol self:rawip_socket { getopt create setopt };
+allow sprd_networkcontrol system_file:file { lock execute_no_trans };
+
+allow sprd_networkcontrol srmi_proxyd:unix_stream_socket {connectto};
+

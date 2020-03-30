@@ -1,0 +1,20 @@
+type hal_log_default, domain;
+type hal_log_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_log_default);
+
+
+
+set_prop(hal_log_default_exec, system_prop);
+
+binder_call(log_service, hal_log_default)
+binder_call(hal_log_default, log_service)
+allow hal_log_default hal_log_hwservice:hwservice_manager {find add};
+allow hal_log_default hwservicemanager_prop:file {  read open getattr };
+allow hal_log_default hwservicemanager:binder {  call transfer };
+#allow hal_log_default system_data_file:dir { open read write add_name };
+#allow hal_log_default system_data_file:file {   read  open };
+allow hal_log_default hidl_base_hwservice:hwservice_manager {  add };
+allow hal_log_default wcnd:unix_stream_socket { connectto read write };
+allow hal_log_default slogmodem_vendor:unix_stream_socket {  connectto read write };
+allow hal_log_default hal_cplog_connmgr_default:unix_stream_socket { connectto };
+allow hal_log_default srtd:unix_stream_socket {  connectto read write };

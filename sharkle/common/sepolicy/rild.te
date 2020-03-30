@@ -1,0 +1,46 @@
+typeattribute rild mlstrustedsubject;
+
+allow rild hal_extRadio_hwservice:hwservice_manager { add };
+allow rild tty_device:chr_file { read write open ioctl };
+#allow rild toolbox_exec:file { read open execute getattr execute_no_trans };
+#allow rild rild:capability { dac_override };
+allow rild modem_control:unix_stream_socket { read write connectto sendto };
+allow rild modem_control:dir search;
+allow rild modem_control:file { write read open };
+allow rild zygote:dir search;
+allow rild zygote:file { write read open };
+allow rild system_server:dir search ;
+allow rild system_server:file { write read open };
+allow rild vold:dir search;
+allow rild vold:file { write read open };
+allow rild sdcardd:dir search;
+allow rild sdcardd:file { write read open };
+allow rild device:dir remove_name;
+allow rild device:lnk_file unlink;
+allow rild untrusted_app:dir search;
+allow rild untrusted_app:file { write read open };
+allow rild kernel:dir search;
+allow rild kernel:file { write read open };
+allow rild hal_network_default:unix_stream_socket { connectto };
+#allow rild system_data_file:dir { write add_name };
+#allow rild coredump_file:file { create write };
+allow rild servicemanager:dir search;
+allow rild servicemanager:file { write read open };
+allow rild ctl_default_prop:property_service set;
+#allow rild system_prop:property_service set;
+allow rild vendor_toolbox_exec:file {execute_no_trans};
+allow rild vendor_shell_exec:file {execute_no_trans};
+allow rild spipe_device:chr_file { open read write };
+
+#For ca nviot
+#allow rild hal_power_hwservice:hwservice_manager find;
+allow rild hal_extthermal_hwservice:hwservice_manager find;
+
+set_prop(rild, vendor_radio_prop)
+set_prop(rild, vendor_sys_prop)
+get_prop(rild, bt_prop)
+
+allow rild proc_cmdline:file { read open };
+allow rild hal_power_default:binder { call transfer };
+allow rild hal_thermal_ext:binder { call };
+allow rild embmsd:binder { call };

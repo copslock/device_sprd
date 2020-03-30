@@ -1,0 +1,14 @@
+type wifi_mac_gen, domain;
+type wifi_mac_gen_exec, exec_type, file_type, vendor_file_type;
+#type wifi_mac_gen_data_file, file_type, data_file_type;
+
+init_daemon_domain(wifi_mac_gen)
+typeattribute wifi_mac_gen netdomain;
+
+allow wifi_mac_gen sysfs_extdata:dir { search };
+#allow wifi_mac_gen wifi_mac_gen_data:dir { search open read write};
+#allow wifi_mac_gen wifi_mac_gen_file:file { create open write read getattr };
+allow wifi_mac_gen prod_file:dir { search };
+allow wifi_mac_gen vendor_data_file:dir { search write add_name remove_name open create getattr};
+allow wifi_mac_gen vendor_data_file:file { create open read write getattr};
+allow wifi_mac_gen vendor_shell_exec:file { execute_no_trans };

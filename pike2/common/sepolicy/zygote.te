@@ -1,0 +1,21 @@
+
+# porting for double-Tcard : add for secondary storage read only
+allow zygote fuse:dir { mounton };
+allow zygote sdcardfs:dir { mounton };
+
+#allow zygote device:file { read write open };
+allow zygote device:dir { read write open };
+
+#/dev/urandom device support
+allow zygote device:file {  getattr };
+allow zygote random_device:file { open read write create };
+#============= zygote ============== 2017-08-02-16-46-00 added by genSepolicy script
+allow zygote system_prop:property_service set;
+#allow zygote vendor_file:file {execute r_file_perms};
+allow zygote property_socket:sock_file {rw_file_perms};
+allow zygote init:unix_stream_socket connectto;
+
+allow zygote sprd_engineermode_app:process { dyntransition };
+
+allow zygote dalvikcache_data_file:file { execute };
+allow zygote zygote:capability { sys_resource };

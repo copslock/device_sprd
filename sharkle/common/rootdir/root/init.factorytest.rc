@@ -1,0 +1,30 @@
+on factorytest
+    mount_all /vendor/etc/fstab.factorytest
+    mount tmpfs tmpfs /data mode=0777
+
+    trigger load_persist_props_action
+
+    setprop sys.usb.configfs 1
+
+    trigger factorytest-fs
+    trigger factorytest-start
+
+on factorytest-fs
+    chmod 0775 /mnt/vendor
+    chown system system /mnt/vendor
+    chmod 0771 /data
+    restorecon /data
+
+    mkdir /data/vendor 0751 root root
+    mkdir /data/vendor/local 0751 root root
+    mkdir /data/vendor/local/media 0770 audioserver system
+
+    # MODEM image partition on eMMC
+    chown system system /dev/block/mmcblk0p22
+    chmod 0660 /dev/block/mmcblk0p22
+
+on factorytest-start
+    #class_start factorytest
+    #start vendor.modem_control
+    start vendor.refnotify
+    start console

@@ -1,0 +1,10 @@
+
+#add for tv.acfundanmaku.video
+get_prop(untrusted_app_27, vendor_sys_prop);
+allow untrusted_app_27 sysfs_extdata:dir { open read };
+
+# add for unisocai
+allow untrusted_app_27 unisoc_ai_service:service_manager { find };
+
+# add for CCSA
+allow untrusted_app_27 security_service:service_manager { find };

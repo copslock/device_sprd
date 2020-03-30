@@ -1,0 +1,2 @@
+on post-fs-data
+    mkdir /data/misc/hprofs 0777 shell shell

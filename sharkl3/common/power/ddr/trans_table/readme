@@ -1,0 +1,35 @@
+
+
+
+一、功能
+统计一段时间ddr频点变换表
+
+二、用法
+连接adb切换root进入shell
+adb root
+adb remount
+adb shell
+./vendor/bin/power/ddr/trans_table/ddr_trans_table -t 60
+-t 测试时间(默认为60s)
+
+三、示例
+s9863a1h10:/vendor/bin/power/ddr/trans_table # ./ddr_trans_table -t 60
+accumulate_time is 60
+counts is 6000
+        160     233     311     400     533     622     800     933
+160     0       0       0       0       0       0       0       0
+233     0       23      4       0       0       0       0       0
+311     0       4       98      40      0       7       1       0
+400     0       0       27      324     0       93      2       0
+533     0       0       0       0       0       0       0       0
+622     0       0       17      67      0       1307    129     0
+800     0       0       4       12      0       106     2401    65
+933     0       0       1       3       0       6       55      1203
+
+四、备注
+1、只适用userdebug版本
+
+
+
+
+

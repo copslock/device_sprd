@@ -1,0 +1,2 @@
+#for bug 753616
+allow hal_drm_default vndbinder_device:chr_file { read write ioctl open };

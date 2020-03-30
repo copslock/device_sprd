@@ -1,0 +1,2 @@
+allow aprd hal_memtrack_default:file { read open getattr };
+allow aprd hal_memtrack_default:dir { search };

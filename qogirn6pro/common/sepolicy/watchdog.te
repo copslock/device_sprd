@@ -1,0 +1,1 @@
+allow watchdogd rootfs:file { open read getattr entrypoint map execute};

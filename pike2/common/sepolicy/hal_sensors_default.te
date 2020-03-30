@@ -1,0 +1,9 @@
+allow hal_sensors_default input_device:dir {open read};
+allow hal_sensors_default input_device:chr_file {open read ioctl};
+allow hal_sensors_default sensors_device:chr_file {open read ioctl};
+allow hal_sensors_default sysfs:file {open write read};
+#============= hal_sensors_default ============== 2017-08-02-16-46-00 added by genSepolicy script
+allow hal_sensors_default input_device:dir search;
+allow hal_sensors_default prod_file:dir {open read search};
+allow hal_sensors_default prod_file:file {open read getattr};
+allow hal_sensors_default mnt_vendor_file:dir {open read search};

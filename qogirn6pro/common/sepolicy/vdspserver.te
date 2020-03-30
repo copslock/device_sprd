@@ -1,0 +1,36 @@
+type vdspserver, domain;
+type vdspserver_exec ,exec_type,file_type,vendor_file_type;
+init_daemon_domain(vdspserver)
+
+vndbinder_use(vdspserver)
+binder_call(vdspserver, system_server)
+allow vdspserver dev_vdsp:chr_file { open read write ioctl};
+allow vdspserver vdsp_vndservice:service_manager {add};
+allow vdspserver device:chr_file { ioctl };
+allow vdspserver ion_device:chr_file { open read write ioctl };
+allow vdspserver self:process execmem;
+allow vdspserver device:dir rw_dir_perms;
+allow vdspserver vndservicemanager:binder { call transfer};
+allow vdspserver vndbinder_device:chr_file {open read write ioctl map getattr};
+
+allow vdspserver ylog:binder { transfer call };
+
+allow vdspserver gpu_device:chr_file { open read write getattr ioctl };
+
+allow vdspserver graphics_device:chr_file { open read write getattr ioctl };
+
+allow vdspserver sysfs:file { getattr  };
+
+allow vdspserver media_prop:property_service set;
+
+allow vdspserver media_prop:file {open read getattr};
+
+allow vdspserver aprd:binder {call transfer};
+#allow vdspserver system_file:file { open read };
+allow vdspserver cmd_services:binder { transfer call};
+allow vdspserver mmcblk_device:file {read open getattr execute};
+allow vdspserver vendor_file:file {read getattr };
+allow vdspserver hal_graphics_allocator_default:fd { use };
+allow vdspserver hal_camera_default:fd { use };
+allow vdspserver hal_face_default:fd { use };
+allow vdspserver hal_xtensa_default:fd { use };

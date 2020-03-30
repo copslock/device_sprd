@@ -1,0 +1,8 @@
+#allow hostapd hwservicemanager_prop:file { read open getattr };
+#allow hostapd system_data_file:dir { read open getattr write add_name };
+#allow hostapd hwservicemanager:binder { call transfer };
+#allow hostapd system_server:binder { call };
+#allow hostapd hal_hostapd_hwservice:hwservice_manager { add };
+#allow hostapd hidl_base_hwservice:hwservice_manager { add };
+#allow hostapd wifi_data_file:dir { write add_name read open getattr };
+#allow hostapd wifi_data_file:file { create };

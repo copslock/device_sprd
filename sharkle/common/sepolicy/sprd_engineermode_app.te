@@ -1,0 +1,95 @@
+type sprd_engineermode_app, domain;
+
+
+app_domain(sprd_engineermode_app)
+net_domain(sprd_engineermode_app)
+typeattribute sprd_engineermode_app mlstrustedsubject;
+allow sprd_engineermode_app cmd_services:unix_stream_socket { connectto read write };
+allow sprd_engineermode_app ylog_prop:property_service { set };
+allow sprd_engineermode_app debug_prop:property_service { set };
+allow sprd_engineermode_app slogmodem_vendor:unix_stream_socket { connectto read write };
+allow sprd_engineermode_app hal_cplog_connmgr_default:unix_stream_socket { connectto read write };
+allow sprd_engineermode_app slogmodem_vendor:dir { search getattr read open };
+allow sprd_engineermode_app slogmodem_vendor:file { getattr };
+set_prop(sprd_engineermode_app, ylog_prop)
+set_prop(sprd_engineermode_app, debug_prop)
+
+set_prop(sprd_engineermode_app, vendor_camera_prop)
+set_prop(sprd_engineermode_app, vendor_wcnd_prop)
+set_prop(sprd_engineermode_app, vendor_sys_prop)
+set_prop(sprd_engineermode_app, vendor_radio_prop)
+get_prop(sprd_sgps_app, vendor_default_prop);
+set_prop(sprd_engineermode_app, vendor_eng_prop)
+get_prop(sprd_engineermode_app, vendor_systemdebuggerd_prop);
+
+#allow sprd_engineermode_app ylog_file:dir { getattr read open };
+
+allow sprd_engineermode_app activity_service:service_manager { find };
+allow sprd_engineermode_app display_service:service_manager { find };
+allow sprd_engineermode_app network_management_service:service_manager { find };
+allow sprd_engineermode_app connectivity_service:service_manager { find };
+allow sprd_engineermode_app appops_service:service_manager { find };
+allow sprd_engineermode_app uimode_service:service_manager { find };
+allow sprd_engineermode_app accessibility_service:service_manager { find };
+allow sprd_engineermode_app input_method_service:service_manager { find };
+allow sprd_engineermode_app surfaceflinger_service:service_manager { find };
+allow sprd_engineermode_app graphicsstats_service:service_manager { find };
+allow sprd_engineermode_app user_service:service_manager { find };
+allow sprd_engineermode_app autofill_service:service_manager { find };
+allow sprd_engineermode_app radio_service:service_manager { find };
+allow sprd_engineermode_app input_service:service_manager { find };
+allow sprd_engineermode_app hal_extRadio_hwservice:hwservice_manager { find };
+allow sprd_engineermode_app audio_service:service_manager { find };
+allow sprd_engineermode_app notification_service:service_manager { find };
+allow sprd_engineermode_app content_service:service_manager { find };
+allow sprd_engineermode_app mount_service:service_manager { find };
+allow sprd_engineermode_app bluetooth_manager_service:service_manager { find };
+allow sprd_engineermode_app textservices_service:service_manager { find };
+allow sprd_engineermode_app wifi_service:service_manager { find };
+allow sprd_engineermode_app power_service:service_manager { find };
+
+allow sprd_engineermode_app system_prop:property_service { set };
+allow sprd_engineermode_app radio_prop:property_service { set };
+allow sprd_engineermode_app ctl_default_prop:property_service { set };
+
+allow sprd_engineermode_app rild:binder { call };
+allow sprd_engineermode_app sysfs:file { read open getattr };
+allow sprd_engineermode_app sysfs_extdata:dir { search };
+allow sprd_engineermode_app sysfs_extdata:file { read open getattr};
+
+allow sprd_engineermode_app wcnd:unix_stream_socket { connectto read write };
+allow sprd_engineermode_app engpc:unix_stream_socket { connectto read write };
+
+#allow sprd_engineermode_app apr_data_file:dir { search getattr read open remove_name add_name write };
+#allow sprd_engineermode_app apr_data_file:file { read open getattr unlink write create append };
+
+allow sprd_engineermode_app gnss_file:file { read open getattr unlink };
+allow sprd_engineermode_app gnss_file:dir {  search };
+allow sprd_engineermode_app hal_log_default:unix_stream_socket {  connectto read write };
+allow sprd_engineermode_app ylog_prop:file {  read open getattr };
+allow sprd_engineermode_app ylog_prop:property_service {  set };
+#allow sprd_engineermode_app ylog_file:dir {  search };
+allow sprd_engineermode_app rild:unix_stream_socket {  connectto read write };
+allow sprd_engineermode_app registry_service:service_manager { find };
+allow sprd_engineermode_app audioserver_service:service_manager { find };
+allow sprd_engineermode_app sysfs_devices_system_cpu:file { write };
+allow sprd_engineermode_app phasecheckserver:unix_stream_socket { connectto };
+allow sprd_engineermode_app clipboard_service:service_manager { find };
+#allow sprd_engineermode_app wifi_prop:property_service { set };
+allow sprd_engineermode_app media_session_service:service_manager { find };
+allow sprd_engineermode_app logd_prop:property_service {  set };
+allow sprd_engineermode_app logd_prop:file { read open getattr };
+allow sprd_engineermode_app log_tag_prop:property_service { set };
+allow sprd_engineermode_app cameraserver_service:service_manager { find };
+allow sprd_engineermode_app hal_extthermal_hwservice:hwservice_manager { find };
+allow sprd_engineermode_app hal_thermal_ext:binder { call };
+allow sprd_engineermode_app hal_combined_default:binder { call };
+allow sprd_engineermode_app fm_device:chr_file { ioctl open read write };
+allow sprd_engineermode_app trust_service:service_manager { find };
+allow sprd_engineermode_app sprd_engineermode_app:tcp_socket { connect create getattr };
+allow sprd_engineermode_app fwmarkd_socket:sock_file { write };
+allow sprd_engineermode_app search_service:service_manager { find };
+allow sprd_engineermode_app log_service:unix_stream_socket { connectto read write };
+allow sprd_engineermode_app vendor_default_prop:file { open read getattr };
+allow sprd_engineermode_app performance_fw_service:service_manager { find };
+allow sprd_engineermode_app vendor_power_prop:file { map open read getattr };

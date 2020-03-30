@@ -1,0 +1,3 @@
+#for vdsp
+allow hal_face_default vdspserver:binder { call transfer };
+allow hal_face_default vdsp_vndservice:service_manager { find };

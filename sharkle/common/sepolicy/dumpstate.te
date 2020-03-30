@@ -1,0 +1,8 @@
+allow dumpstate vold:binder { call };
+allow dumpstate prod_file:dir {getattr search };
+allow dumpstate debugfs:dir {read open };
+allow dumpstate debugfs:file {read open };
+allow dumpstate sysfs_stat:file {read open getattr};
+allow dumpstate debugfs_binder:file {read open};
+allow dumpstate debugfs_mmc:dir {search};
+allow dumpstate mnt_media_rw_file:dir { getattr };

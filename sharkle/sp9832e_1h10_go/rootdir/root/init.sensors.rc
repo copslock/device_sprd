@@ -1,0 +1,11 @@
+on post-fs
+    insmod ${ro.vendor.ko.mount.point}/socko/bstclass.ko
+    insmod ${ro.vendor.ko.mount.point}/socko/bma2x2.ko
+    insmod ${ro.vendor.ko.mount.point}/socko/ltr_558als.ko
+    insmod ${ro.vendor.ko.mount.point}/socko/akm09911.ko
+
+on factorytest
+    insmod ${ro.vendor.ko.mount.point}/socko/bstclass.ko
+    insmod ${ro.vendor.ko.mount.point}/socko/bma2x2.ko
+    insmod ${ro.vendor.ko.mount.point}/socko/ltr_558als.ko
+    insmod ${ro.vendor.ko.mount.point}/socko/akm09911.ko

@@ -1,0 +1,35 @@
+
+#add for bankabc
+allow untrusted_app_25 system_data_file:dir {open read};
+#allow untrusted_app_25 vendor_file:file {open read  getattr };
+#allow untrusted_app_25 bcc_exec:file {open read  getattr };
+allow untrusted_app_25 srt_socket:sock_file {read write getattr };
+#allow untrusted_app_25 srtd:unix_stream_socket {read write getattr connectto};
+
+# add for CCSA
+allow untrusted_app_25 security_service:service_manager { find };
+#allow untrusted_app_25 proc_stat:file { open read };
+#allow untrusted_app_25 vendor_file:file { open read };
+
+#add for wechat and baiduMap
+allow untrusted_app_25 asec_public_file:dir {search getattr};
+allow untrusted_app_25 asec_public_file:file {read getattr open};
+
+allow untrusted_app_25 embmsd_socket:sock_file {read write getattr };
+
+# add for sprdssense
+allow untrusted_app_25 ssense_service:service_manager { find };
+
+# add for coredump
+allow untrusted_app_25 coredump_file:dir { write add_name };
+get_prop(untrusted_app_25, vendor_sys_prop);
+
+#add for GPU
+get_prop(untrusted_app_25, vendor_gpu_prop);
+
+#add for HWUI
+get_prop(untrusted_app_25, vendor_hwui_prop);
+
+#add for powerhint
+allow untrusted_app_25 hwc_stat_file:dir { search write add_name };
+allow untrusted_app_25 hwc_stat_file:file { open getattr read write };

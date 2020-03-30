@@ -1,0 +1,25 @@
+allow vold ntfsfix_exec:file { execute_no_trans  getattr open read execute };
+allow vold ntfs3g_exec:file { execute_no_trans  getattr open read execute };
+allow vold vold:capability  { setgid setuid };
+# allow vold mkntfs_exec:file { execute_no_trans  getattr open read execute };
+
+
+allow vold tmpfs:lnk_file create_file_perms;
+allow vold kernel:system module_request;
+
+allow vold mnt_media_rw_file:dir mounton;
+allow vold mmcblk_device:blk_file { read write open ioctl getattr };
+allow vold storage_file:lnk_file create_file_perms;
+allow vold unlabeled:filesystem mount;
+#allow vold configfs:file {open write read};
+allow vold configfs:dir search;
+allow vold prod_file:dir r_file_perms;
+
+# add for move app to sd card
+allow vold labeledfs:filesystem remount;
+allow vold asec_public_file:dir { read getattr open search };
+allow vold asec_public_file:file { getattr read open };
+allow vold system_radio_prop:property_service set;
+
+# aosp issue add for vold to open proc/pid/ns
+allow vold nsfs:file { open read };

@@ -1,0 +1,20 @@
+
+
+#allow adbd ylog_file:dir {read getattr open search};
+#allow adbd ylog_file:file {open read getattr};
+
+#allow adbd device:file {read write};
+#allow adbd ylog_lite_file:dir {read getattr open search};
+#allow adbd ylog_lite_file:file {open read getattr};
+
+allow adbd system_data_file:dir { open read };
+allow adbd system_data_file:file open;
+#allow adbd apr_data_file:file { create open read write getattr setattr rename unlink };
+#allow adbd apr_data_file:dir { read open write search add_name remove_name getattr };
+#allow adbd self_system_data_file:file { create open read write getattr setattr rename unlink };
+#allow adbd self_system_data_file:dir { read open write search add_name remove_name getattr};
+#allow adbd self_system_data_file:sock_file {getattr read write};
+# Add for gro switch
+allow adbd ext_data:file { getattr read open };
+allow adbd oemfs:dir { search };
+

@@ -1,0 +1,4 @@
+#add otpd te
+allow sprd_validationtools_app otpd:unix_stream_socket { read write connectto sendto };
+allow sprd_validationtools_app otpd:dir search;
+#allow sprd_validationtools_app otpd:file { write read open };

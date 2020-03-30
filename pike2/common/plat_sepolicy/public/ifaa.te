@@ -1,0 +1,2 @@
+type ifaa, domain;
+type ifaa_exec, exec_type, file_type;

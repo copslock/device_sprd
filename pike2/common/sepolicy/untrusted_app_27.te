@@ -1,0 +1,8 @@
+
+#add for tv.acfundanmaku.video
+get_prop(untrusted_app_27, vendor_sys_prop);
+allow untrusted_app_27 sysfs_extdata:dir { open read };
+
+#add for GPU
+#allow untrusted_app_27 vendor_file:file {open read getattr};
+get_prop(untrusted_app_27, vendor_gpu_prop);

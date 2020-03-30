@@ -1,0 +1,29 @@
+
+
+
+一、功能
+获取所有扫描数据
+
+二、用法
+正常连接adb进入shell
+sh /vendor/bin/power/total/tool/total.sh > /vendor/bin/power/total/total.txt
+扫描结束将在/vendor/bin/power/total目录下，生成total_data.txt的结果文件
+
+三、示例
+s9863a1h10:/vendor/bin/power/total# ls
+ls
+readme tool
+s9863a1h10:/vendor/bin/power/total# sh tool/total.sh > total.txt
+sh tool/total.sh > total.txt
+s9863a1h10:/vendor/bin/power/total # ls
+ls
+readme tool total.txt
+s9863a1h10:/vendor/bin/power/total # exit
+exit
+
+C:\Users\username>adb pull /vendor/bin/power/total/total.txt
+
+四、备注
+1、仅适用于userdebug版本
+
+

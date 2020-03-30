@@ -1,0 +1,4 @@
+allow vndservicemanager vdspserver:dir { search };
+allow vndservicemanager hal_xtensa_default:dir { search };
+allow vndservicemanager hal_xtensa_default:file { read open };
+allow vndservicemanager hal_xtensa_default:process { getattr };

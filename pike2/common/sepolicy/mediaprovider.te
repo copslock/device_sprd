@@ -1,0 +1,4 @@
+# add for CCSA
+allow mediaprovider security_service:service_manager { find };
+
+allow mediaprovider vendor_sys_prop:file { read };

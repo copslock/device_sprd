@@ -1,0 +1,14 @@
+allow drmserver fuse:file open;
+allow drmserver storage_file:dir search;
+allow drmserver storage_file:lnk_file read;
+allow drmserver mmcblk_device:file { open create write read };
+allow drmserver prod_file:dir { search open read write add_name };
+allow drmserver prod_file:file { open read write create getattr };
+#allow drmserver vendor_file:file { r_file_perms execute };
+allow drmserver sdcardfs:file { r_file_perms };
+allow drmserver vfat:file { r_file_perms };
+#add for bug 738893
+#allow drmserver proc:file {open read write};
+
+# add for CCSA
+allow drmserver security_service:service_manager { find };

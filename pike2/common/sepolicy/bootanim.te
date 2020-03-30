@@ -1,0 +1,12 @@
+
+binder_call(audioserver, bootanim)
+binder_call(bootanim, mediaserver)
+binder_call(mediaserver, bootanim)
+allow bootanim mediaserver_service:service_manager find;
+allow mediaextractor bootanim:fd use;
+#allow bootanim vendor_file:file r_file_perms;
+set_prop(system_server, ctl_bootanim_prop)
+set_prop(bootanim, system_prop)
+
+#add for GPU
+get_prop(bootanim, vendor_gpu_prop);

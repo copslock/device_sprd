@@ -1,0 +1,58 @@
+# Default density config, 240 for WVGA
+#ro.sf.lcd_density=240
+#ro.sf.lcd_width=54
+#ro.sf.lcd_height=96
+#ro.product.hardware=sl8541e_1h10_32b
+ro.product.hardware=sl8541e_1h10
+#ro.vendor.audio.product.hardware=sl8541e_1h10_32b
+ro.vendor.audio.product.hardware=sl8541e_1h10
+# Set Opengl ES Version
+#ro.opengles.version=196609
+
+# ro.fm.chip.port.UART.androidm=true
+
+# FRP property for pst device
+ro.frp.pst=/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/persist
+
+#enable audio nr tuning
+ro.vendor.audio_tunning.nr=1
+
+# Disable the long screenshot
+ro.longscreenshot.enable=false
+
+#config dreamcamera
+persist.sys.cam.battery.flash = 10
+persist.sys.cam.sfv.alter=true
+persist.sys.cam.normalhdr=false
+persist.sys.cam.wide.frame.gap=2
+persist.sys.cam.3dnr=true
+persist.sys.cam.filter.version=2
+persist.sys.cam.beauty.fullfuc=false
+persist.sys.cam.fr.blur.version=1
+
+#Enable sdcardfs feature
+ro.sys.sdcardfs=true
+persist.sys.sdcardfs=force_on
+
+#Disable assistant touch
+ro.product.assistanttouch=false
+
+#add for rotation animation scale
+sys.rotation.animscale=0.5
+
+#add for performance
+pm.dexopt.downgrade_after_inactive_days=10
+ro.lmk.vmpressurenhanced=true
+
+#lmkd init config
+ro.lmk.critical_minfree=7680
+
+#Disable per_app_memcg
+ro.config.per_app_memcg=false
+
+#enable uififo
+sys.use_fifo_ui=1
+
+#add for Assistant
+ro.product.assistanttouch=false
+

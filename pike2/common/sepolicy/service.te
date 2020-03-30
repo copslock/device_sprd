@@ -1,0 +1,13 @@
+
+#type vce_service,               service_manager_type;
+
+#type phasecheck_service,        service_manager_type;
+
+# add for CCSA
+#type security_service,          system_server_service, service_manager_type;
+
+#type addon_service,             system_server_service, service_manager_type;
+
+# add for Power
+#type powerguru_service,         system_server_service, service_manager_type;
+#type power_ex_service,          system_server_service, service_manager_type;

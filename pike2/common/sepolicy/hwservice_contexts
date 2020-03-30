@@ -1,0 +1,15 @@
+vendor.sprd.hardware.radio::IExtRadio     u:object_r:hal_extRadio_hwservice:s0
+vendor.sprd.hardware.radio.lite::ILiteRadio     u:object_r:hal_extRadio_hwservice:s0
+vendor.sprd.hardware.log::ILogControl     u:object_r:hal_log_hwservice:s0
+vendor.sprd.hardware.wifi.hostapd::IHostapd     u:object_r:hal_hostapd_hwservice:s0
+vendor.sprd.hardware.thermal::IExtThermal     u:object_r:hal_extthermal_hwservice:s0
+vendor.sprd.hardware.connmgr::IConnmgr     u:object_r:hal_connmgr_hwservice:s0
+vendor.sprd.hardware.power::IPower        u:object_r:hal_power_hwservice:s0
+android.hardware.power.stats::IPowerStats       u:object_r:hal_power_stats_hwservice:s0
+vendor.sprd.hardware.gnss::IGnss     u:object_r:hal_extGnss_hwservice:s0
+vendor.sprd.hardware.aprd::IAprdInfoSync     u:object_r:hal_aprd_hwservice:s0
+vendor.sprd.hardware.enhance::IEnhance     u:object_r:hal_enhance_hwservice:s0
+
+#network hidl service
+vendor.sprd.hardware.network::INetworkControl   u:object_r:hal_network_hwservice:s0
+vendor.sprd.hardware.cplog_connmgr::IConnectControl u:object_r:hal_cplog_connmgr_hwservice:s0

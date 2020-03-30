@@ -1,0 +1,34 @@
+
+allow surfaceflinger self:process execmem;
+allow surfaceflinger ashmem_device:chr_file execute;
+
+allow surfaceflinger device:dir rw_dir_perms;
+
+allow surfaceflinger system_data_file:dir { write add_name };
+
+#allow surfaceflinger ylog:binder { transfer call };
+
+allow surfaceflinger gpu_device:chr_file { open read write getattr ioctl };
+
+allow surfaceflinger graphics_device:chr_file { open read write getattr ioctl };
+
+allow surfaceflinger sysfs:file { getattr  };
+
+#allow surfaceflinger media_prop:property_service set;
+
+allow surfaceflinger media_prop:file {open read getattr};
+
+allow surfaceflinger aprd:binder {call transfer};
+allow surfaceflinger system_file:file { open read };
+#============= surfaceflinger ============== 2017-08-02-13-24-29 added by genSepolicy script
+#allow surfaceflinger device:chr_file { read write ioctl open };
+allow surfaceflinger ion_device:chr_file write;
+allow surfaceflinger cmd_services:binder { transfer call};
+allow surfaceflinger mmcblk_device:file {read open getattr execute};
+#allow surfaceflinger vendor_file:file {read getattr };
+
+# add for CCSA
+allow surfaceflinger security_service:service_manager { find };
+
+#add for GPU
+get_prop(surfaceflinger, vendor_gpu_prop);

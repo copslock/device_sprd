@@ -1,0 +1,43 @@
+
+
+
+#============= hal_camera_default ============== 2017-08-02-13-24-29 added by genSepolicy script
+allow hal_camera_default camera_data_file:file { read write };
+allow hal_camera_default vendor_camera_data_file:dir { search add_name write };
+allow hal_camera_default vendor_camera_data_file:file { open read write create getattr append };
+allow hal_camera_default vndbinder_device:chr_file { read write ioctl open };
+allow hal_camera_default sysfs:file { open write read };
+allow hal_camera_default sysfile:file { open write getattr };
+allow hal_camera_default sysfile:dir { search };
+allow hal_camera_default sysfs_ddr_dfs:file { open read write getattr};
+allow hal_camera_default sysfs_ddr_dfs:dir {search read open getattr};
+allow hal_camera_default graphics_device:chr_file { open read write create ioctl };
+allow hal_camera_default sprd_img_device:chr_file { read write open ioctl map};
+allow hal_camera_default property_socket:sock_file { write };
+allow hal_camera_default sysfs_sensor:file { getattr open read write create };
+allow hal_camera_default system_server:binder { call transfer };
+
+typeattribute hal_camera_default halclientdomain;
+typeattribute hal_camera_default hal_graphics_allocator_client;
+typeattribute hal_camera_default hal_configstore_client;
+typeattribute hal_camera_default hal_power_client;
+
+#3DNR
+allow hal_camera_default gpu_device:chr_file { open read write getattr ioctl map};
+allow hal_camera_default hal_graphics_allocator_hwservice:hwservice_manager find;
+allow hal_camera_default hal_graphics_allocator_default:binder call;
+allow hal_camera_default hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
+allow hal_camera_default hal_configstore_default:binder call;
+#allow hal_camera_default system_data_file:dir read;
+
+#power
+allow hal_camera_default hal_power_hwservice:hwservice_manager find;
+allow hal_camera_default hal_power_default:binder call;
+allow hal_camera_default init:unix_stream_socket connectto;
+allow hal_camera_default hal_power_default:binder transfer;
+
+#add for lcd flash
+allow hal_camera_default sysfs_lcd:file { open write read };
+
+#property
+set_prop(hal_camera_default, vendor_camera_prop)

@@ -1,0 +1,96 @@
+##########################
+# property service keys
+#
+#
+
+
+
+#auido sub-system use
+persist.vendor.media.systemready.state u:object_r:media_prop:s0
+persist.vendor.media.dump.path u:object_r:media_prop:s0
+persist.vendor.media.dump.switch u:object_r:media_prop:s0
+persist.vendor.media.audiofw.devices.dump u:object_r:media_prop:s0
+persist.vendor.media.audiofw.dump u:object_r:media_prop:s0
+persist.vendor.audioloop.test.result  u:object_r:media_prop:s0
+persist.vendor.modem.t.enable  u:object_r:media_prop:s0
+persist.vendor.modem.w.enable  u:object_r:media_prop:s0
+persist.vendor.modem.tl.enable  u:object_r:media_prop:s0
+persist.vendor.modem.lf.enable  u:object_r:media_prop:s0
+persist.vendor.modem.l.enable  u:object_r:media_prop:s0
+ro.vendor.audio_tunning.nr u:object_r:media_prop:s0
+ro.vendor.digital.fm.support  u:object_r:media_prop:s0
+ro.vendor.audio.product.hardware  u:object_r:media_prop:s0
+persist.vendor.media.audio.dump  u:object_r:media_prop:s0
+
+persist.vendor.delta.time u:object_r:system_prop:s0
+
+
+persist.vendor.ylog_lite.   u:object_r:ylog_lite_pprop:s0
+vendor.ylog_lite.   u:object_r:ylog_lite_prop:s0
+
+persist.vendor.radio.    u:object_r:vendor_radio_prop:s0
+ro.vendor.modem.         u:object_r:vendor_radio_prop:s0
+ro.vendor.radio.         u:object_r:vendor_radio_prop:s0
+vendor.radio.            u:object_r:vendor_radio_prop:s0
+vendor.ril.              u:object_r:vendor_radio_prop:s0
+vendor.sim.              u:object_r:vendor_radio_prop:s0
+vendor.data.             u:object_r:vendor_radio_prop:s0
+vendor.net.              u:object_r:vendor_radio_prop:s0
+vendor.bluetooth.        u:object_r:bt_prop:s0
+persist.vendor.sys.      u:object_r:vendor_sys_prop:s0
+vendor.sys.              u:object_r:vendor_sys_prop:s0
+ro.vendor.media          u:object_r:vendor_video_prop:s0
+vendor.h264dec           u:object_r:vendor_video_prop:s0
+vendor.h264enc           u:object_r:vendor_video_prop:s0
+vendor.m4vdec            u:object_r:vendor_video_prop:s0
+persist.vendor.sysdump   u:object_r:vendor_systemdebuggerd_prop:s0
+vendor.debug.sysdump.enabled   u:object_r:vendor_systemdebuggerd_prop:s0
+
+# For thermal
+persist.vendor.thermal. u:object_r:vendor_thermald_prop:s0
+persist.vendor.bsservice. u:object_r:vendor_thermald_prop:s0
+
+# For Power
+persist.vendor.power.            u:object_r:vendor_power_prop:s0
+
+# For engpc
+vendor.flag.engpc.onemodem.enable       u:object_r:vendor_engpc_prop:s0
+vendor.flag.sys.usb.config              u:object_r:vendor_engpc_prop:s0
+vendor.ro.bootmode                      u:object_r:vendor_engpc_prop:s0
+persist.vendor.modem.log_dest           u:object_r:vendor_engpc_prop:s0
+persist.vendor.wcn.log_dest             u:object_r:vendor_engpc_prop:s0
+ro.vendor.modem.support                 u:object_r:vendor_engpc_prop:s0
+vendor.flag.engpc.restart               u:object_r:vendor_engpc_prop:s0
+
+# For aprd
+persist.vendor.aprservice.enabled       u:object_r:vendor_aprd_prop:s0
+
+# For Camera
+vendor.cam.            u:object_r:vendor_camera_prop:s0
+ro.vendor.cam.         u:object_r:vendor_camera_prop:s0
+persist.vendor.cam.    u:object_r:vendor_camera_prop:s0
+
+# For GPU
+ro.vendor.gpu.boost             u:object_r:vendor_gpu_prop:s0
+ro.vendor.gpu.boost.path        u:object_r:vendor_gpu_prop:s0
+ro.vendor.gpu.boost.sf          u:object_r:vendor_gpu_prop:s0
+ro.vendor.gpu.boost.sf.level    u:object_r:vendor_gpu_prop:s0
+
+# For Hwui
+ro.vendor.hwui.    u:object_r:vendor_hwui_prop:s0
+
+# For FaceID
+persist.vendor.faceid.       u:object_r:vendor_faceid_prop:s0
+
+# For Wcnd
+persist.vendor.wcnd.   u:object_r:vendor_wcnd_prop:s0
+
+# For slogmodem
+persist.vendor.modem.  u:object_r:vendor_modem_prop:s0
+ro.vendor.product.partitionpath    u:object_r:vendor_product_prop:s0
+
+# For engineerMode
+persist.vendor.eng.   u:object_r:vendor_eng_prop:s0
+
+# For hal_graphics_composer_default
+vendor.hwc.drm.device  u:object_r:vendor_hwc_prop:s0

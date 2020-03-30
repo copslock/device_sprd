@@ -1,0 +1,1 @@
+allow domain debugfs_binder:dir search;

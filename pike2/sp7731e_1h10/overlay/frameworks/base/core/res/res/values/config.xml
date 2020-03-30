@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds.  Do not translate. -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Bug 846351 Begin:Add sceenshot func into overlay on 1GB project -->
+    <string-array translatable="false" name="config_startingwindow_packages">
+       <item>com.android.soundrecorder</item>
+       <item>com.thunderst.radio</item>
+       <item>com.android.documentsui</item>
+       <item>com.android.calendar</item>
+       <item>com.sprd.note</item>
+       <item>com.sprd.sprdnote</item>
+       <item>com.android.calculator2</item>
+       <item>com.sprd.fileexplorer</item>
+    </string-array>
+    <!-- Bug 846351 End:Add sceenshot func into overlay on 1GB project-->
+
+    <string name="config_ims_package" translatableds="false">com.spreadtrum.ims</string>
+    <bool name="config_dynamic_bind_ims">true</bool>
+
+    <bool name="config_device_volte_available">false</bool>
+
+    <!-- Flag specifying whether VoLTE should be available for carrier: independent of
+         carrier provisioning. If false: hard disabled. If true: then depends on carrier
+         provisioning, availability etc -->
+    <bool name="config_carrier_volte_available">false</bool>
+
+    <!-- Flag specifying whether VoLTE availability is based on provisioning -->
+    <bool name="config_carrier_volte_provisioned">false</bool>
+
+    <!-- Flag specifying whether VoLTE TTY is supported -->
+    <bool name="config_carrier_volte_tty_supported">false</bool>
+
+    <!-- Flag specifying whether VT is available on device -->
+    <bool name="config_device_vt_available">true</bool>
+
+    <!-- Flag specifying whether VT should be available for carrier: independent of
+         carrier provisioning. If false: hard disabled. If true: then depends on carrier
+         provisioning, availability etc -->
+    <bool name="config_carrier_vt_available">true</bool>
+
+    <bool name="useImsAlwaysForEmergencyCall">false</bool>
+
+    <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
+         on the headphone/microphone jack. When false use the older uevent framework. -->
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+
+    <!-- definite program allowed to access persistent partition -->
+    <string name="config_persistentDataPackageName" translatableds="false">com.google.android.gms</string>
+    <bool translatable="false" name="config_wifi_enable_wifi_firmware_debugging">false</bool>
+
+    <!-- Add for vowifi -->
+    <!-- Flag specifying whether WFC over IMS is available on device -->
+    <bool name="config_device_wfc_ims_available">false</bool>
+
+    <!-- Need hold before merge -->
+    <bool name="skipHoldBeforeMerge">false</bool>
+
+    <!-- De we do icon badges? Used to decide if there should be a disable option-->
+    <bool name="config_notificationBadging">false</bool>
+
+    <!-- Launcher Go customization requires AppWidgetService, but otherwise
+         home screen widgets are not supported -->
+    <bool name="config_enableAppWidgetService">true</bool>
+
+    <!-- Device configuration setting the /proc/sys/vm/extra_free_kbytes tunable in the kernel
+         (if it exists).  A high value will increase the amount of memory that the kernel
+         tries to keep free, reducing allocation time and causing the lowmemorykiller to kill
+         earlier.  A low value allows more memory to be used by processes but may cause more
+         allocations to block waiting on disk I/O or lowmemorykiller.  Overrides the default
+         value chosen by ActivityManager based on screen size.  0 prevents keeping any extra
+         memory over what the kernel keeps by default.  -1 keeps the default. -->
+    <integer name="config_extraFreeKbytesAbsolute">5400</integer>
+
+    <!-- Device configuration adjusting the /proc/sys/vm/extra_free_kbytes tunable in the kernel
+         (if it exists).  0 uses the default value chosen by ActivityManager.  A positive value
+         will increase the amount of memory that the kernel tries to keep free, reducing
+         allocation time and causing the lowmemorykiller to kill earlier.  A negative value
+         allows more memory to be used by processes but may cause more allocations to block
+         waiting on disk I/O or lowmemorykiller.  Directly added to the default value chosen by
+         ActivityManager based on screen size. -->
+    <integer name="config_extraFreeKbytesAdjust">0</integer>
+
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/lib/libjavacrypto.so"</item>
+        <item>"vendor/lib/hw/gralloc.sp7731e.so"</item>
+        <item>"/system/lib/libhidltransport.so"</item>
+        <item>"/system/framework/arm/boot-core-libart.oat"</item>
+        <item>"/system/framework/arm/boot-conscrypt.oat"</item>
+        <item>"/system/framework/boot-core-libart.vdex"</item>
+        <item>"/system/framework/boot-ext.vdex"</item>
+        <item>"/system/framework/boot.vdex"</item>
+        <item>"/system/framework/boot-framework.vdex"</item>
+        <item>"/system/priv-app/SprdContacts/oat/arm/SprdContacts.odex"</item>
+        <item>"/system/priv-app/SprdContacts/oat/arm/SprdContacts.vdex"</item>
+        <item>"/system/priv-app/SprdContactsProvider/oat/arm/SprdContactsProvider.odex"</item>
+        <item>"/system/priv-app/SprdContactsProvider/oat/arm/SprdContactsProvider.vdex"</item>
+    </string-array>
+</resources>

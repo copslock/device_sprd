@@ -1,0 +1,162 @@
+type otpd, domain;
+type otpd_exec, exec_type, file_type, vendor_file_type;
+
+
+init_daemon_domain(otpd)
+
+allow otpd vendor_radio_prop:file { open read getattr};
+#allow otpd system_file:file { read open execute_no_trans };
+allow otpd system_file:dir { read open  };
+allow otpd vendor_shell_exec:file { read open execute execute_no_trans getattr };
+allow otpd self:capability {  sys_nice fowner setgid setuid fsetid sys_module sys_admin chown net_admin net_raw sys_boot };
+allow otpd self:capability2 { block_suspend syslog };
+allow otpd property_socket:sock_file { read write };
+allow otpd rootfs:file { open read getattr };
+allow otpd rootfs:system { module_load };
+allow otpd engpc:unix_stream_socket connectto;
+allow otpd sysfs_wake_lock:file { read write open };
+allow otpd serial_device:chr_file { open read write ioctl };
+allow otpd tty_device:chr_file { open read write ioctl getattr };
+allow otpd input_device:dir { open read search };
+allow otpd input_device:chr_file { open read ioctl getattr };
+allow otpd block_device:dir { search };
+allow otpd mmcblk_device:blk_file { open read write ioctl getattr };
+allow otpd log_device:chr_file { open read };
+allow otpd ctl_bootanim_prop:property_service set;
+allow otpd ctl_default_prop:property_service set;
+allow otpd sysfs:dir {read open search };
+allow otpd sysfs:file {read open write getattr ioctl };
+allow otpd rootfs:dir { mounton write add_name read };
+allow otpd prod_file:dir { search open read write remove_name add_name create};
+allow otpd prod_file:file { open read write lock unlink getattr setattr create rw_file_perms };
+allow otpd kernel:system { module_request };
+allow otpd kernel:dir { search };
+allow otpd kernel:file { getattr read write open };
+allow otpd init:dir { search read };
+allow otpd init:file { open read getattr };
+allow otpd init:unix_stream_socket connectto;
+allow otpd ueventd:dir { search read };
+allow otpd ueventd:file { open read getattr };
+allow otpd logd:dir { search read };
+allow otpd logd:file { open read getattr };
+allow otpd vold:dir { search read };
+allow otpd vold:file { open read getattr };
+allow otpd gatekeeperd:dir { search read };
+allow otpd gatekeeperd:file { open read getattr };
+allow otpd shell:dir { search read };
+allow otpd shell:file { open read getattr };
+allow otpd healthd:dir { search read };
+allow otpd healthd:file { open read getattr };
+allow otpd lmkd:dir { search read };
+allow otpd lmkd:file { open read getattr };
+allow otpd modem_control:dir { search read };
+allow otpd modem_control:file { open read getattr };
+allow otpd rild:dir { search read };
+allow otpd rild:file { open read getattr };
+allow otpd rild:unix_stream_socket{ connectto };
+allow otpd drmserver:dir { search read };
+allow otpd drmserver:file { open read getattr };
+allow otpd mediaserver:dir { search read};
+allow otpd mediaserver:file { open read getattr };
+allow otpd installd:dir { search read };
+allow otpd installd:file { open read getattr };
+allow otpd keystore:dir { search read };
+allow otpd keystore:file { open read getattr };
+allow otpd wcnd:dir { search read };
+allow otpd wcnd:file { open read getattr };
+allow otpd slogmodem_vendor:dir { search read };
+allow otpd slogmodem_vendor:file { open read getattr };
+allow otpd slogmodem_vendor:unix_stream_socket { connectto sendto };
+allow otpd hal_cplog_connmgr_default:unix_stream_socket { connectto sendto};
+allow otpd refnotify:dir { search read };
+allow otpd refnotify:file { open read getattr };
+allow otpd cp_diskserver:dir { search read };
+allow otpd cp_diskserver:file { open read getattr };
+allow otpd engpc:dir { search read };
+allow otpd engpc:file { open read getattr };
+allow otpd otpd:dir { search read };
+allow otpd otpd:file { open read getattr };
+
+allow otpd wcnd:unix_stream_socket { connectto sendto };
+allow otpd proc_bluetooth_writable:file { open write };
+allow otpd bt_prop:file { read open getattr };
+allow otpd hal_bluetooth_default:binder { call transfer };
+#allow otpd hal_bluetooth_hwservice:hwservice_manager { find };
+
+allow otpd audio_device:dir { search };
+allow otpd audio_device:fifo_file { create setattr open write read };
+allow otpd audio_device:chr_file { read write };
+
+allow otpd tmpfs:dir {search write add_name };
+allow otpd devpts:chr_file { open read write };
+allow otpd sensors_device:chr_file { open read write getattr ioctl };
+#allow otpd hal_sensors_hwservice:hwservice_manager { find };
+allow otpd hal_sensors_default:binder { call };
+allow otpd nfc_device:chr_file { open read write getattr setattr ioctl };
+allow otpd camera_device:chr_file { open read write getattr ioctl };
+allow otpd sprd_img_device:chr_file { open read write getattr ioctl };
+allow otpd graphics_device:chr_file { open read write getattr ioctl };
+allow otpd graphics_device:dir { search };
+allow otpd otpd:process { execmem };
+allow otpd proc:file { open read write getattr };
+allow otpd ashmem_device:chr_file { execute };
+
+#allow otpd cpuctl_device:dir { search read };
+#allow otpd cpuctl_device:file { setattr getattr open write read };
+allow otpd gpsd:unix_stream_socket { connectto };
+allow otpd gnss_file:dir { create search add_name open read write remove_name };
+allow otpd gnss_file:file { read write open create getattr setattr append unlink };
+allow otpd zygote:dir { search read open };
+allow otpd zygote:file { setattr getattr open write read };
+
+userdebug_or_eng(`
+allow otpd perfprofd:dir { search read open };
+allow otpd perfprofd:file { setattr getattr open write read };
+allow otpd su:dir { search read open };
+')
+
+allow otpd ylog:dir { search read open };
+allow otpd ylog:file { setattr getattr open write read };
+allow otpd adbd:dir { search read };
+allow otpd adbd:file { setattr getattr open write read };
+allow otpd iio_device:chr_file { setattr getattr open write read };
+allow otpd spipe_device:chr_file { setattr getattr open write read };
+allow otpd wcn_device:chr_file { setattr getattr open write read ioctl };
+allow otpd wcn_device:file { open write read ioctl };
+allow otpd radio_device:chr_file { open read write ioctl };
+
+allow otpd otpd:capability { sys_tty_config };
+allow otpd logdr_socket:sock_file { write };
+allow otpd logd:unix_stream_socket { connectto };
+allow otpd device:dir { open read write remove_name add_name search };
+allow otpd device:file { open read write create };
+allow otpd null_device:chr_file { unlink };
+
+allow otpd mnt_media_rw_file: dir { write add_name create mounton read open search };
+allow otpd vfat:filesystem { mount unmount };
+
+#allow otpd autotest_tmpfs:file { create open getattr write read setattr };
+allow otpd fingerprintd:dir {read open search };
+allow otpd fingerprintd:file { create open getattr write read setattr };
+allow otpd phasecheckserver:dir { search read open };
+allow otpd phasecheckserver:file { write read open setattr getattr create };
+
+#allow otpd dex2oat:dir { search read open };
+allow otpd vendor_toolbox_exec:file { execute_no_trans read open getattr execute };
+allow otpd ion_device:chr_file { open read ioctl };
+allow otpd otpd:capability2 { wake_alarm };
+allow otpd sysfs_sensor:file { write open };
+allow otpd uhid_device:chr_file {  setattr getattr open write read ioctl};
+allow otpd aprd:dir { search read open };
+allow otpd aprd:file { write read open setattr getattr create };
+allow otpd fm_device:chr_file { read write open ioctl };
+
+allow otpd vendor_data_file:dir { search open read write remove_name add_name};
+allow otpd vendor_data_file:file { open read write lock unlink getattr setattr create rw_file_perms };
+
+#prodinfo
+allow otpd mnt_vendor_file:file { open read write create append getattr };
+allow otpd mnt_vendor_file:dir { search write add_name remove_name open create };
+
+set_prop(otpd, vendor_modem_prop)
+set_prop(otpd, vendor_product_prop)

@@ -1,0 +1,38 @@
+type sprd_sgps_app, domain;
+app_domain(sprd_sgps_app)
+typeattribute sprd_sgps_app mlstrustedsubject;
+allow sprd_sgps_app gpsd:unix_stream_socket { connectto sendto getattr read write };
+allow sprd_sgps_app activity_service:service_manager { find };
+allow sprd_sgps_app display_service:service_manager { find };
+allow sprd_sgps_app connectivity_service:service_manager { find };
+allow sprd_sgps_app network_management_service:service_manager { find };
+allow sprd_sgps_app accessibility_service:service_manager { find };
+allow sprd_sgps_app surfaceflinger_service:service_manager { find };
+allow sprd_sgps_app autofill_service:service_manager { find };
+allow sprd_sgps_app power_service:service_manager { find };
+allow sprd_sgps_app mount_service:service_manager { find };
+allow sprd_sgps_app notification_service:service_manager { find };
+allow sprd_sgps_app location_service:service_manager { find };
+allow sprd_sgps_app input_method_service:service_manager { find };
+allow sprd_sgps_app graphicsstats_service:service_manager { find };
+allow sprd_sgps_app textservices_service:service_manager { find };
+allow sprd_sgps_app input_service:service_manager { find };
+allow sprd_sgps_app audio_service:service_manager { find };
+allow sprd_sgps_app clipboard_service:service_manager { find };
+allow sprd_sgps_app gnss_file:dir { create search add_name open read write remove_name };
+allow sprd_sgps_app gnss_file:file { read write open create getattr setattr append unlink };
+
+allow sprd_sgps_app media_session_service:service_manager { find };
+allow sprd_sgps_app content_service:service_manager { find };
+allow sprd_sgps_app property_socket:sock_file write;
+allow sprd_sgps_app init:unix_stream_socket connectto;
+allow sprd_sgps_app vendor_default_prop:file { open read };
+allow sprd_sgps_app vendor_radio_prop:file { open read };
+get_prop(sprd_sgps_app, vendor_default_prop);
+get_prop(sprd_sgps_app, vendor_sys_prop);
+
+allow sprd_sgps_app cgroup:file { write };
+binder_call(sprd_sgps_app, gpuservice);
+allow sprd_sgps_app vendor_radio_prop:file { getattr map };
+
+allow sprd_sgps_app activity_task_service:service_manager { find };

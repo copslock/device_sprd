@@ -1,0 +1,2 @@
+
+service.vdspservice   u:object_r:vdsp_vndservice:s0

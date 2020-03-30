@@ -1,0 +1,123 @@
+
+# for volte VceDaemon
+#allow system_app vce_data_file:file { open read write setattr getattr create };
+#allow system_app vce_data_file:fifo_file { open read write setattr getattr create };
+#allow system_app vce_data_file:dir { write add_name create remove_name search };
+allow system_app volte_vtsp_device:chr_file { open read write ioctl };
+#allow system_app bt_prop:property_service set;
+
+#redstone fota
+allow system_app cache_file:dir { create add_name write ioctl open search };
+allow system_app cache_file:file {create open write ioctl };
+allow system_app cache_recovery_file:dir { create add_name write ioctl open search read setattr getattr remove_name};
+allow system_app cache_recovery_file:file {create open write read unlink setattr getattr };
+#redstone end
+
+#add for app installed on Sd Card info in settings
+allow system_app asec_apk_file:dir { search };
+
+#add for engineermode
+allow system_app cmd_services:unix_stream_socket { connectto };
+#allow system_app ylog:unix_stream_socket {connectto};
+#allow system_app ylog_prop:property_service {set};
+#allow system_app slogmodem:unix_stream_socket { connectto read write };
+#allow system_app slogmodem:dir { search getattr read open };
+#allow system_app slogmodem:file { getattr read open };
+#allow system_app ylog:unix_stream_socket {connectto};
+#set_prop(system_app, ylog_prop)
+#allow system_app ylog_file:dir { getattr read open };
+#allow system_app ylog:dir { search getattr read open };
+#sallow system_app ylog:file { getattr read open };
+
+#add for engineerinternal
+#typeattribute system_app system_writes_vendor_properties_violators;
+#set_prop(system_app, vendor_camera_prop)
+#set_prop(system_app, vendor_sys_prop)
+#set_prop(system_app, vendor_radio_prop)
+
+allow system_app ims_bridged:unix_stream_socket { read write connectto sendto };
+
+allow system_app srtd:dir { search getattr read open };
+allow system_app srtd:file { getattr };
+
+#allow system_app gpsd:unix_stream_socket { connectto sendto getattr read write };
+allow system_app gnss_file:dir { create search add_name open read write remove_name };
+allow system_app gnss_file:file { read write open create getattr setattr append unlink };
+allow system_app embmsd_socket:sock_file {read write getattr };
+allow system_app rild:binder { call };
+
+#add for engineerinternal
+allow system_app sysfs_devices_system_cpu:file { write };
+#allow system_app media_prop:property_service { set };
+
+#apr
+allow system_app apr_data_file:file { create open read write unlink getattr append };
+allow system_app apr_data_file:dir { search add_name remove_name write };
+allow system_app aprd:dir { search getattr read open };
+allow system_app aprd:file { getattr  };
+#add for vowifi
+allow system_app tty_device:chr_file { open read write ioctl };
+allow system_app node:rawip_socket node_bind;
+allow system_app racoon:unix_stream_socket connectto;
+allow system_app system_app:udp_socket ioctl;
+allow system_app system_app:icmp_socket { create bind setopt getopt write read };
+allow system_app node:icmp_socket node_bind;
+allow system_app net_dns_prop:file map;
+allowxperm system_app self:udp_socket ioctl {0x89f7 SIOCGIFHWADDR};
+#============= system_app ============== 2017-08-02-13-24-29 added by genSepolicy script
+#allow system_app system_data_file:dir { write create add_name };
+
+#allow system_app wcnd:unix_stream_soket connectto;
+allow system_app radio_prop:property_service set;
+allow system_app hal_extRadio_hwservice:hwservice_manager find;
+
+
+# for fm
+allow system_app fm_device:chr_file { read write open ioctl };
+
+#allow system_app vendor_file:file {r_file_perms };
+allow system_app prod_file:dir { search getattr setattr write add_name };
+allow system_app prod_file:{file lnk_file} create_file_perms;
+
+#for autostart.apk
+allow system_app shell_data_file:dir { search };
+
+# add for CCSA
+allow system_app security_service:service_manager { find };
+allow system_app system_file:file { lock ioctl };#for ccsa to use telephonesec.db
+
+#add for ConnectivityServiceEx
+allow system_app connectionEx_service:service_manager { find };
+#add for network_adapter
+allow system_app networkadapter_service:service_manager { find };
+
+#add for ims_bridged
+#allow system_app ims_bridged:unix_stream_socket { read write connectto sendto };
+
+# for volte video call
+allow system_app vce_service:service_manager add;
+
+# for vowifi dns property get
+allow system_app net_dns_prop:file {read getattr open map};
+
+# for get cp2 info
+allow system_app hal_connmgr_hwservice:hwservice_manager { find };
+
+# for mlog
+#allow system_app mlog_file:dir { read open };
+allow system_app ctl_default_prop:property_service { set };
+
+#allow system_app get vendor_radio_prop & vendor_sys_prop
+get_prop(system_app, vendor_sys_prop)
+get_prop(system_app, vendor_radio_prop)
+
+#add for ai service
+allow system_app unisoc_ai_service:service_manager { add find };
+
+allow system_app media_prop:file { read };
+
+#add for HWUI
+get_prop(system_app, vendor_hwui_prop);
+
+#add for srmi_proxyd
+allow system_app srmi_proxyd:unix_stream_socket { read connectto };

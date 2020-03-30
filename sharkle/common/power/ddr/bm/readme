@@ -1,0 +1,36 @@
+
+
+
+一、功能：抓取ddr带宽数据
+
+二、用法
+连接adb切换root进入shell
+adb root
+adb remount
+./vendor/bin/power/ddr/bm/tool/ddr_bm -t 240
+-t   后面接的是测试时间(默认240s)以s为单位
+统计结束将在目录/vendor/bin/power/ddr/bm 下生成sharkl3_ddr_bm.csv的文件
+
+三、示例
+sp9832e_1h10:/vendor/bin/power/ddr # chmod 777 bm -R
+chmod 777 bm -R
+sp9832e_1h10:/vendor/bin/power/ddr # cd bm
+cd bm
+sp9832e_1h10:/vendor/bin/power/ddr/bm # ls
+ls
+readme tool
+sp9832e_1h10:/vendor/bin/power/ddr/bm # ./tool/ddr_bm -t 240
+./tool/ddr_bm -t 240
+accummulate_time is 240(s)
+sp9832e_1h10:/vendor/bin/power/ddr/bm # ls
+ls
+readme sharkle_ddr_bm.csv tool
+
+C:\Users\username>adb pull /vendor/bin/power/ddr/bm/sharkle_ddr_bm.csv
+
+四、备注
+1、该脚本只适用于userdebug版本
+
+
+
+

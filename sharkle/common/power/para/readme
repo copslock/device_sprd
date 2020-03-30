@@ -1,0 +1,21 @@
+
+
+
+一、功能
+获取功耗相关参数
+
+二、用法
+正常连接adb进入shell
+./vendor/bin/power/paras/tool/paras > /vendor/bin/power/paras/tool/para.txt
+扫描结束将在/vendor/bin/power/paras/tool/生成para.txt的结果文件
+
+三、示例
+sp9832e_1h10:/vendor/bin/power/paras # ./tool/paras > /sdcard/para.txt
+./tool/paras > /sdcard/para.txt
+sp9832e_1h10:/vendor/bin/power/paras #exit
+C:\Users\username>adb pull /sdcard/para.txt
+
+四、备注
+1、仅适用于userdebug版本
+
+

@@ -1,0 +1,12 @@
+type sprd_coulomb_app, domain, mlstrustedsubject;
+app_domain(sprd_coulomb_app)
+net_domain(sprd_coulomb_app)
+
+allow sprd_coulomb_app phasecheckserver:unix_stream_socket {read write getattr connectto};
+allow sprd_coulomb_app netd:unix_stream_socket {read write getattr connectto};
+allow sprd_coulomb_app sysfs:file {open read};
+allow sprd_coulomb_app activity_service:service_manager {find};
+allow sprd_coulomb_app display_service:service_manager {find};
+allow sprd_coulomb_app connectivity_service:service_manager {find};
+allow sprd_coulomb_app dnsproxyd_socket:sock_file {write};
+allow sprd_coulomb_app mount_service:service_manager {find};

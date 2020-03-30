@@ -1,0 +1,4 @@
+#add for move app to sd card
+allow installd asec_apk_file:dir { getattr read open search };
+allow installd asec_public_file:dir { read open getattr };
+allow installd asec_public_file:file { getattr };

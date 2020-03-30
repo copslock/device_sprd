@@ -1,0 +1,36 @@
+
+# porting for double-Tcard
+allow untrusted_app srt_socket:sock_file {read write getattr };
+#allow untrusted_app srtd:unix_stream_socket {read write getattr connectto};
+allow untrusted_app asec_apk_file:file execute;
+allow untrusted_app asec_apk_file:dir {getattr search};
+allow untrusted_app asec_public_file:dir {getattr search};
+allow untrusted_app asec_public_file:file {read open getattr};
+### Add untrusted_app permission for appbackup app
+allow untrusted_app app_data_file:file { open read setattr rename unlink };
+allow untrusted_app app_data_file:dir { open read search add_name remove_name};
+allow untrusted_app embmsd_socket:sock_file {read write getattr };
+
+# add for bankabc
+allow untrusted_app system_data_file:dir {open read};
+# add for drm
+#allow untrusted_app vendor_file:file { r_file_perms };
+
+allow untrusted_app aprd:file {getattr };
+allow untrusted_app aprd:dir {getattr search};
+##graphic
+#allow untrusted_app bcc_exec:file {open read  getattr };
+#allow untrusted_app vendor_file:file {open read getattr};
+
+# add for CCSA
+allow untrusted_app security_service:service_manager { find };
+
+# add for sprdssense
+allow untrusted_app ssense_service:service_manager { find };
+
+# add for coredump
+allow untrusted_app coredump_file:dir { write add_name };
+get_prop(untrusted_app, vendor_sys_prop);
+
+# add for unisocai
+allow untrusted_app unisoc_ai_service:service_manager { find };

@@ -1,0 +1,18 @@
+type hal_network_default, domain;
+type hal_network_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_network_default)
+
+
+set_prop(hal_network_default_exec, system_prop);
+
+binder_call(sprd_networkcontrol, hal_network_default)
+binder_call(hal_network_default, sprd_networkcontrol)
+
+allow hal_network_default hal_network_hwservice:hwservice_manager {find add};
+allow hal_network_default hwservicemanager_prop:file {  read open getattr map };
+allow hal_network_default hwservicemanager:binder {  call transfer };
+allow hal_network_default modem_control:unix_stream_socket { connectto read write };
+
+allow hal_network_default hidl_base_hwservice:hwservice_manager {  add };
+
+

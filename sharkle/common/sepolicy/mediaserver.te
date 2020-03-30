@@ -1,0 +1,9 @@
+# add for CCSA
+allow mediaserver security_service:service_manager { find };
+allow mediametrics security_service:service_manager { find };
+#add for sprdssense
+allow mediaserver ssense_service:service_manager { find };
+
+allow mediaserver media_prop:file { read open getattr map};
+
+allow mediadrmserver media_prop:file { read };

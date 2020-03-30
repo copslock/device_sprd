@@ -1,0 +1,42 @@
+addon                                     u:object_r:addon_service:s0
+# add for power
+powerguru                                 u:object_r:powerguru_service:s0
+power_ex                                  u:object_r:power_ex_service:s0
+sprd_power                                u:object_r:power_ex_service:s0
+# add for ssense
+SceneRecognize                            u:object_r:ssense_service:s0
+sprdssense                                u:object_r:ssense_service:s0
+
+# add for performance
+performancemanager                        u:object_r:performancemanager_service:s0
+performance_fw                            u:object_r:performance_fw_service:s0
+
+# add for ccsa
+security                                  u:object_r:security_service:s0
+
+connectionEx                              u:object_r:connectionEx_service:s0
+network_adapter                           u:object_r:networkadapter_service:s0
+
+# add for fm
+fm                                        u:object_r:mediaserver_service:s0
+
+# add for tele
+iphonesubinfoEx                           u:object_r:radio_service:s0
+phone_ex                                  u:object_r:radio_service:s0
+ismsEx                                    u:object_r:radio_service:s0
+ims_ex                                    u:object_r:radio_service:s0
+ims_ut_ex                                 u:object_r:radio_service:s0
+ims_doze_manager                          u:object_r:radio_service:s0
+simphonebookEx                            u:object_r:radio_service:s0
+irit                                      u:object_r:radio_service:s0
+phone_dmyk                                u:object_r:radio_service:s0
+ions_ex                                   u:object_r:radio_service:s0
+
+# add for VoLTE video call
+VideoCallEngineService                    u:object_r:vce_service:s0
+
+# add for ifaa
+ifaa                                      u:object_r:ifaa_service:s0
+
+#fow unisocai
+unisocai                                  u:object_r:unisoc_ai_service:s0

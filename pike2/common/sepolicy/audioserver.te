@@ -1,0 +1,17 @@
+
+
+#============= audioserver ============== 2017-08-02-13-24-29 added by genSepolicy script
+allow audioserver init:unix_stream_socket connectto;
+allow audioserver property_socket:sock_file write;
+
+#============= audioserver ============== 2017-08-02-16-46-00 added by genSepolicy script
+#added for audioflinger track dump pcm data
+allow audioserver spipe_device:chr_file { read write };
+
+allow audioserver media_prop:file { read open getattr };
+
+# add for CCSA
+allow audioserver security_service:service_manager { find };
+
+allow audioserver media_prop:file { read open getattr };
+allow audioserver system_prop:property_service { set };

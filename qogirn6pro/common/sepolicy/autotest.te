@@ -1,0 +1,189 @@
+type autotest,domain;
+type autotest_exec, exec_type, file_type, vendor_file_type;
+
+
+init_daemon_domain(autotest)
+hwbinder_use(autotest)
+get_prop(autotest, hwservicemanager_prop);
+#allow autotest system_file:file { read open execute_no_trans };
+allow autotest system_file:dir { read open  };
+allow autotest vendor_shell_exec:file { read open execute execute_no_trans getattr };
+allow autotest self:capability {  sys_nice fowner setgid setuid fsetid sys_module sys_admin chown net_admin net_raw sys_boot };
+allow autotest self:capability2 { block_suspend syslog };
+allow autotest property_socket:sock_file { read write };
+allow autotest rootfs:file { open read getattr };
+allow autotest rootfs:system { module_load };
+allow autotest engpc:unix_stream_socket connectto;
+allow autotest sysfs_wake_lock:file { read write open };
+allow autotest serial_device:chr_file { open read write ioctl };
+allow autotest tty_device:chr_file { open read write ioctl getattr };
+allow autotest input_device:dir { open read search };
+allow autotest input_device:chr_file { open read ioctl getattr };
+allow autotest block_device:dir { search };
+allow autotest mmcblk_device:blk_file { open read write ioctl getattr };
+allow autotest log_device:chr_file { open read };
+#allow autotest logcat_exec:file { getattr execute read open execute_no_trans };
+allow autotest ctl_bootanim_prop:property_service set;
+allow autotest ctl_default_prop:property_service set;
+allow autotest sysfs:dir {read open search };
+allow autotest sysfs:file {read open write getattr ioctl };
+allow autotest rootfs:dir { mounton write add_name read };
+#allow autotest system_data_file:dir { open write read create setattr add_name remove_name rmdir };
+#allow autotest system_data_file:file { open };
+allow autotest prod_file:dir { search open read write remove_name add_name};
+allow autotest prod_file:file { open read write lock unlink getattr setattr create rw_file_perms };
+allow autotest kernel:system { module_request };
+allow autotest kernel:dir { search };
+allow autotest kernel:file { getattr read write open };
+allow autotest init:dir { search read };
+allow autotest init:file { open read getattr };
+allow autotest init:unix_stream_socket connectto;
+allow autotest ueventd:dir { search read };
+allow autotest ueventd:file { open read getattr };
+allow autotest logd:dir { search read };
+allow autotest logd:file { open read getattr };
+allow autotest vold:dir { search read };
+allow autotest vold:file { open read getattr };
+allow autotest gatekeeperd:dir { search read };
+allow autotest gatekeeperd:file { open read getattr };
+allow autotest shell:dir { search read };
+allow autotest shell:file { open read getattr };
+allow autotest healthd:dir { search read };
+allow autotest healthd:file { open read getattr };
+allow autotest lmkd:dir { search read };
+allow autotest lmkd:file { open read getattr };
+allow autotest modem_control:dir { search read };
+allow autotest modem_control:file { open read getattr };
+allow autotest rild:dir { search read };
+allow autotest rild:file { open read getattr };
+allow autotest rild:unix_stream_socket{ connectto };
+allow autotest drmserver:dir { search read };
+allow autotest drmserver:file { open read getattr };
+allow autotest mediaserver:dir { search read};
+allow autotest mediaserver:file { open read getattr };
+allow autotest installd:dir { search read };
+allow autotest installd:file { open read getattr };
+allow autotest keystore:dir { search read };
+allow autotest keystore:file { open read getattr };
+allow autotest wcnd:dir { search read };
+allow autotest wcnd:file { open read getattr };
+allow autotest slogmodem_vendor:dir { search read };
+allow autotest slogmodem_vendor:file { open read getattr };
+allow autotest slogmodem_vendor:unix_stream_socket { connectto };
+allow autotest hal_cplog_connmgr_default:unix_stream_socket { connectto };
+allow autotest refnotify:dir { search read };
+allow autotest refnotify:file { open read getattr };
+allow autotest cp_diskserver:dir { search read };
+allow autotest cp_diskserver:file { open read getattr };
+allow autotest engpc:dir { search read };
+allow autotest engpc:file { open read getattr };
+
+allow autotest wcnd:unix_stream_socket { connectto sendto };
+#allow autotest bluetooth_data_file:dir { open getattr search write add_name remove_name };
+#allow autotest bluetooth_data_file:file { create read open write getattr rename unlink setattr };
+allow autotest proc_bluetooth_writable:file { open write };
+allow autotest bt_prop:file { read open getattr };
+allow autotest hal_bluetooth_default:binder { call transfer };
+#allow autotest hal_bluetooth_hwservice:hwservice_manager { find };
+allow hal_bluetooth_default autotest:binder { call };
+#allow autotest wifi_data_file:dir { getattr setattr search create open read write add_name remove_name rmdir };
+#allow autotest wifi_data_file:file { open read write getattr setattr create unlink append };
+allow autotest hal_wifi_default:binder { call };
+allow hal_wifi_default autotest:binder { call transfer };
+#allow autotest hal_wifi_hwservice:hwservice_manager { find };
+allow servicemanager autotest:dir { search };
+allow wificond autotest:binder { transfer };
+
+
+#allow autotest system_prop:property_service { set };
+#allow autotest wpa_socket:dir rw_dir_perms;
+#allow autotest wpa_socket:file { setattr getattr open write };
+#allow autotest wpa_socket:sock_file { create setattr write unlink };
+#allow autotest wpa_socket:dir { getattr setattr search create open read write add_name remove_name rmdir };
+allow autotest audio_device:dir { search };
+allow autotest audio_device:fifo_file { create setattr open write read };
+allow autotest audio_device:chr_file { read write };
+
+#allow autotest media_data_file:fifo_file { open read write setattr create };
+#allow autotest media_data_file:dir { open read write search add_name create };
+#allow autotest media_data_file:file { open read write setattr getattr create };
+allow autotest tmpfs:dir {search write add_name };
+allow autotest devpts:chr_file { open read write };
+allow autotest sensors_device:chr_file { open read write getattr ioctl };
+#allow autotest hal_sensors_hwservice:hwservice_manager { find };
+allow autotest hal_sensors_default:binder { call };
+allow autotest nfc_device:chr_file { open read write getattr setattr ioctl };
+allow autotest camera_device:chr_file { open read write getattr ioctl };
+allow autotest sprd_img_device:chr_file { open read write getattr ioctl };
+allow autotest graphics_device:chr_file { open read write getattr ioctl };
+allow autotest graphics_device:dir { search };
+allow autotest sprd_img_device:chr_file { open read write getattr ioctl };
+allow autotest autotest:process { execmem };
+allow autotest proc:file { open read write getattr };
+allow autotest ashmem_device:chr_file { execute };
+
+#allow autotest cpuctl_device:dir { search read };
+#allow autotest cpuctl_device:file { setattr getattr open write read };
+allow autotest gpsd:unix_stream_socket { connectto };
+allow autotest gnss_file:dir { create search add_name open read write remove_name };
+allow autotest gnss_file:file { read write open create getattr setattr append unlink };
+allow autotest zygote:dir { search read open };
+allow autotest zygote:file { setattr getattr open write read };
+
+userdebug_or_eng(`
+allow autotest perfprofd:dir { search read open };
+allow autotest perfprofd:file { setattr getattr open write read };
+allow autotest su:dir { search read open };
+')
+
+allow autotest ylog:dir { search read open };
+allow autotest ylog:file { setattr getattr open write read };
+allow autotest adbd:dir { search read };
+allow autotest adbd:file { setattr getattr open write read };
+allow autotest iio_device:chr_file { setattr getattr open write read };
+allow autotest spipe_device:chr_file { setattr getattr open write read };
+allow autotest wcn_device:chr_file { setattr getattr open write read ioctl };
+allow autotest wcn_device:file { open write read ioctl };
+allow autotest radio_device:chr_file { open read write ioctl };
+
+allow autotest autotest:capability { sys_tty_config };
+allow autotest logdr_socket:sock_file { write };
+allow autotest logd:unix_stream_socket { connectto };
+allow autotest device:dir { open read write remove_name add_name search };
+allow autotest device:file { open read write create };
+allow autotest null_device:chr_file { unlink };
+
+allow autotest mnt_media_rw_file: dir { write add_name create mounton read open search };
+allow autotest vfat:filesystem { mount unmount };
+
+#allow autotest autotest_tmpfs:file { create open getattr write read setattr };
+allow autotest fingerprintd:dir {read open search };
+allow autotest fingerprintd:file { create open getattr write read setattr };
+allow autotest phasecheckserver:dir { search read open };
+allow autotest phasecheckserver:file { write read open setattr getattr create };
+
+#allow autotest dex2oat:dir { search read open };
+allow autotest vendor_toolbox_exec:file { execute_no_trans read open getattr execute };
+allow autotest ion_device:chr_file { open read ioctl };
+allow autotest autotest:capability2 { wake_alarm };
+#allow autotest camera_data_file:dir{  search read open write add_name create };
+#allow autotest camera_data_file:file { read write open getattr create };
+allow autotest sysfs_sensor:file { write open };
+allow autotest uhid_device:chr_file {  setattr getattr open write read ioctl};
+allow autotest aprd:dir { search read open };
+allow autotest aprd:file { write read open setattr getattr create };
+allow autotest fm_device:chr_file { read write open ioctl };
+
+#led && vibrator
+allow autotest sysfs_leds:dir { search };
+allow autotest sysfs_leds:lnk_file { read };
+allow autotest sysfs_vibrator:file { open read write };
+allow hal_wifi_supplicant_default autotest :unix_dgram_socket {sendto  };
+allow autotest hal_wifi_supplicant_default:unix_dgram_socket {sendto  };
+allow autotest rild :binder {call };
+allow autotest hal_extRadio_hwservice :hwservice_manager {find add};
+
+#add for cp2 log
+allow autotest wcnd:unix_stream_socket { connectto };
+allow autotest slogmodem_vendor:unix_stream_socket { connectto };
+allow autotest hal_cplog_connmgr_default:unix_stream_socket { connectto };

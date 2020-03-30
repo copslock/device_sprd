@@ -1,0 +1,224 @@
+#type engpc, binder_in_vendor_violators,domain;
+type engpc,domain;
+type engpc_exec, exec_type, file_type, vendor_file_type;
+#type engpc_data_file, file_type, data_file_type;
+#binder_use(engpc)
+#binder_service(engpc)
+#binder_call(engpc, system_server)
+init_daemon_domain(engpc)
+hwbinder_use(engpc)
+get_prop(engpc, hwservicemanager_prop);
+
+#typeattribute engpc socket_between_core_and_vendor_violators;
+hwbinder_use(engpc)
+allow engpc serial_device:chr_file { read write open ioctl };
+allow engpc sysfs:file { read open write ioctl};
+#allow engpc system_data_file:dir { rw_file_perms add_name create remove_name setattr };
+#allow engpc system_data_file:file { open };
+#allow engpc system_data_file:fifo_file { open read write};
+allow engpc audio_device:chr_file { ioctl open read write create };
+allow engpc audio_device:dir { search };
+allow engpc audio_device:fifo_file { open read write };
+allow engpc engpc:netlink_kobject_uevent_socket { create setopt bind read };
+allow engpc prod_file:dir { search open read write remove_name add_name};
+allow engpc prod_file:file { open read write lock unlink getattr setattr create rw_file_perms };
+allow engpc engpc:capability { net_admin chown fsetid sys_module net_raw sys_resource };
+allow engpc engpc:capability2 { syslog };
+
+allow engpc slog_device:chr_file { open read write };
+allow engpc radio_device:chr_file { read write open };
+allow engpc property_socket:sock_file write;
+allow engpc init:unix_stream_socket connectto;
+allow engpc vendor_shell_exec:file { read open execute execute_no_trans getattr };
+allow engpc vendor_file:file {read open getattr execute execute_no_trans };
+allow engpc vendor_file:dir { search open read };
+allow engpc engpc:udp_socket { create ioctl };
+
+#allow engpc system_prop:property_service set;
+#allow engpc system_file:file { read open execute_no_trans };
+allow engpc system_file:dir { read open  };
+
+allow engpc logdr_socket:sock_file write;
+allow engpc logd:unix_stream_socket connectto;
+allow engpc block_device:dir search;
+allow engpc mmcblk_device:blk_file { open read write };
+allow engpc engpc:capability { sys_nice  sys_boot };
+#allow engpc property_data_file:dir { search getattr};
+allow engpc property_data_file:file { getattr};
+#allow engpc system_radio_prop:property_service set;
+allow engpc ctl_default_prop:property_service set;
+allow engpc vfat:dir { search add_name create write };
+allow engpc bm_device:chr_file { open write ioctl};
+allow engpc vfat:file { create open read write };
+allow engpc tty_device:chr_file { read write open ioctl};
+#allow engpc cache_file:dir {getattr  search write open create read add_name remove_name rmdir };
+#allow engpc cache_recovery_file:dir {getattr search write open create read add_name remove_name rmdir };
+#allow engpc cache_file:file {getattr   write open create read unlink };
+#allow engpc cache_recovery_file:file {getattr write open create read  unlink  };
+allow engpc proc_sysrq:file { write open create read };
+#allow engpc system_data_file:sock_file { unlink setattr write create };
+#allow  engpc engpc_data_file:sock_file { unlink setattr write create };
+allow engpc self:capability { setuid setgid };
+
+allow engpc kernel:system { module_request };
+#allow engpc bluetooth_data_file:dir { open getattr search read write add_name remove_name };
+#allow engpc bluetooth_data_file:file { read open write getattr setattr unlink create rename };
+allow engpc wcnd:unix_stream_socket { connectto };
+allow engpc hci_attach_dev:chr_file { open read write ioctl };
+
+allow engpc mediaserver:binder { call transfer };
+#allow engpc servicemanager:binder call;
+allow engpc proc_bluetooth_writable:file { open write };
+
+#allow engpc config_prop:property_service set;
+allow engpc mmcblk_device:blk_file { read getattr open };
+
+allow engpc wcn_device:chr_file { open read write ioctl };
+allow engpc engpc_data:dir { add_name setattr getattr create search open read remove_name rmdir write unlink };
+allow engpc engpc_data:file { setattr getattr create open read rename write unlink append lock };
+#allow engpc logcat_exec:file { getattr execute read open execute_no_trans };
+allow engpc log_device:chr_file { read };
+allow engpc powerctl_prop:property_service { set };
+
+typeattribute engpc hal_audio_client;
+typeattribute engpc halclientdomain;
+allow engpc sprd_audio_file:dir { open write read search add_name remove_name };
+allow engpc sprd_audio_file:fifo_file { write read open };
+allow engpc sprd_audio_file:file { create open read write setattr getattr append unlink };
+allow engpc hal_audio_hwservice:hwservice_manager { find };
+allow engpc hal_audio_default:binder { call transfer };
+allow engpc hal_audio_default:fd { use };
+
+allow engpc gnss_file:dir { create search add_name open read write remove_name };
+allow engpc gnss_file:file { read write open create getattr setattr append unlink };
+allow engpc sysfs_gnss:dir { open read search};
+allow engpc sysfs_gnss:file { write open read ioctl};
+allowxperm engpc sysfs_gnss:file ioctl { 0x540b };
+allow engpc sysfs_gnss:lnk_file { read };
+
+allow engpc slogmodem_vendor:unix_stream_socket { connectto };
+allow engpc hal_cplog_connmgr_default:unix_stream_socket { connectto };
+
+#allow engpc cpuctl_device:dir { search read };
+allow engpc proc:file { open read };
+
+allow engpc refnotify:unix_stream_socket { connectto read write };
+allow engpc engpc:capability2 { wake_alarm };
+### for bt_snoop_slog_socket {
+#allow engpc ylog:unix_stream_socket { connectto };
+### }
+allow engpc modem_control:unix_stream_socket { connectto read write };
+allow engpc configfs:dir { open write read search };
+allow engpc configfs:file { open read write setattr getattr };
+allow engpc rootfs:file { open read getattr };
+allow engpc rootfs:system { module_load };
+allow engpc engpc:netlink_generic_socket { read write getattr bind setopt create };
+allow engpc proc_net:file { open read getattr };
+allow engpc fm_device:chr_file { read write open ioctl };
+allow engpc hwservicemanager_prop:file { read open getattr };
+allow engpc unlabeled:dir { search };
+allow engpc unlabeled:file { open read write lock getattr setattr };
+allow engpc vendor_toolbox_exec:file { execute_no_trans read open getattr execute };
+
+#============= engpc ============== 2017-08-02-13-24-29 added by genSepolicy script
+#allow engpc device:chr_file { read write ioctl open };
+#allow engpc system_data_file:file { read lock getattr append };
+
+allow engpc debugfs_pinctrl:file { open write read getattr };
+allow engpc debugfs_pinctrl:dir { search getattr open read };
+
+allow engpc tty_device:chr_file { read write open ioctl };
+
+#add for sensor test
+typeattribute engpc halclientdomain;
+typeattribute engpc hal_sensors_client;
+allow engpc input_device:dir { search read open };
+allow engpc input_device:chr_file { open read ioctl write};
+allow engpc sensors_device:chr_file { open read ioctl write};
+allow engpc hal_sensors_hwservice:hwservice_manager { find };
+allow engpc hal_sensors_default:binder { call transfer };
+
+#add for 9.0
+set_prop(engpc, vendor_radio_prop)
+set_prop(engpc, vendor_engpc_prop)
+set_prop(engpc, vendor_product_prop)
+set_prop(engpc, powerctl_prop)
+set_prop(vendor_init, vendor_engpc_prop)
+allow engpc proc_cmdline:file { read open };
+allow engpc sysfs_android_usb:dir { search };
+allow engpc sysfs_android_usb:file { read open };
+allow engpc sysfs_power:dir { search };
+allow engpc sysfs_power:file { open write read };
+allow engpc device:dir { open read };
+allow engpc vendor_camera_prop:file { open read getattr };
+#allow engpc vendor_sys_prop:file { open read getattr setattr };
+
+#add wifi sepolicy
+allow engpc exported_wifi_prop:file { open read getattr };
+allow engpc vendor_file:system { module_load };
+allow engpc wpa_data_file:dir { create read write open remove_name add_name search getattr };
+allow engpc wpa_data_file:file { create open read write getattr setattr };
+allow engpc wpa_data_file:sock_file { unlink setattr write create };
+allow engpc vendor_default_prop:file { open read getattr };
+allow engpc vendor_engpc_prop:property_service { set };
+allow engpc vendor_data_file:dir { create read write open add_name search getattr };
+allow engpc vendor_data_file:file { create open read write getattr setattr };
+allow engpc wpa_socket:sock_file { write };
+allow engpc hal_wifi_supplicant_default:unix_dgram_socket { sendto };
+
+
+#add lcd test
+allow engpc graphics_device:chr_file { open read write ioctl };
+allow engpc gpu_device:chr_file { read write open ioctl map };
+
+#add vibrator
+allow engpc sysfs_vibrator:file { open read write ioctl};
+
+allow engpc sysfs:dir { search open read };
+allow engpc sysfs:file { open read write };
+allow engpc sysfs_leds:dir { search };
+allow engpc sysfs_leds:file { open read write };
+allow engpc sysfs_sensor:file { open read write };
+allow engpc sysfs_lcd:file { open read write };
+
+#add for camera
+allow engpc camera_device:chr_file { open read write ioctl};
+allow engpc sprd_img_device:chr_file { open read write ioctl};
+allow engpc vendor_camera_data_file:dir { search add_name write };
+allow engpc vendor_camera_data_file:file { read write open getattr create };
+allow engpc ion_device:chr_file { open read ioctl };
+set_prop(engpc, vendor_camera_prop)
+
+allow engpc nfc_device:chr_file { open read write getattr setattr ioctl };
+
+allow engpc rild:binder { call };
+allow engpc hal_extRadio_hwservice:hwservice_manager { find add };
+#add for androidP
+allow engpc rootfs:dir { create read write open add_name search getattr };
+set_prop(engpc, media_prop)
+set_prop(engpc, vendor_modem_prop)
+set_prop(engpc, vendor_sys_prop)
+
+allow engpc mnt_media_rw_file:dir { search create read write open add_name getattr mounton };
+allow engpc mnt_media_rw_file:file {read append create open getattr write unlink rename setattr};
+allow engpc tmpfs:dir { search create read write open add_name getattr mounton };
+allow engpc mmcblk_device:blk_file { ioctl open read };
+allow engpc sdcard_device:blk_file { open read };
+allow engpc engpc:capability { sys_admin  };
+allow engpc vfat:filesystem { mount };
+allow engpc hwservicemanager:binder { call transfer };
+
+#for androidq
+allow engpc engpc:netlink_kobject_uevent_socket { getopt };
+allow vendor_init default_prop:file { read };
+
+#for rtc
+allow engpc refnotify_device:chr_file { read write ioctl open getattr entrypoint map execute };
+
+#for tsensor
+allow engpc sysfs_thermal:dir { search };
+allow engpc sysfs_thermal:lnk_file { read };
+allow engpc sysfs_thermal:file { open read };
+
+#for autotest0
+allow engpc autotest0_device:chr_file { read write ioctl open getattr entrypoint map execute };

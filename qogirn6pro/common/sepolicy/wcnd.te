@@ -1,0 +1,94 @@
+type wcnd, domain, mlstrustedsubject;
+type wcnd_exec, exec_type, file_type, vendor_file_type;
+
+
+init_daemon_domain(wcnd)
+
+typeattribute wcnd netdomain;
+
+allow wcnd prod_file:dir { search write add_name };
+allow wcnd prod_file:file { read write open create getattr };
+allow wcnd property_socket:sock_file write;
+allow wcnd spipe_device:chr_file { read write open };
+allow wcnd slog_device:chr_file { read write open };
+allow wcnd hci_attach_dev:chr_file { read write open ioctl };
+
+#allow wcnd wifi_data_file:dir { search write add_name };
+#allow wcnd wifi_data_file:file { create read write open getattr setattr };
+#allow wcnd bluetooth_data_file:dir { search write add_name remove_name getattr setattr };
+#allow wcnd bluetooth_data_file:file { create read write open unlink rename getattr setattr };
+allow wcnd wcnd:udp_socket { ioctl };
+allowxperm wcnd wcnd:udp_socket ioctl { SIOCSIFFLAGS };
+allow wcnd init:unix_stream_socket connectto;
+allow wcnd init:dir search;
+allow wcnd init:file { read open };
+allow wcnd kernel:dir search;
+allow wcnd kernel:file { read open };
+allow wcnd kernel:system {module_request};
+allow wcnd bluetooth:dir search;
+allow wcnd bluetooth:file { read open };
+allow wcnd bluetooth:process { signal };
+#allow wcnd wpa:dir search;
+#allow wcnd wpa:file { read open };
+#allow wcnd wpa:process { signal };
+allow wcnd hal_wifi_supplicant:dir search;
+allow wcnd hal_wifi_supplicant:file { read open };
+allow wcnd hal_wifi_supplicant:process { signal };
+allow wcnd hal_wifi_supplicant_default:dir search;
+allow wcnd hal_wifi_supplicant_default:file { read open };
+allow wcnd hal_wifi_supplicant_default:process { signal };
+#allow wcnd hostapd:dir search;
+#allow wcnd hostapd:file { read open };
+#allow wcnd hostapd:process { signal };
+
+allow wcnd block_device:dir search;
+#allow wcnd download:unix_stream_socket { connectto };
+allow wcnd ctl_default_prop:property_service set;
+#allow wcnd system_prop:property_service set;
+allow wcnd proc:file write;
+allow wcnd proc_net:file {open getattr read write};
+
+allow wcnd wcnd:netlink_socket { create setopt bind getattr write read };
+#allow wcnd wcnd:udp_socket { ioctl create setopt bind getattr write read };
+allow wcnd wcnd:netlink_generic_socket { create setopt bind getattr write read };
+#allow wcnd netd:unix_stream_socket { connectto };
+
+allow wcnd vendor_shell_exec:file { execute read open execute_no_trans getattr};
+allow wcnd vendor_toolbox_exec:file { execute read open execute_no_trans getattr};
+#allow wcnd system_file:file execute_no_trans;
+
+allow wcnd wcnd:tcp_socket { create };
+allow wcnd fuse:dir { search };
+allow wcnd proc_bluetooth_writable:file { open write setattr getattr };
+allow wcnd serial_device:chr_file { read write open ioctl };
+allow wcnd wcnd:capability { fsetid setgid setuid fowner net_admin kill sys_module sys_nice };
+#allow wcnd mmcblk_device:blk_file { read open };
+#allow wcnd system_data_file:file { open };
+#allow wcnd system_data_file:dir { add_name write create };
+allow wcnd unlabeled:file { open read getattr };
+
+#allow wcnd fm_device:chr_file { open read write ioctl };
+allow wcnd  sysfs:file { write read open setattr };
+allow wcnd  sysfs:dir  { open search read };
+allow wcnd  proc:file { open read setattr ioctl};
+
+allow wcnd platform_app:dir search;
+allow wcnd platform_app:file { read open };
+allow wcnd platform_app:process { signal };
+#allow wcnd bluetooth_data_file:dir { read open };
+#allow wcnd ylog:unix_stream_socket { connectto };
+allow wcnd wcnd:capability2 { wake_alarm };
+allow wcnd rootfs:file { read open getattr };
+allow wcnd rootfs:system { module_load };
+allow wcnd proc_net:file { open read getattr };
+allow wcnd tty_device:chr_file { read write open ioctl };
+allow wcnd vendor_file:file { execute_no_trans };
+allow wcnd vendor_file:system {module_load};
+#for gnss part of wcn/gnss co dump
+allow wcnd gnss_file:dir {create open read getattr search write add_name};
+allow wcnd gnss_file:file {create open read getattr write setattr};
+
+allow wcnd proc_cmdline:file { read open };
+get_prop(wcnd, vendor_sys_prop)
+set_prop(wcnd, vendor_sys_prop)
+get_prop(wcnd, vendor_radio_prop)

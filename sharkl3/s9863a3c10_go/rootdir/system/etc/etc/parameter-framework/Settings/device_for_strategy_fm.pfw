@@ -1,0 +1,120 @@
+domainGroup: DeviceForStrategy
+
+	domainGroup: SprdFmDomain
+
+		domain: UnreachableDevices
+			conf: Calibration
+				component: /Policy/policy/strategies/fm_Strategy/selected_output_devices/mask
+					fm = 0
+					speaker_safe = 0
+					bluetooth_sco = 0
+					bluetooth_sco_headset = 0
+					bluetooth_sco_carkit = 0
+					telephony_tx = 0
+					ip = 0
+					bus = 0
+					stub = 0
+
+		domain: Device2
+
+			conf: ForceSpeaker
+				ForceUseForMedia Is ForceSpeaker
+				AvailableOutputDevices Includes Speaker
+				#
+				# If hdmi system audio mode is on, remove speaker out of output list.
+				#
+				ForceUseForHdmiSystemAudio IsNot ForceHdmiSystemEnforced
+
+				component: /Policy/policy/strategies/fm_Strategy/selected_output_devices/mask
+					speaker = 1
+					hdmi = 0
+					dgtl_dock_headset = 0
+					angl_dock_headset = 0
+					usb_device = 0
+					usb_accessory = 0
+					wired_headset = 0
+					wired_headphone = 0
+					bluetooth_a2dp_speaker = 0
+					bluetooth_a2dp_headphones = 0
+					bluetooth_a2dp = 0
+					remote_submix = 0
+					line = 0
+
+			conf: WiredHeadphone
+				AvailableOutputDevices Includes WiredHeadphone
+				ForceUseForFm IsNot ForceSpeaker
+				component: /Policy/policy/strategies/fm_Strategy/selected_output_devices/mask
+					speaker = 0
+					hdmi = 0
+					dgtl_dock_headset = 0
+					angl_dock_headset = 0
+					usb_device = 0
+					usb_accessory = 0
+					wired_headset = 0
+					wired_headphone = 1
+					bluetooth_a2dp_speaker = 0
+					bluetooth_a2dp_headphones = 0
+					bluetooth_a2dp = 0
+					remote_submix = 0
+					line = 0
+
+			conf: WiredHeadset
+				AvailableOutputDevices Includes WiredHeadset
+				ForceUseForFm IsNot ForceSpeaker
+				component: /Policy/policy/strategies/fm_Strategy/selected_output_devices/mask
+					speaker = 0
+					hdmi = 0
+					dgtl_dock_headset = 0
+					angl_dock_headset = 0
+					usb_device = 0
+					usb_accessory = 0
+					wired_headset = 1
+					wired_headphone = 0
+					bluetooth_a2dp_speaker = 0
+					bluetooth_a2dp_headphones = 0
+					bluetooth_a2dp = 0
+					remote_submix = 0
+					line = 0
+
+
+			conf: Speaker
+				ANY
+					AvailableOutputDevices Includes WiredHeadset
+					AvailableOutputDevices Includes WiredHeadphone
+				AvailableOutputDevices Includes Speaker
+				#
+				# If hdmi system audio mode is on, remove speaker out of output list.
+				#
+				ForceUseForFm IsNot ForceHeadphones
+
+				component: /Policy/policy/strategies/fm_Strategy/selected_output_devices/mask
+					speaker = 1
+					hdmi = 0
+					dgtl_dock_headset = 0
+					angl_dock_headset = 0
+					usb_device = 0
+					usb_accessory = 0
+					wired_headset = 0
+					wired_headphone = 0
+					bluetooth_a2dp_speaker = 0
+					bluetooth_a2dp_headphones = 0
+					bluetooth_a2dp = 0
+					remote_submix = 0
+					line = 0
+
+			conf: Default
+				component: /Policy/policy/strategies/fm_Strategy/selected_output_devices/mask
+					speaker = 0
+					hdmi = 0
+					dgtl_dock_headset = 0
+					angl_dock_headset = 0
+					usb_device = 0
+					usb_accessory = 0
+					wired_headset = 0
+					wired_headphone = 1
+					bluetooth_a2dp_speaker = 0
+					bluetooth_a2dp_headphones = 0
+					bluetooth_a2dp = 0
+					remote_submix = 0
+					line = 0
+

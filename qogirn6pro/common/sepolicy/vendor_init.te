@@ -1,0 +1,63 @@
+#add for usb
+allow vendor_init tmpfs:dir { write add_name };
+allow vendor_init tmpfs:lnk_file create;
+
+allow vendor_init rootfs:dir { write add_name };
+
+allow vendor_init proc_security:file write;
+allow vendor_init proc_cmdline:file write;
+allow vendor_init proc:file write;
+
+allow vendor_init unencrypted_data_file:file read;
+
+#add for insmod ko
+allow vendor_init self:capability sys_module;
+allow vendor_init vendor_file:system module_load;
+
+allow vendor_init mmcblk_device:blk_file write;
+#for coredump
+allow vendor_init sysfs:file { write open };
+allow vendor_init sysfs:lnk_file { setattr };
+
+#init_ram_rc
+allow vendor_init proc_extra_free_kbytes:file write;
+get_prop(vendor_init, system_prop)
+set_prop(vendor_init, system_lmk_prop)
+
+set_prop(vendor_init, vendor_sys_prop)
+set_prop(vendor_init, vendor_radio_prop)
+set_prop(vendor_init, vold_prop)
+set_prop(vendor_init, system_prop)
+set_prop(vendor_init, media_prop)
+set_prop(vendor_init, vendor_camera_prop)
+set_prop(vendor_init, vendor_hwui_prop)
+set_prop(vendor_init, vendor_systemdebuggerd_prop)
+set_prop(vendor_init, vendor_aprd_prop)
+set_prop(vendor_init, vendor_eng_prop)
+
+#For thermal
+set_prop(vendor_init, vendor_thermald_prop);
+
+#for memtrack
+allow vendor_init debugfs:file { getattr relabelfrom relabelto };
+allow vendor_init debugfs_pvr:file { relabelto };
+
+#for mlog
+allow vendor_init mlog_file:dir { setattr read open ioctl create };
+
+#sf
+set_prop(vendor_init, vendor_sf_prop);
+
+#gpu boost
+set_prop(vendor_init, vendor_gpu_prop);
+
+#gpu fbc
+set_prop(vendor_init, vendor_gpu_fbc_prop);
+
+#sf fbc
+set_prop(vendor_init, vendor_sf_fbc_prop);
+
+#vsp fbc
+set_prop(vendor_init, vendor_vsp_fbc_prop);
+
+

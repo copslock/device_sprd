@@ -1,0 +1,30 @@
+#sprd sensors
+type sprd_img_device, dev_type, mlstrustedobject;
+type wcn_device, dev_type;
+type slog_device, dev_type;
+type spipe_device, dev_type;
+type mmcblk_device, dev_type;
+type efuse_device, dev_type;
+type ap_efuse_device, dev_type;
+type mpu_device, dev_type;
+type bm_device, dev_type;
+type refnotify_device, dev_type;
+type sipc_device, dev_type;
+type fm_device, dev_type, mlstrustedobject;
+type etb_device, dev_type;
+type volte_vtsp_device, dev_type;
+type zram_block_device, dev_type;
+type autotest_device, dev_type;
+type autotest0_device, dev_type;
+type log_device, dev_type, mlstrustedobject;
+type power_device, dev_type;
+
+# MAP device
+type map_device, dev_type;
+
+#sdcard device
+type sdcard_device, dev_type;
+
+
+#ylog device
+type ylogbuffer_device, dev_type;

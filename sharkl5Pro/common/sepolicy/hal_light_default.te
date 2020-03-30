@@ -1,0 +1,4 @@
+#============= hal_light_default ============== 2017-08-02-13-24-29 added by genSepolicy script
+allow hal_light_default sysfs:file { read write open };
+allow hal_light_default sysfs_ddr_dfs:file { open read write getattr};
+allow hal_light_default sysfs_ddr_dfs:dir {search read open getattr};

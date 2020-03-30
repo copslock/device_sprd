@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<performance>
+    <policy name="Memory">
+        <config name="MemoryConstant" >
+            <item ramsize="512">
+                <averageAppUss>20</averageAppUss>
+                <lowCpuLoad>30</lowCpuLoad>
+                <highCpuLoad>60</highCpuLoad>
+                <emergencyMemory>60</emergencyMemory>
+                <bigMemCriticalMemory>120</bigMemCriticalMemory>
+                <defaultCriticalMemory>95</defaultCriticalMemory>
+                <normalMemory>150</normalMemory>
+                <fsMemory>150</fsMemory>
+                <fsIdleTime>1</fsIdleTime>
+                <bgPkgLimit>1</bgPkgLimit>
+                <protect_lru_limit>30 40 0</protect_lru_limit>
+            </item>
+            <item ramsize="1024">
+                <averageAppUss>20</averageAppUss>
+                <lowCpuLoad>30</lowCpuLoad>
+                <highCpuLoad>60</highCpuLoad>
+                <emergencyMemory>170</emergencyMemory>
+                <bigMemCriticalMemory>200</bigMemCriticalMemory>
+                <defaultCriticalMemory>150</defaultCriticalMemory>
+                <normalMemory>300</normalMemory>
+                <fsMemory>160 200 250</fsMemory>
+                <fsIdleTime>0 1 2</fsIdleTime>
+                <bgPkgLimit>3</bgPkgLimit>
+                <protect_lru_limit>30 40 0</protect_lru_limit>
+            </item>
+            <item ramsize="2048">
+                <averageAppUss>20</averageAppUss>
+                <lowCpuLoad>30</lowCpuLoad>
+                <highCpuLoad>60</highCpuLoad>
+                <emergencyMemory>350</emergencyMemory>
+                <bigMemCriticalMemory>400</bigMemCriticalMemory>
+                <defaultCriticalMemory>600</defaultCriticalMemory>
+                <normalMemory>900</normalMemory>
+                <fsMemory>400 600</fsMemory>
+                <fsIdleTime>1 5</fsIdleTime>
+                <bgPkgLimit>5</bgPkgLimit>
+                <protect_lru_limit>30 40 0</protect_lru_limit>
+            </item>
+            <item ramsize="3072">
+                <averageAppUss>20</averageAppUss>
+                <lowCpuLoad>30</lowCpuLoad>
+                <highCpuLoad>60</highCpuLoad>
+                <emergencyMemory>400</emergencyMemory>
+                <bigMemCriticalMemory>450</bigMemCriticalMemory>
+                <defaultCriticalMemory>800</defaultCriticalMemory>
+                <normalMemory>1228</normalMemory>
+                <fsMemory>400 1000</fsMemory>
+                <fsIdleTime>0 5</fsIdleTime>
+                <bgPkgLimit>6</bgPkgLimit>
+                <protect_lru_limit>60 80 0</protect_lru_limit>
+            </item>
+        </config>
+        <config name="MemoryScene">
+            <item scene="idle">
+                <action>reclaim</action>
+            </item>
+            <item scene="default">
+                <action>kill</action>
+            </item>
+            <item scene="BigMem">
+                <action>quickkill</action>
+            </item>
+            <item scene="Emergency">
+                <action>reclaimPersist</action>
+            </item>
+        </config>
+    </policy>
+    <policy name="PowerHint">
+        <config name="powerHintConstants">
+            <item name= "InStrumentationGTS">
+                <string-array name= "pkgName">
+                    <string>com.google.android.exoplayer.gts</string>
+                    <string>com.google.android.media.gts</string>
+                    <string>android.jank.cts</string>
+                    <string>com.google.android.youtube.gts</string>
+                </string-array>
+                <hintType>POWER_HINT_VENDOR_PERFORMANCE_GTS</hintType>
+            </item>
+            <item name= "InStrumentationCTS">
+                <string-array name= "pkgName">
+                    <string>android.openglperf.cts</string>
+                    <string>android.media.cts</string>
+                    <string>android.autofillservice.cts</string>
+                </string-array>
+                <hintType>POWER_HINT_VENDOR_PERFORMANCE_CTS</hintType>
+            </item>
+            <item name="BenchMark">
+                <string-array name= "pkgName">
+                    <string>antutu</string>
+                    <string>benchmark</string>
+                    <string>ludashi</string>
+                    <string>cfbench</string>
+                    <string>quicinc.vellamo</string>
+                    <string>geekbench</string>
+                    <string>greenecomputing.linpack</string>
+                    <string>nenamark</string>
+                    <string>Quadrant</string>
+                    <string>qihoo360.mobilesafe.opti</string>
+                    <string>eembc.coremark</string>
+                    <string>rightware.tdmm2v10jnifree</string>
+                    <string>aurorasoftworks.quadrant</string>
+                    <string>futuremark.dmandroid</string>
+                    <string>andromeda.androbench</string>
+                    <string>rightware.Basemark</string>
+                    <string>tptest</string>
+                    <string>mobilexprt</string>
+                </string-array>
+                <hintType>POWER_HINT_VENDOR_BENCHMARK</hintType>
+            </item>
+            <item name="StartProc">
+                <string-array name= "pkgName">
+                    <string>com.tencent.mm, 12000</string>
+                    <string>com.facebook.katana, 20000</string>
+                    <string>com.facebook.orca, 15000</string>
+                    <string>com.imangi.templerun2, 30000</string>
+                </string-array>
+                <hintType>POWER_HINT_VENDOR_BENCHMARK</hintType>
+            </item>
+            <item name="FastKill">
+                <string-array name= "pkgName">
+                    <string>com.android.camera2</string>
+                </string-array>
+                <hintType>null</hintType>
+            </item>
+        </config>
+    </policy>
+    <policy name="OomAdj">
+        <config name="OomAdjConstansNormal">
+            <item name="commonConfig">
+                <hotapp_launchcount>50</hotapp_launchcount>
+                <hotapp_adj>service</hotapp_adj>
+                <hotapp_count>2</hotapp_count>
+                <recentapp_adj>serviceb</recentapp_adj>
+                <sectionhabit_adj>serviceb</sectionhabit_adj>
+                <sectionhabitapp_count>3</sectionhabitapp_count>
+                <sectionhabitapp_launchcount>50</sectionhabitapp_launchcount>
+            </item>
+            <item memPressure="normal">
+                <visible_adj>visible</visible_adj>
+                <perceptible_adj>perceptible</perceptible_adj>
+                <service_adj>service</service_adj>
+                <serviceb_adj>serviceb</serviceb_adj>
+                <idletime>30</idletime>
+                <recentprotect>5</recentprotect>
+                <notificationtime>5</notificationtime>
+            </item>
+            <item memPressure="moderate">
+                <visible_adj>visible</visible_adj>
+                <perceptible_adj>perceptible</perceptible_adj>
+                <service_adj>service</service_adj>
+                <serviceb_adj>serviceb</serviceb_adj>
+                <idletime>15</idletime>
+                <recentprotect>5</recentprotect>
+                <notificationtime>4</notificationtime>
+            </item>
+            <item memPressure="low">
+                <visible_adj>service</visible_adj>
+                <perceptible_adj>service</perceptible_adj>
+                <service_adj>serviceb</service_adj>
+                <serviceb_adj>cached</serviceb_adj>
+                <idletime>10</idletime>
+                <recentprotect>3</recentprotect>
+                <notificationtime>2</notificationtime>
+            </item>
+            <item memPressure="critical">
+                <visible_adj>service</visible_adj>
+                <perceptible_adj>service</perceptible_adj>
+                <service_adj>cached</service_adj>
+                <serviceb_adj>cached</serviceb_adj>
+                <idletime>5</idletime>
+                <recentprotect>2</recentprotect>
+                <notificationtime>1</notificationtime>
+            </item>
+        </config>
+        <config name="OomAdjConstans1G">
+            <item name="commonConfig">
+                <hotapp_launchcount>50</hotapp_launchcount>
+                <hotapp_adj>serviceb</hotapp_adj>
+                <hotapp_count>1</hotapp_count>
+                <recentapp_adj>serviceb</recentapp_adj>
+                <sectionhabit_adj>serviceb</sectionhabit_adj>
+                <sectionhabitapp_count>1</sectionhabitapp_count>
+                <sectionhabitapp_launchcount>50</sectionhabitapp_launchcount>
+            </item>
+            <item memPressure="normal">
+                <visible_adj>visible</visible_adj>
+                <perceptible_adj>perceptible</perceptible_adj>
+                <service_adj>service</service_adj>
+                <serviceb_adj>serviceb</serviceb_adj>
+                <idletime>30</idletime>
+                <recentprotect>5</recentprotect>
+                <notificationtime>5</notificationtime>
+            </item>
+            <item memPressure="moderate">
+                <visible_adj>visible</visible_adj>
+                <perceptible_adj>perceptible</perceptible_adj>
+                <service_adj>service</service_adj>
+                <serviceb_adj>serviceb</serviceb_adj>
+                <idletime>15</idletime>
+                <recentprotect>5</recentprotect>
+                <notificationtime>4</notificationtime>
+            </item>
+            <item memPressure="low">
+                <visible_adj>service</visible_adj>
+                <perceptible_adj>service</perceptible_adj>
+                <service_adj>serviceb</service_adj>
+                <serviceb_adj>cached</serviceb_adj>
+                <idletime>5</idletime>
+                <recentprotect>3</recentprotect>
+                <notificationtime>2</notificationtime>
+            </item>
+            <item memPressure="critical">
+                <visible_adj>service</visible_adj>
+                <perceptible_adj>service</perceptible_adj>
+                <service_adj>cached</service_adj>
+                <serviceb_adj>cached</serviceb_adj>
+                <idletime>3</idletime>
+                <recentprotect>2</recentprotect>
+                <notificationtime>1</notificationtime>
+            </item>
+        </config>
+        <config name="OomAdjConstans512M">
+            <item name="commonConfig">
+                <hotapp_launchcount>50</hotapp_launchcount>
+                <hotapp_adj>service</hotapp_adj>
+                <hotapp_count>0</hotapp_count>
+                <recentapp_adj>serviceb</recentapp_adj>
+                <sectionhabit_adj>serviceb</sectionhabit_adj>
+                <sectionhabitapp_count>0</sectionhabitapp_count>
+                <sectionhabitapp_launchcount>50</sectionhabitapp_launchcount>
+            </item>
+            <item memPressure="normal">
+                <visible_adj>visible</visible_adj>
+                <perceptible_adj>perceptible</perceptible_adj>
+                <service_adj>service</service_adj>
+                <serviceb_adj>serviceb</serviceb_adj>
+                <idletime>15</idletime>
+                <recentprotect>5</recentprotect>
+                <notificationtime>2</notificationtime>
+            </item>
+            <item memPressure="moderate">
+                <visible_adj>visible</visible_adj>
+                <perceptible_adj>perceptible</perceptible_adj>
+                <service_adj>service</service_adj>
+                <serviceb_adj>serviceb</serviceb_adj>
+                <idletime>10</idletime>
+                <recentprotect>5</recentprotect>
+                <notificationtime>1</notificationtime>
+            </item>
+            <item memPressure="low">
+                <visible_adj>visible</visible_adj>
+                <perceptible_adj>service</perceptible_adj>
+                <service_adj>serviceb</service_adj>
+                <serviceb_adj>cached</serviceb_adj>
+                <idletime>5</idletime>
+                <recentprotect>3</recentprotect>
+                <notificationtime>1</notificationtime>
+            </item>
+            <item memPressure="critical">
+                <visible_adj>service</visible_adj>
+                <perceptible_adj>cached</perceptible_adj>
+                <service_adj>cached</service_adj>
+                <serviceb_adj>cached</serviceb_adj>
+                <idletime>3</idletime>
+                <recentprotect>2</recentprotect>
+                <notificationtime>1</notificationtime>
+            </item>
+        </config>
+    </policy>
+    <policy name="Schedule">
+        <config name="SchedAdjustment" >
+            <item package="com.imangi.templerun2">
+                <process>com.imangi.templerun2</process>
+                <string-array name="threads">
+                   <string>Unity*,rr,1</string>
+                </string-array>
+            </item>
+            <item package="com.kiloo.subwaysurf">
+                <process>com.kiloo.subwaysurf</process>
+                <string-array name= "threads">
+                    <string>iloo.subwaysurf,other,-19</string>
+                    <string>Unity*,other,-19</string>
+                </string-array>
+            </item>
+            <item package="com.tencent.mm">
+                <process>com.tencent.mm:appbrand1</process>
+                <string-array name= "threads">
+                    <string>nt.mm:appbrand1,other,-19</string>
+                    <string>Msg.GLThread*,other,-19</string>
+                </string-array>
+            </item>
+        </config>
+    </policy>
+</performance>

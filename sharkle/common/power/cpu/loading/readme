@@ -1,0 +1,46 @@
+
+
+
+一、功能
+抓取cpu loading数据
+
+二、使用方法
+
+2.1userdebug版本
+连接adb切换root进入shell
+adb root
+adb remount
+adb shell
+./vendor/bin/power/cpu/loading/cpu_loading -t 60
+-t 测试时间(默认为60s)以s为单位
+
+2.2user版本
+adb shell
+./vendor/bin/power/cpu/loading/cpu_loading -t 60
+-t 测试时间(默认为60s)以s为单位
+
+三、示例
+sp9832e_1h10:/vendor/bin/power/cpu/loading # ./cpu_loading -t 60
+./cpu_loading -t 60
+accummulate_time is 60(s)
+
+        768000  900000  1100000 1300000 1400000 online  offline
+cpu0    8.42    0.00    0.00    0.00    0.00    8.42    91.58
+cpu1    unplugned
+cpu2    6.38    0.00    0.00    0.00    0.00    6.38    93.62
+cpu3    7.81    0.00    0.00    0.00    0.00    7.81    92.19
+freq    100.00  0.00    0.00    0.00    0.00
+sum:173613.72kHZ
+
+
+四、备注
+1、适用于user和userdebug版本，但user和debug版本使用方法略有不同。
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+
+
+
+一、功能
+获取背光节点的值[0~255]
+
+二、用法
+连接adb切换root进入shell
+adb root
+adb remount
+adb shell
+./vendor/bin/power/backlight/bright
+
+三、示例
+sp7731e_1h10:/vendor/bin/power/backlight # ./bright
+brightness: 25
+brightness: 25
+brightness: 25
+brightness: 25
+brightness: 25
+brightness: 53
+brightness: 53
+brightness: 10
+brightness: 64
+brightness: 87
+brightness: 87
+brightness: 255
+brightness: 255
+brightness: 255
+brightness: 255
+
+四、备注:
+1、只适用于userdebug版本
+
+
+

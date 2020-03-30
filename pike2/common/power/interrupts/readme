@@ -1,0 +1,44 @@
+
+
+
+一、功能
+统计一段时间内CPU上发生的中断数
+
+二、用法
+正常连接adb进入shell
+./vendor/bin/power/interrupt/interrupts  -t 测试时间(默认10s)
+
+三、示例
+sp7731e_1h10:/vendor/bin/power/interrupt # ./interrupt -t 10
+accumulate_time is 10
+        CPU0                TOTAL
+IPI1:   29                     29       Timer broadcast interrupts
+ IPI2:  1268                 1268       Rescheduling interrupts
+ IPI4:  16                     16       Single function call interrupts
+ 
+ 
+结果说明
+sp7731e_1h10:/vendor/bin/power/interrupt # ./interrupt -t 10
+accumulate_time is 10
+        CPU0           CPU1           CPU2           CPU3[boot]          TOTAL
+  16:   1536           1689           494495         0                  497720  GIC             60      Level
+r4p0_bcevt_timer
+   17:  4486           4566           455745         0                  464797  GIC             30      Edge
+arch_timer
+   18:  0              0              524288         0                  524288  GIC             26      Edge
+arch_timer
+   20:  0              0              524288         0                  524288  GIC             93      Level
+headset_button
+ IPI1:  260            306            377            10669                 943  Timer broadcast interrupts
+ IPI2:  8318           10236          11192          164642              29746  Rescheduling interrupts
+ IPI4:  363            266            170            4426                  799  Single function call interrupts
+  
+TOTAL表示测试时间内能够统计出的发生在所有CPU上的中断总数
+对于测试过程中存在插拔核的情况的CPU,以CPUx[boot]格式显示，统计的中断数为开机到采样点的中断数
+不能视为测试时间内发生的中断数，TOTAL中也将不包含该数据
+
+四、备注
+1、适用于user的userdebug版本
+
+
+

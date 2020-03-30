@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2015 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<MediaCodecs>
+    <Encoders>
+        <MediaCodec name="OMX.sprd.h264.encoder" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="419-419" />
+            <Limit name="measured-frame-rate-720x480" range="165-166" />
+            <Limit name="measured-frame-rate-1280x720" range="75-76" />
+            <Limit name="performance-point-1920x1080" range="30-30" />
+        </MediaCodec>
+
+    </Encoders>
+    <Decoders>
+        <MediaCodec name="OMX.sprd.h263.decoder" type="video/3gpp" update="true">
+            <Limit name="measured-frame-rate-176x144" range="480-480" />
+            <Limit name="measured-frame-rate-352x288" range="717-717" />
+            <Limit name="performance-point-1920x1080" range="30-30" />
+        </MediaCodec>
+        <MediaCodec name="OMX.sprd.h264.decoder" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="493-493" />
+            <Limit name="measured-frame-rate-720x480" range="261-261" />
+            <Limit name="measured-frame-rate-1280x720" range="128-128" />
+            <Limit name="measured-frame-rate-1920x1088" range="60-60" />
+            <Limit name="performance-point-1920x1080" range="30-30" />
+        </MediaCodec>
+        <MediaCodec name="OMX.sprd.mpeg4.decoder" type="video/mp4v-es" update="true">
+            <Limit name="measured-frame-rate-176x144" range="496-496" />
+            <Limit name="measured-frame-rate-480x360" range="380-380" />
+            <Limit name="performance-point-1920x1080" range="30-30" />
+        </MediaCodec>
+    </Decoders>
+</MediaCodecs>
+

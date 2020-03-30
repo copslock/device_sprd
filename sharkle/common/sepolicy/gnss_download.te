@@ -1,0 +1,11 @@
+type gnss_download,domain;
+type gnss_download_exec, exec_type,file_type, vendor_file_type;
+
+allow gnss_download gnss_download:unix_stream_socket { connectto };
+init_daemon_domain(gnss_download)
+#============= gnss_download ============== 2017-08-02-13-24-29 added by genSepolicy script
+#allow gnss_download gnss_file:dir search;
+#allow gnss_download gnss_file:file { read write getattr open };
+allow gnss_download serial_device:chr_file { read write ioctl open };
+allow gnss_download wcn_device:chr_file { read write ioctl open };
+

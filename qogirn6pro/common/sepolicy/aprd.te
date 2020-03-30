@@ -1,0 +1,4 @@
+allow aprd hal_graphics_allocator_default:dir { getattr search open read };
+allow aprd hal_graphics_allocator_default:file { read getattr open };
+allow aprd hal_xtensa_default:file { read open getattr };
+allow aprd hal_xtensa_default:dir { search  };

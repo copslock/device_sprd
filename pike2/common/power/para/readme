@@ -1,0 +1,25 @@
+
+
+
+一、功能
+获取功耗相关参数
+
+二、用法
+正常连接adb进入shell
+./vendor/bin/power/paras/tool/paras > /vendor/bin/power/paras/tool/para.txt
+扫描结束将在/vendor/bin/power/paras/tool/生成para.txt的结果文件
+
+三、示例
+s9863a1h10:/vendor/bin/power/paras/tool # ls
+ls
+para.sh paras power_ctrl power_hint
+s9863a1h10:/vendor/bin/power/paras/tool # ./paras > para.txt
+./para > para.txt
+s9863a1h10:/vendor/bin/power/paras/tool # ls
+ls
+para.sh para.txt paras power_ctrl power_hint
+
+四、备注
+1、仅适用于userdebug版本
+
+

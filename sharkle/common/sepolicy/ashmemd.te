@@ -1,0 +1,2 @@
+# add for CCSA
+allow ashmemd security_service:service_manager { find };

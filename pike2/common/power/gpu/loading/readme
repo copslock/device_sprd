@@ -1,0 +1,28 @@
+
+
+
+一、功能
+抓取gpu loading数据
+
+二、使用方法
+连接adb切换root进入shell
+adb root
+adb remount
+adb shell
+./vendor/bin/power/gpu/loading/gpu_loading -t 60
+-t 测试时间(默认为60s)以s为单位
+
+三、示例
+sp7731e_1h10:/vendor/bin/power/gpu/loading # ./gpu_loading -t 60
+accummulate_time is 60(s)
+
+256: 84.17%      utilisation:29.87%
+384: 1.25%       utilisation:34.80%
+550: 14.58%      utilisation:26.10%
+Averag GPU Utilisation : 29.38%
+
+四、备注
+1、只适用于userdebug版本
+
+
+

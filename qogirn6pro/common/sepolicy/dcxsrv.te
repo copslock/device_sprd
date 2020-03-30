@@ -1,0 +1,7 @@
+type dcxsrv,domain;
+type dcxsrv_exec, exec_type, file_type, vendor_file_type;
+init_daemon_domain(dcxsrv)
+
+allow dcxsrv sysfs:file { read open write ioctl};
+allow dcxsrv prod_file:dir { search open read write remove_name add_name};
+allow dcxsrv prod_file:file { open read write lock unlink getattr setattr create rw_file_perms };

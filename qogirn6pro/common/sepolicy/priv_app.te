@@ -1,0 +1,44 @@
+
+
+# porting for double-Tcard : add for move-app-to-sdcard
+allow priv_app asec_apk_file:file {getattr read open};
+
+allow priv_app asec_apk_file:file {getattr read write open};
+
+allow priv_app asec_apk_file:dir {search};
+
+
+#============= priv_app ============== 2017-08-02-13-24-29 added by genSepolicy script
+allow priv_app addon_service:service_manager { find };
+
+#allow priv_app vendor_file:file {r_file_perms };
+
+#allow priv_app bcc_exec:file {open read  getattr };
+allow priv_app system_app_data_file:file { read write };
+# for sprd_jpg
+allow priv_app sprd_img_device:chr_file { read write open ioctl map};
+
+#add for ConnectivityServiceEx
+allow priv_app connectionEx_service:service_manager { find };
+#add for network_adapter
+allow priv_app networkadapter_service:service_manager { find };
+
+# add for CCSA
+allow priv_app security_service:service_manager { find };
+
+# add for coredump
+allow priv_app coredump_file:dir { write add_name };
+
+#add for radio get vendor prop
+get_prop(priv_app, vendor_radio_prop);
+
+#add for radio get vendor prop
+get_prop(priv_app, vendor_sys_prop);
+
+#add for ai service
+allow priv_app unisoc_ai_service:service_manager { find };
+
+allow priv_app media_prop:file { read };
+
+#add for HWUI
+get_prop(priv_app, vendor_hwui_prop);

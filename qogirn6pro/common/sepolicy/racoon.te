@@ -1,0 +1,17 @@
+typeattribute racoon mlstrustedsubject;
+
+allow racoon prod_file:dir getattr;
+#allow racoon racoon:capability {dac_override dac_read_search};
+allow racoon shell_exec:file {execute read open execute_no_trans getattr map};
+allow racoon fs_bpf:dir search;
+allow racoon racoon:netlink_xfrm_socket {create setopt bind getattr write nlmsg_write nlmsg_read read};
+allow racoon racoon:netlink_route_socket nlmsg_write;
+allow racoon proc_net:file {open write};
+allow racoon storage_file:dir {search getattr read};
+allow racoon init_exec:file {getattr read open};
+allow racoon tun_device:chr_file {write open read ioctl};
+allow racoon storage_file:lnk_file read;
+allow racoon racoon:udp_socket ioctl;
+allowxperm racoon self:udp_socket ioctl {SIOCSIFMTU};
+#"SIOCDEVPRIVATE + 7" value is 0x89f7,and sepolicy can not using "SIOCDEVPRIVATE + 7",so just using 0x89f7
+allowxperm racoon self:udp_socket ioctl {0x89f7};

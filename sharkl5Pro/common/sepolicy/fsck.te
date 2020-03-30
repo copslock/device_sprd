@@ -1,0 +1,15 @@
+
+
+
+#============= fsck ============== 2017-08-02-17-25-08 added by genSepolicy script
+#allow fsck self:capability { dac_read_search  };
+allow fsck mmcblk_device:chr_file { read write };
+allow fsck mmcblk_device:blk_file { read write getattr open ioctl };
+#allow fsck self:capability dac_override;
+
+allow fsck kmsg_device:chr_file {open write};
+allow fsck device:dir write;
+
+allow fsck block_device:blk_file {getattr};
+#allow fsck vendor_file:file {read open getattr execute};
+allow fsck sysfs_power:dir { search };

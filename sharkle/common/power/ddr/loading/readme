@@ -1,0 +1,41 @@
+
+
+
+一、功能：计算ddr_loading数据
+
+二、用法
+连接adb切换root进入shell
+adb root
+adb remount
+adb shell
+./vendor/bin/power/ddr/loading/ddr_loading -t 60
+-t 测试时间(默认测试60s)以s为单位
+
+三、示例
+sp9832e_1h10:/vendor/bin/power/ddr/loading # ./ddr_loading -t 60
+./ddr_loading -t 60
+accummulate_time is 60(s)
+time_use is 70145.25ms
+0:      0.00%
+256:    100.00%
+384:    0.00%
+667:    0.00%
+0:      0.00%
+0:      0.00%
+0:      0.00%
+0:      0.00%
+0:      0.00%
+0:      0.00%
+unit:10ms
+theory_bw = 0   2048000 3072000 5336000 0       0       0       0       0       0
+overflow  = 1 7200000 12000000 4294967295
+underflow = 1 1 7100000 11800000
+
+四、备注
+1、只适用于userdebug版本
+
+
+
+
+
+

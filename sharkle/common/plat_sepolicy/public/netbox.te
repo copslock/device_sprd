@@ -1,0 +1,3 @@
+type netbox, domain;
+type netbox_exec, exec_type, file_type, system_file_type;
+

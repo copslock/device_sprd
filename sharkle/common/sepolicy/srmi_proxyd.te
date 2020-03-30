@@ -1,0 +1,1 @@
+allow srmi_proxyd spipe_device:chr_file { read open write };

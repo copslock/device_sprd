@@ -1,0 +1,5 @@
+allow ueventd media_data_file:dir { search };
+allow ueventd media_data_file:file { open read getattr };
+allow ueventd tmpfs:blk_file {getattr setattr};
+allow ueventd mmcblk_device:blk_file {getattr setattr};
+

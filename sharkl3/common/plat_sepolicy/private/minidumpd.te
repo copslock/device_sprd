@@ -1,0 +1,15 @@
+typeattribute minidumpd coredomain;
+init_daemon_domain(minidumpd)
+allow minidumpd storage_file:dir { add_name getattr setattr create search open read remove_name rmdir write unlink rename};
+allow minidumpd storage_file:file { create getattr setattr open read rename write unlink append };
+allow minidumpd storage_file:lnk_file { create getattr setattr open read rename write unlink append };
+allow minidumpd mnt_user_file:dir { add_name getattr setattr create search open read remove_name rmdir write unlink rename};
+allow minidumpd mnt_user_file:file { create getattr setattr open read rename write unlink append };
+allow minidumpd mnt_user_file:lnk_file { create getattr setattr open read rename write unlink append };
+allow minidumpd sdcardfs:dir { add_name getattr setattr create search open read remove_name rmdir write unlink rename};
+allow minidumpd sdcardfs:file { create getattr setattr open read rename write unlink append };
+allow minidumpd media_rw_data_file:dir { add_name getattr setattr create search open read remove_name rmdir write unlink rename};
+allow minidumpd media_rw_data_file:file { create getattr setattr open read rename write unlink append };
+allow minidumpd block_device:dir { add_name getattr setattr create search open read remove_name rmdir write unlink rename};
+allow minidumpd proc_minidump_gesture:file { create getattr setattr open read rename write unlink append };
+#allow minidumpd mmcblk_device:blk_file { create getattr setattr open read  write unlink append };

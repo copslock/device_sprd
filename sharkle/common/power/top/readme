@@ -1,0 +1,31 @@
+
+
+
+一、功能
+统计一段时间内CPU平均使用率前N的进程
+
+二、用法
+正常连接adb进入shell
+./vendor/bin/power/tops/tops -t 10 -n 10
+-t 后面接的是测试时长(默认是10s)以s为单位
+-n 后面接的是显示的CPU平均使用率前N的进程(默认是前10的进程)
+
+三、示例
+sp9832e_1h10:/vendor/bin/power/tops # ./tops -t 10 -n 10
+./tops -t 10 -n 10
+%[CPU]  ARGS
+39.7    top -n 1 -d 3
+ 4.8    surfaceflinger
+ 4.8    com.android.sys+
+ 2.5    [irq/7-70700000+
+ 2.5    system_server
+ 2.5    [kworker/u8:0]
+ 2.5    ylog
+ 2.5    sgm.cpu_memory +
+ 2.5    com.google.andr+
+ 2.5    [rcu_preempt]
+
+四、备注
+1、适用于user的userdebug版本
+
+

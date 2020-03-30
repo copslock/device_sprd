@@ -1,0 +1,41 @@
+
+
+# porting for double-Tcard
+allow kernel block_device:blk_file { read write };
+# porting for double-Tcard: add for UMS
+allow kernel vold_device:blk_file { read write };
+allow kernel mmcblk_device:blk_file { open read write };
+#============= kernel ============== 2017-08-02-13-24-29 added by genSepolicy script
+allow kernel device: { chr_file } { create setattr };
+allow kernel device:dir { create write add_name };
+#allow kernel self:capability { mknod  };
+allow kernel unlabeled:file { write open };
+
+#============= kernel ============== 2017-08-02-16-46-00 added by genSepolicy script
+allow kernel block_device:dir search;
+allow kernel device:chr_file getattr;
+allow kernel self:capability mknod;
+
+#============= kernel ============== 2017-08-09-12-45-45 added by genSepolicy script
+allow kernel device:chr_file unlink;
+allow kernel device:dir { remove_name rmdir };
+allow kernel prod_file:dir { search add_name write };
+allow kernel prod_file:file { write open create };
+allow kernel battery_file:dir { search read write create open add_name getattr };
+allow kernel battery_file:file { open read write create setattr getattr };
+allow kernel cali_save_file:dir { search read write create open add_name getattr };
+allow kernel cali_save_file:file { open read write create setattr getattr };
+
+#add for move app to sd card
+#allow kernel device:blk_file { getattr unlink };
+
+#add for tmpfs
+allow kernel tmpfs:dir { create search open read write add_name };
+allow kernel tmpfs:file { create open read write };
+
+#add for crypto
+allow kernel self:system { module_request };
+
+#add for USB cdrom
+allow kernel vendor_init:fd { use };
+

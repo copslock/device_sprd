@@ -1,0 +1,41 @@
+
+allow shell serial_device:chr_file rw_file_perms;
+
+#allow shell apr_data_file:file { create open read write getattr rename unlink};
+#allow shell apr_data_file:dir { read open write search add_name remove_name getattr};
+
+#allow shell aprd:unix_stream_socket {read write};
+
+#allow shell self_system_data_file:file { create open read write getattr rename };
+#allow shell self_system_data_file:dir { read open write search add_name remove_name getattr};
+#allow shell self_system_data_file:sock_file {create unlink getattr open read write};
+#allow shell ylog_file:dir {search getattr read open write remove_name rmdir};
+#allow shell ylog_file:file {getattr read write open unlink};
+#allow shell ylog_lite_file:dir {search getattr read open write remove_name rmdir};
+#allow shell ylog_lite_file:file {getattr read write open unlink};
+#allow shell ylog:unix_stream_socket connectto;
+#allow shell ylog_exec:file {getattr};
+#allow shell ylog_prop:property_service {set};
+#allow shell ylog_prop:file {read getattr open read};
+allow shell net_dns_prop:file {open getattr};
+
+#allow shell ylog_lite_exec:file {getattr};
+#allow shell ylog_lite_prop:property_service {set};
+#allow shell ylog_lite_prop:file {read getattr open read};
+#allow shell ylog_lite_cli_exec:file {getattr execute read open    execute_no_trans };
+#allow shell ylog_lite_pprop:property_service {set};
+#allow shell ylog_lite_pprop:file {read getattr open read};
+allow shell vendor_file:file {read getattr open read getattr execute read open    execute_no_trans};
+#allow shell ylog_lite:unix_stream_socket connectto;
+allow shell sysfs_ddr_dfs:file {read open getattr};
+allow shell sysfs_ddr_dfs:dir {search read open getattr};
+
+#set_prop(shell, vendor_video_prop)
+
+#typeattribute shell system_writes_vendor_properties_violators;
+#set_prop(shell, vendor_camera_prop)
+
+#For thermal
+get_prop(shell, vendor_thermald_prop)
+
+allow shell log_service:unix_stream_socket { connectto read write };

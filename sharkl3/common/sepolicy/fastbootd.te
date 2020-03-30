@@ -1,0 +1,5 @@
+allow fastbootd sysfs_power:dir { search r_dir_perms };
+allow fastbootd sysfs_power:file rw_file_perms;
+allow fastbootd mmcblk_device:blk_file { read write getattr open ioctl };
+allow fastbootd devpts:chr_file { read write open };
+allow fastbootd rootfs:file { execute_no_trans };

@@ -1,0 +1,46 @@
+type modem_control, domain;
+type modem_control_exec, exec_type,file_type, vendor_file_type;
+
+
+
+init_daemon_domain(modem_control)
+
+allow modem_control sysfs:file write;
+allow modem_control sysfs_wake_lock:file { open read write };
+
+allow modem_control init:unix_stream_socket connectto;
+allow modem_control vendor_shell_exec:file { read open execute execute_no_trans getattr };
+
+#allow modem_control system_prop:property_service set;
+#allow modem_control system_file:file execute_no_trans;
+
+allow modem_control block_device:dir search;
+allow modem_control mmcblk_device:blk_file { open read write };
+allow modem_control bm_device:chr_file { open write read ioctl};
+allow modem_control mpu_device:chr_file { open write read ioctl getattr };
+allow modem_control slog_device:chr_file { open read write };
+allow modem_control tty_device:chr_file { read write open };
+allow modem_control proc_sysrq:file { write open create read };
+allow modem_control cp_diskserver:dir search;
+allow modem_control cp_diskserver:file { read open};
+allow modem_control proc:file { open read write setattr };
+allow modem_control proc_mini_dump:file { open read getattr write };
+allow modem_control proc_pubcpiram:file { open read getattr write };
+allow modem_control proc_aoniram:file { open read getattr write };
+allow modem_control proc_pmicmem:file { open read getattr write };
+allow modem_control spipe_device:chr_file { read write open };
+allow modem_control self:capability2 { block_suspend };
+allow modem_control property_socket:sock_file { read write };
+allow modem_control powerctl_prop:property_service { set };
+allow modem_control modem_control:capability {  setuid setgid };
+allow modem_control proc_cmdline:file { read open };
+allow modem_control vendor_radio_prop:file { read getattr open map };
+allow modem_control vendor_product_prop:file { read getattr open map };
+allow modem_control vendor_sys_prop:file { read getattr open };
+set_prop(modem_control, vendor_modem_prop)
+allow modem_control kernel:system { module_request };
+
+allow modem_control vendor_sys_prop:file { read open getattr map };
+allow modem_control ctl_start_prop:property_service { set };
+
+allow modem_control vendor_sys_prop:property_service { set };

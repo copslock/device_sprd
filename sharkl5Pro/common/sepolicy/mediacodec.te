@@ -1,0 +1,4 @@
+allow mediacodec video_device:chr_file { open read write ioctl };
+allow mediacodec media_prop:file { read open getattr };
+
+set_prop(mediacodec, vendor_video_prop)

@@ -1,0 +1,8 @@
+#Dynamic partitions fstab file
+#<dev> <mnt_point> <type> <mnt_flags options>  <fs_mgr_flags>
+
+system /system ext4 ro,barrier=1 wait,logical,first_stage_mount
+vendor /vendor ext4 ro,barrier=1 wait,logical,first_stage_mount
+product /product ext4 ro,barrier=1 wait,logical,first_stage_mount
+#/dev/block/platform/soc/soc:ap-apb/71400000.sdio/by-name/metadata /metadata    ext4 nodev,noatime,nosuid,errors=panic wait,formattable,first_stage_mount
+/dev/block/memdisk0p2    /data        ext4 noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,check

@@ -1,0 +1,19 @@
+#============= servicemanager ============== 2017-08-02-13-24-29 added by genSepolicy script
+allow servicemanager aprd:process getattr;
+allow servicemanager aprd:dir search;
+allow servicemanager aprd:file {open read write};
+allow servicemanager rild:dir search;
+allow servicemanager rild:file { read open };
+allow servicemanager rild:process getattr;
+
+allow servicemanager nonplat_service_contexts_file:file r_file_perms;
+allow servicemanager system_data_file:dir w_file_perms;
+
+allow servicemanager cmd_services:dir{ search };
+allow servicemanager cmd_services:file{ read open };
+allow servicemanager cmd_services:process{ getattr };
+
+allow hwservicemanager embmsd:dir { search };
+allow hwservicemanager embmsd:file { read open };
+allow hwservicemanager embmsd:process { getattr };
+allow hwservicemanager embmsd:binder { transfer };

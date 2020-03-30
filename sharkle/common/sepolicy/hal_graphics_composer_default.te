@@ -1,0 +1,19 @@
+
+allow hal_graphics_composer_default device:dir { read open };
+allow hal_graphics_composer_default hal_graphics_allocator_default:binder call;
+hal_client_domain(hal_graphics_composer_default,hal_graphics_allocator)
+#allow hal_graphics_composer_default hal_graphics_allocator_hwservice:hwservice_manager find;
+hal_client_domain(hal_graphics_composer_default,hal_configstore)
+#allow hal_graphics_composer_default hal_configstore_ISurfaceFlingerConfigs:hwservice_manager { find };
+allow hal_graphics_composer_default ion_device:chr_file write;
+#allow hal_graphics_composer_default system_data_file:dir { write create add_name };
+allow hal_graphics_composer_default vndbinder_device:chr_file { read write ioctl open };
+
+#read camera prop
+get_prop(hal_graphics_composer_default, vendor_camera_prop)
+
+allow hal_graphics_composer_default hal_configstore_default:binder { call };
+allow hal_graphics_composer_default sysfs:file { write };
+allow hal_graphics_allocator_default sensorhub_data_file:dir { search };
+
+allow hal_graphics_composer_default vendor_hwc_prop:file { read open getattr map };

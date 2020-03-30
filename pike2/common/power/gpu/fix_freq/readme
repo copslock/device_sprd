@@ -1,0 +1,27 @@
+
+
+
+一、功能:固定gpu的频率
+
+二、用法:
+连接adb切换root进入shell
+adb root
+adb remount
+adb shell
+./vendor/bin/power/gpu/fix_freq/fix_gpu_freq
+
+三、示例:
+sp7731e_1h10:/vendor/bin/power/gpu/fix_freq # ./fix_gpu_freq
+gpu avalible freq:
+384000000       533000000
+input fix freq
+533000000
+cur_freq:533000000
+
+四、备注:
+1、只适用于userdebug版本
+2、sharkl3需要在滑屏时设置才能成功
+
+
+
+

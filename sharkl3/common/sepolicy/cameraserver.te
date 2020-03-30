@@ -1,0 +1,29 @@
+
+type sysfile, fs_type, sysfs_type, mlstrustedobject;
+allow cameraserver sensors_device:chr_file rw_file_perms;
+allow cameraserver graphics_device:dir search;
+allow cameraserver graphics_device:chr_file {open read write create ioctl};
+allow cameraserver camera_device:chr_file rw_file_perms;
+allow cameraserver media_prop:file {open read getattr};
+#allow cameraserver media_prop:property_service set;
+#allow cameraserver mlog_file:dir { search open read write add_name create};
+#allow cameraserver mlog_file:file { getattr open read write create};
+#allow cameraserver sysfs:file {read open write };
+allow cameraserver camera_device:dir search;
+allow cameraserver camera_device:fifo_file {open read write create };
+allow cameraserver camera_device:file {open read write create };
+allow cameraserver camera_data_file:dir { search open read write add_name create};
+allow cameraserver camera_data_file:file { getattr open read write create};
+#allow cameraserver sysfs_sensor:file { getattr open read write create};
+allow cameraserver sensorservice_service:service_manager find;
+allow cameraserver system_server:unix_stream_socket {read write };
+#============= cameraserver ============== 2017-08-02-15-13-07 added by genSepolicy script
+allow cameraserver property_socket:sock_file {write};
+allow cameraserver sysfile:file {getattr};
+allow cameraserver sprd_img_device:chr_file {open read write create ioctl map};
+allow cameraserver gpu_device:chr_file { open read write getattr ioctl map};
+allow cameraserver sysfs_ddr_dfs:file {read open write getattr};
+allow cameraserver sysfs_ddr_dfs:dir {search read open getattr};
+# add for CCSA
+allow cameraserver security_service:service_manager { find };
+allow cameraserver power_service:service_manager { find };

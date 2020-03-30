@@ -1,0 +1,14 @@
+#============= hal_power_default ============== 2017-08-02-13-24-29 added by genSepolicy script
+# Board Common Bgn
+allow hal_power_default sysfs_ddr_dfs:dir search;
+allow hal_power_default sysfs_ddr_dfs:file { open read write };
+
+allow hal_power_default sysfs:file { read open write };
+allow hal_power_default sysfs_devices_system_cpu:file { write open write };
+
+hal_client_domain(hal_power_default, hal_health)
+allow hal_power_default hal_health_hwservice:hwservice_manager find;
+binder_call(hal_power_default, hal_health_default)
+binder_call(hal_health_default, hal_power_default)
+
+set_prop(hal_power_default, vendor_power_prop);

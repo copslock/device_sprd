@@ -1,0 +1,14 @@
+type fsmgr, domain,domain;
+type fsmgr_exec, exec_type,file_type, system_file_type;
+
+
+
+allow fsmgr kmsg_device:chr_file {open write};
+allow fsmgr device:dir write;
+
+allow fsmgr block_device:blk_file {getattr};
+allow fsmgr block_device:dir {search};
+
+allow fsmgr devpts:chr_file { read write ioctl getattr };
+allow fsmgr proc_swaps:file { read open getattr };
+allow fsmgr sysfs_fs_ext4_features:dir search;

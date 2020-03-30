@@ -1,0 +1,23 @@
+
+
+# Send kill signals
+allow lmkd appdomain:process { getpgid sigkill signal };
+
+#for lmfs
+allow lmkd lmkd:capability { net_admin ipc_lock };
+allow lmkd lmkd:netlink_socket { create read write bind getattr create_socket_perms_no_ioctl };
+allow lmkd lmkd:sock_file create_file_perms;
+allow lmkd lmkd:unix_stream_socket { write };
+
+r_dir_file(lmkd, domain)
+#r_dir_file(lmkd, proc)
+r_dir_file(lmkd, proc_meminfo)
+r_dir_file(lmkd, proc_net)
+r_dir_file(lmkd, rootfs)
+#r_dir_file(lmkd, sysfs_type)
+
+allow lmkd property_socket:sock_file{ write };
+allow lmkd init:unix_stream_socket{ connectto };
+
+#trigger emem
+set_prop(lmkd, system_prop)

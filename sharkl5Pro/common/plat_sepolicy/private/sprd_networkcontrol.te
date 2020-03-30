@@ -1,0 +1,3 @@
+typeattribute sprd_networkcontrol coredomain;
+
+init_daemon_domain(sprd_networkcontrol)

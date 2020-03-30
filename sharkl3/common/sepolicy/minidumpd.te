@@ -1,0 +1,1 @@
+allow minidumpd mmcblk_device:blk_file { create getattr setattr open read  write unlink append };

@@ -1,0 +1,31 @@
+allow radio tty_device:chr_file rw_file_perms;
+
+#add for volte video call
+allow radio vce_service:service_manager { find };
+
+allow radio addon_service:service_manager { find };
+allow radio radio_service:service_manager { add };
+allow radio hal_extRadio_hwservice:hwservice_manager { find };
+
+#add for ConnectivityServiceEx
+allow radio connectionEx_service:service_manager { find };
+#add for network_adapter
+allow radio networkadapter_service:service_manager { find };
+#add for CM,ping6
+allow radio node:rawip_socket {node_bind};
+
+# add for CCSA
+allow radio security_service:service_manager { find };
+
+# add for power
+allow radio power_ex_service:service_manager { find };
+
+#add for radio get vendor prop
+get_prop(radio, vendor_radio_prop)
+#add for radio get vendor_sys_prop
+get_prop(radio, vendor_sys_prop)
+
+#add for HWUI
+get_prop(radio, vendor_hwui_prop);
+
+allow radio mediametrics_service:service_manager { find };

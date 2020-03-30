@@ -1,0 +1,38 @@
+
+
+一、功能
+获取dvfs_table
+
+二、使用方法
+连接adb切换root进入shell
+adb root
+adb remount
+adb shell
+./vendor/bin/power/cpu/dvfs/dvfs_table
+
+
+三、示例
+sp7731e_1h10:/vendor/bin/power/cpu/dvfs # ./dvfs_table
+lit core:
+/* kHz  uV */
+768000  900
+900000  900
+1000000 900
+1100000 931
+1150000 946
+1200000 962
+1300000 990
+
+
+四、备注
+1、仅适用于userdebug版本
+2、每次获取dvfs_table后续要重启手机
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+#allow platform_app srtd:unix_stream_socket connectto;
+#allow platform_app srt_socket:sock_file write;
+### Add platfrom_app mls permission for appbackup app
+typeattribute platform_app mlstrustedsubject;
+
+
+allow platform_app app_data_file:dir { rmdir remove_name };
+allow platform_app app_data_file:file { unlink };
+allow platform_app aprd:file {getattr };
+allow platform_app aprd:dir {getattr search};
+allow platform_app property_socket:sock_file write;
+allow platform_app embmsd_socket:sock_file {read write getattr };
+allow platform_app addon_service:service_manager { find };
+
+allow platform_app system_app_data_file:dir r_dir_perms;
+allow platform_app system_app_data_file:file rw_file_perms;
+
+#============= platform_app ============== 2017-08-02-13-24-29 added by genSepolicy script
+#allow platform_app slogmodem:unix_stream_socket connectto;
+
+#allow platform_app wcnd:unix_stream_socket connectto;
+
+# add for PowerManagerEx
+allow platform_app power_ex_service:service_manager { find };
+# for fm
+allow platform_app fm_device:chr_file { read write open ioctl };
+allow platform_app broadcastradio_service:service_manager{find};
+#allow platform_app vendor_file:file {r_file_perms };
+
+#add for ConnectivityServiceEx
+allow platform_app connectionEx_service:service_manager { find };
+#add for network_adapter
+allow platform_app networkadapter_service:service_manager { find };
+
+# add for CCSA
+allow platform_app security_service:service_manager { find };
+
+#add for gpu
+#allow platform_app same_process_hal_file:file { execute_no_trans };
+
+
+#add for systemui
+# For modem assert
+get_prop(platform_app, vendor_sys_prop);
+get_prop(platform_app, vendor_radio_prop);
+
+# add for faceid
+get_prop(platform_app, vendor_camera_prop)
+get_prop(platform_app, vendor_faceid_prop)
+
+allow platform_app media_prop:file { read };
+allow platform_app platform_app:process { ptrace };
+allow platform_app ssense_service:service_manager { find };
+
+#add for hprofs
+allow platform_app hprof_file:dir {write getattr open add_name read search};
+allow platform_app hprof_file:file {create getattr write open read};
+
+#add for NewGallery2
+allow platform_app unisoc_ai_service:service_manager { find };
+allow platform_app sprd_img_device:chr_file {open read write create ioctl map};

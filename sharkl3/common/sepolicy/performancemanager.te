@@ -1,0 +1,33 @@
+
+
+
+# Needed to check for app permissions.
+binder_use(performancemanager)
+binder_call(performancemanager, system_server)
+allow performancemanager permission_service:service_manager find;
+add_service(performancemanager, performancemanager_service)
+
+
+allow performancemanager self:global_capability_class_set {setuid setgid sys_nice kill sys_resource};
+
+r_dir_file(performancemanager, { appdomain bufferhubd kernel surfaceflinger })
+
+allow performancemanager { appdomain bufferhubd kernel surfaceflinger }:process setsched;
+
+# Send kill signals
+allow performancemanager appdomain:process sigkill;
+allow performancemanager tmpfs:dir { write add_name };
+
+#for read& write /proc/PID/reclaim
+r_dir_file(performancemanager, appdomain)
+allow performancemanager appdomain:file write;
+
+allow performancemanager domain:dir { search open read };
+allow performancemanager domain:file { open read };
+
+allow performancemanager proc_zoneinfo:file r_file_perms;
+allow performancemanager proc_meminfo:file r_file_perms;
+allow performancemanager proc_mounts:file r_file_perms;
+allow performancemanager sysfs_lowmemorykiller:file w_file_perms;
+allow dumpstate performancemanager:binder { call };
+allow performancemanager cgroup:file { open read write };

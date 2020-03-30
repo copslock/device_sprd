@@ -1,0 +1,35 @@
+#for performance
+/system/bin/performancemanager    u:object_r:performancemanager_exec:s0
+
+#add for ims_bridged
+/system/bin/ims_bridged           u:object_r:ims_bridged_exec:s0
+#for ylog
+/system/bin/ylog           u:object_r:ylog_exec:s0
+/data/ylog(/.*)?           u:object_r:ylog_file:s0
+/system/bin/log_service           u:object_r:log_service_exec:s0
+
+#for cmd_services
+/system/bin/cmd_services       u:object_r:cmd_services_exec:s0
+#for aprd
+/system/bin/collect_apr     u:object_r:aprd_exec:s0
+/data/sprdinfo(/.*)?	u:object_r:apr_data_file:s0
+#dataLogDaemon
+/system/bin/dataLogDaemon   u:object_r:dataLogDaemon_exec:s0
+
+#add for tcpip related shell scripts
+/system/bin/netbox.sh                    u:object_r:netbox_exec:s0
+/system/bin/tiny_firewall.sh             u:object_r:netbox_exec:s0
+/system/bin/ip_monitor.sh                u:object_r:netbox_exec:s0
+/system/bin/data_rps.sh                  u:object_r:netbox_exec:s0
+#add for srim_proxyd
+/system/bin/srmi_proxyd                  u:object_r:srmi_proxyd_exec:s0
+
+/system/bin/resize2fs     u:object_r:fsmgr_exec:s0
+
+#add for hprofs
+/data/misc/hprofs(/.*)?   u:object_r:hprof_file:s0
+#for minidump
+/system/bin/minidumpd       u:object_r:minidumpd_exec:s0
+
+#add for sprd_networkcontrol
+/system/bin/sprd_networkcontrol   u:object_r:sprd_networkcontrol_exec:s0

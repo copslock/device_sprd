@@ -1,0 +1,28 @@
+
+allow hal_audio_default property_socket:sock_file write;
+allow hal_audio_default init:unix_stream_socket connectto;
+allow hal_audio_default media_prop:file { read open getattr map};
+allow hal_audio_default sysfs:file { open read write getattr };
+allow hal_audio_default modem_control:unix_stream_socket { connectto read write };
+allow hal_audio_default spipe_device:chr_file { open write read };
+allow hal_audio_default rild:binder call;
+allow hal_audio_default hal_extRadio_hwservice:hwservice_manager find;
+#allow hal_audio_default hal_power_hwservice:hwservice_manager find;
+allow hal_audio_default hal_power_default:binder { call transfer };
+allow hal_audio_default sprd_audio_file:fifo_file { open read write setattr getattr create };
+allow hal_audio_default sprd_audio_file:file { read write create open getattr setattr };
+allow hal_audio_default sprd_audio_file:dir { search write add_name open };
+allow hal_audio_default exported3_radio_prop:file { read open getattr };
+allow hal_audio_default engpc:binder { transfer call };
+allow hal_audio_default factorytest:binder { transfer call };
+#============= hal_audio_default ============== 2017-08-02-16-46-00 added by genSepolicy script
+#allow hal_audio_default media_data_file:dir { search write open add_name };
+allow hal_audio_default media_prop:property_service set;
+allow hal_audio_default spipe_device:chr_file { ioctl };
+allow hal_audio_default prod_file:dir { search getattr read open };
+allow hal_audio_default prod_file:file { getattr open read write ioctl unlink lock setattr};
+get_prop(hal_audio_default, vendor_product_prop)
+allow hal_audio_default block_device:dir search;
+allow hal_audio_default mmcblk_device:blk_file { open read };
+allow hal_audio_default mnt_vendor_file:dir { search getattr add_name read open write};
+allow hal_audio_default mnt_vendor_file:file { getattr create open read write ioctl unlink lock setattr};

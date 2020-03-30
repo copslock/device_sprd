@@ -1,0 +1,9 @@
+
+#============= tee ============== 2017-08-02-13-24-29 added by genSepolicy script
+#allow tee block_device:blk_file { read write open };
+#allow tee device:chr_file { read write ioctl open };
+allow tee self:capability { setuid setgid };
+#allow tee system_data_file:dir { read open getattr };
+#allow tee system_file:file entrypoint;
+#allow tee system_data_file:file {read open};
+

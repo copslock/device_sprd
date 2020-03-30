@@ -1,0 +1,38 @@
+
+
+
+
+一、功能:限制cpu的最大频率
+
+二、用法:
+连接adb进入切换root账户进入shell
+adb root
+adb remount
+adb shell
+./vendor/bin/power/cpu/lit_freq/lit_cpu_freq
+根据提示选择需要固定的freq
+
+三、示例:
+s9863a1h10:/vendor/bin/power/cpu/lit_freq # ./lit_cpu_freq
+/lit_cpu_freq
+lit core
+768000  884000  1000000 1100000 1200000
+input lit max freq
+884000
+884000
+cur_freq:884000
+
+big core
+768000  1050000 1225000 1400000 1500000 1600000
+input lit max freq
+1050000
+1050000
+cur_freq:1050000
+
+三、备注:
+1、只适用于userdebug版本
+
+
+
+
+

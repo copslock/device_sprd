@@ -1,0 +1,13 @@
+allow hal_wifi_supplicant_default engpc :unix_dgram_socket {sendto  };
+allow hal_wifi_supplicant_default exported_default_prop:file { open read getattr };
+allow hal_wifi_supplicant_default exported_overlay_prop:file { open read getattr };
+allow hal_wifi_supplicant_default exported_system_prop:file { open read getattr };
+allow hal_wifi_supplicant_default exported_vold_prop:file { open read getattr };
+allow hal_wifi_supplicant_default exported_wifi_prop:file { open read getattr };
+allow hal_wifi_supplicant_default exported2_default_prop:file { open read getattr };
+#allow hal_wifi_supplicant_default exported2_system_prop:file { open read getattr };
+#allow hal_wifi_supplicant_default exported3_default_prop:file { open read getattr };
+#allow hal_wifi_supplicant_default exported3_system_prop:file { open read getattr };
+allow hal_wifi_supplicant_default vendor_default_prop:file { open read getattr };
+allow hal_wifi_supplicant_default vendor_data_file:dir { create read write open add_name search getattr };
+allow hal_wifi_supplicant_default vendor_data_file:file { create open read write getattr };

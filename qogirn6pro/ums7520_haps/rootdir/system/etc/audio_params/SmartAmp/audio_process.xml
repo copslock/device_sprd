@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<audio_process time="2019-08-21 20:31:40">
+    <Audio>
+        <Handset>
+            <NB1>
+                <mic_switch id="0x0" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </NB1>
+            <NB2>
+                <mic_switch id="0x2" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </NB2>
+            <WB1>
+                <mic_switch id="0x4" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </WB1>
+            <WB2>
+                <mic_switch id="0x6" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </WB2>
+            <SWB1>
+                <mic_switch id="0x8" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </SWB1>
+            <FB1>
+                <mic_switch id="0xa" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </FB1>
+            <VOIP1>
+                <mic_switch id="0xc" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </VOIP1>
+        </Handset>
+        <Handsfree>
+            <NB1>
+                <mic_switch id="0xe" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x00" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </NB1>
+            <NB2>
+                <mic_switch id="0x10" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x00" />
+                </mic_switch>
+            </NB2>
+            <WB1>
+                <mic_switch id="0x12" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x00" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </WB1>
+            <WB2>
+                <mic_switch id="0x14" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x00" />
+                </mic_switch>
+            </WB2>
+            <SWB1>
+                <mic_switch id="0x16" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x00" />
+                </mic_switch>
+            </SWB1>
+            <FB1>
+                <mic_switch id="0x18" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x00" />
+                </mic_switch>
+            </FB1>
+            <VOIP1>
+                <mic_switch id="0x1a" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x00" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </VOIP1>
+        </Handsfree>
+        <Headset4P>
+            <NB1>
+                <mic_switch id="0x1c" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="true" val="0x01" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </NB1>
+            <NB2>
+                <mic_switch id="0x1e" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="true" val="0x01" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </NB2>
+            <WB1>
+                <mic_switch id="0x20" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="true" val="0x01" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </WB1>
+            <WB2>
+                <mic_switch id="0x22" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="true" val="0x01" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </WB2>
+            <SWB1>
+                <mic_switch id="0x24" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="true" val="0x01" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </SWB1>
+            <FB1>
+                <mic_switch id="0x26" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="true" val="0x01" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </FB1>
+            <VOIP1>
+                <mic_switch id="0x28" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="true" val="0x01" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </VOIP1>
+        </Headset4P>
+        <Headset3P>
+            <NB1>
+                <mic_switch id="0x2a" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </NB1>
+            <NB2>
+                <mic_switch id="0x2c" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </NB2>
+            <WB1>
+                <mic_switch id="0x2e" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </WB1>
+            <WB2>
+                <mic_switch id="0x30" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </WB2>
+            <SWB1>
+                <mic_switch id="0x32" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </SWB1>
+            <FB1>
+                <mic_switch id="0x34" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </FB1>
+            <VOIP1>
+                <mic_switch id="0x36" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </VOIP1>
+        </Headset3P>
+        <BTHS visible="false">
+            <NB1>
+                <mic_switch id="0x38" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </NB1>
+            <NB2>
+                <mic_switch id="0x3a" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </NB2>
+            <WB1>
+                <mic_switch id="0x3c" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </WB1>
+            <WB2>
+                <mic_switch id="0x3e" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </WB2>
+            <SWB1>
+                <mic_switch id="0x40" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </SWB1>
+            <FB1>
+                <mic_switch id="0x42" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </FB1>
+            <VOIP1>
+                <mic_switch id="0x44" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </VOIP1>
+        </BTHS>
+        <BTHSNREC visible="false">
+            <NB1>
+                <mic_switch id="0x46" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </NB1>
+            <NB2>
+                <mic_switch id="0x48" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </NB2>
+            <WB1>
+                <mic_switch id="0x4a" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </WB1>
+            <WB2>
+                <mic_switch id="0x4c" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </WB2>
+            <SWB1>
+                <mic_switch id="0x4e" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </SWB1>
+            <FB1>
+                <mic_switch id="0x50" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </FB1>
+            <VOIP1>
+                <mic_switch id="0x52" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x0" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x0" />
+                </mic_switch>
+            </VOIP1>
+        </BTHSNREC>
+        <TypeC_Digital>
+            <NB1>
+                <mic_switch id="0x54" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x01" />
+                </mic_switch>
+            </NB1>
+            <NB2>
+                <mic_switch id="0x56" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x01" />
+                </mic_switch>
+            </NB2>
+            <WB1>
+                <mic_switch id="0x58" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x01" />
+                </mic_switch>
+            </WB1>
+            <WB2>
+                <mic_switch id="0x5a" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x01" />
+                </mic_switch>
+            </WB2>
+            <SWB1>
+                <mic_switch id="0x5c" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x01" />
+                </mic_switch>
+            </SWB1>
+            <FB1>
+                <mic_switch id="0x5e" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x01" />
+                </mic_switch>
+            </FB1>
+            <VOIP1>
+                <mic_switch id="0x60" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="false" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="false" val="0x01" />
+                </mic_switch>
+            </VOIP1>
+        </TypeC_Digital>
+        <Hac>
+            <NB1>
+                <mic_switch id="0x62" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </NB1>
+            <NB2>
+                <mic_switch id="0x64" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </NB2>
+            <WB1>
+                <mic_switch id="0x66" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </WB1>
+            <WB2>
+                <mic_switch id="0x68" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </WB2>
+            <SWB1>
+                <mic_switch id="0x6a" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </SWB1>
+            <FB1>
+                <mic_switch id="0x6c" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </FB1>
+            <VOIP1>
+                <mic_switch id="0x6e" t="u16">
+                    <head_mic_enable offset="2" bits="1" visible="false" val="0x00" />
+                    <aux_mic_enable offset="1" bits="1" visible="true" val="0x01" />
+                    <main_mic_enable offset="0" bits="1" visible="true" val="0x01" />
+                </mic_switch>
+            </VOIP1>
+        </Hac>
+    </Audio>
+    <Music>
+        <Headset>
+            <Record>
+                <eq>
+                    <RECORDEQ_sw_switch offset="0" bits="16" t="u16" id="0x150" visible="true" val="0xff00" />
+                    <RECORDEQ_master_gain offset="0" bits="16" t="u16" id="0x152" visible="true" val="0x07fb" />
+                    <RECORDEQ_band_para00>
+                        <f0 offset="0" bits="16" t="u16" id="0x154" visible="true" val="0x03e8" />
+                        <df offset="0" bits="16" t="u16" id="0x156" visible="true" val="0x03e8" />
+                        <boost offset="0" bits="16" t="u16" id="0x158" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x15a" visible="true" val="0x00" />
+                    </RECORDEQ_band_para00>
+                    <RECORDEQ_band_para01>
+                        <f0 offset="0" bits="16" t="u16" id="0x15c" visible="true" val="0x07d0" />
+                        <df offset="0" bits="16" t="u16" id="0x15e" visible="true" val="0x07d0" />
+                        <boost offset="0" bits="16" t="u16" id="0x160" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x162" visible="true" val="0x00" />
+                    </RECORDEQ_band_para01>
+                    <RECORDEQ_band_para02>
+                        <f0 offset="0" bits="16" t="u16" id="0x164" visible="true" val="0x0bb8" />
+                        <df offset="0" bits="16" t="u16" id="0x166" visible="true" val="0x0bb8" />
+                        <boost offset="0" bits="16" t="u16" id="0x168" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x16a" visible="true" val="0x00" />
+                    </RECORDEQ_band_para02>
+                    <RECORDEQ_band_para03>
+                        <f0 offset="0" bits="16" t="u16" id="0x16c" visible="true" val="0x0fa0" />
+                        <df offset="0" bits="16" t="u16" id="0x16e" visible="true" val="0x0fa0" />
+                        <boost offset="0" bits="16" t="u16" id="0x170" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x172" visible="true" val="0x00" />
+                    </RECORDEQ_band_para03>
+                    <RECORDEQ_band_para04>
+                        <f0 offset="0" bits="16" t="u16" id="0x174" visible="true" val="0x1388" />
+                        <df offset="0" bits="16" t="u16" id="0x176" visible="true" val="0x1388" />
+                        <boost offset="0" bits="16" t="u16" id="0x178" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x17a" visible="true" val="0x00" />
+                    </RECORDEQ_band_para04>
+                    <RECORDEQ_band_para05>
+                        <f0 offset="0" bits="16" t="u16" id="0x17c" visible="true" val="0x1770" />
+                        <df offset="0" bits="16" t="u16" id="0x17e" visible="true" val="0x1770" />
+                        <boost offset="0" bits="16" t="u16" id="0x180" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x182" visible="true" val="0x00" />
+                    </RECORDEQ_band_para05>
+                </eq>
+                <dp>
+                    <DP_sw_switch offset="0" bits="16" t="u16" id="0x184" visible="true" val="0x03" />
+                    <DP_input_gain offset="0" bits="16" t="u16" id="0x186" visible="false" val="0x07fb" />
+                    <DP_sdelay offset="0" bits="16" t="u16" id="0x188" visible="false" val="0x32" />
+                    <DP_limit_up offset="0" bits="16" t="u16" id="0x18a" visible="true" val="0x00" />
+                    <DP_limit_down offset="0" bits="16" t="u16" id="0x18c" visible="true" val="0xfffffc7c" />
+                    <COMPRESSOR_threshold offset="0" bits="16" t="u16" id="0x18e" visible="true" val="0xffffffe2" />
+                    <COMPRESSOR_ratio offset="0" bits="16" t="u16" id="0x190" visible="true" val="0x671f" />
+                    <COMPRESSOR_attack offset="0" bits="16" t="u16" id="0x192" visible="true" val="0x05" />
+                    <COMPRESSOR_hold offset="0" bits="16" t="u16" id="0x194" visible="true" val="0x32" />
+                    <COMPRESSOR_release offset="0" bits="16" t="u16" id="0x196" visible="true" val="0x64" />
+                    <EXPANDER_threshold offset="0" bits="16" t="u16" id="0x198" visible="true" val="0xfffffda8" />
+                    <EXPANDER_ratio offset="0" bits="16" t="u16" id="0x19a" visible="true" val="0x5669" />
+                    <EXPANDER_attack offset="0" bits="16" t="u16" id="0x19c" visible="true" val="0x05" />
+                    <EXPANDER_hold offset="0" bits="16" t="u16" id="0x19e" visible="true" val="0x32" />
+                    <EXPANDER_release offset="0" bits="16" t="u16" id="0x1a0" visible="true" val="0x64" />
+                    <DP_lcf_fp_l offset="0" bits="16" t="u16" id="0x1a2" visible="false" val="0xc8" />
+                    <DP_lcf_fp_r offset="0" bits="16" t="u16" id="0x1a4" visible="false" val="0xc8" />
+                    <DP_lcf_gain_l offset="0" bits="16" t="u16" id="0x1a6" visible="false" val="0x4000" />
+                    <DP_lcf_gain_r offset="0" bits="16" t="u16" id="0x1a8" visible="false" val="0x4000" />
+                </dp>
+                <nr>
+                    <nr_switch offset="0" bits="16" t="u16" id="0x1aa" visible="true" val="0x01" />
+                    <modu1_switch offset="0" bits="16" t="u16" id="0x1ac" visible="true" val="0x1111" />
+                    <modu2_switch offset="0" bits="16" t="u16" id="0x1ae" visible="true" val="0x2802" />
+                    <min_psne offset="0" bits="16" t="u16" id="0x1b0" visible="true" val="0xffffe4a8" />
+                    <max_psne offset="0" bits="16" t="u16" id="0x1b2" visible="true" val="0xffffea84" />
+                    <nr_dgain offset="0" bits="16" t="u16" id="0x1b4" visible="true" val="0x00" />
+                    <ns_limit offset="0" bits="16" t="u16" id="0x1b6" visible="true" val="0x04b0" />
+                    <ns_factor offset="0" bits="16" t="u16" id="0x1b8" visible="true" val="0x64" />
+                </nr>
+            </Record>
+            <UnprocessRecord>
+                <eq>
+                    <RECORDEQ_sw_switch offset="0" bits="16" t="u16" id="0x1ba" visible="true" val="0x3f01" />
+                    <RECORDEQ_master_gain offset="0" bits="16" t="u16" id="0x1bc" visible="true" val="0x0400" />
+                    <RECORDEQ_band_para00>
+                        <f0 offset="0" bits="16" t="u16" id="0x1be" visible="true" val="0x32" />
+                        <df offset="0" bits="16" t="u16" id="0x1c0" visible="true" val="0x19" />
+                        <boost offset="0" bits="16" t="u16" id="0x1c2" visible="true" val="0xfffffed4" />
+                        <gain offset="0" bits="16" t="u16" id="0x1c4" visible="true" val="0x00" />
+                    </RECORDEQ_band_para00>
+                    <RECORDEQ_band_para01>
+                        <f0 offset="0" bits="16" t="u16" id="0x1c6" visible="true" val="0x32" />
+                        <df offset="0" bits="16" t="u16" id="0x1c8" visible="true" val="0x19" />
+                        <boost offset="0" bits="16" t="u16" id="0x1ca" visible="true" val="0xfffffed4" />
+                        <gain offset="0" bits="16" t="u16" id="0x1cc" visible="true" val="0x00" />
+                    </RECORDEQ_band_para01>
+                    <RECORDEQ_band_para02>
+                        <f0 offset="0" bits="16" t="u16" id="0x1ce" visible="true" val="0x0bb8" />
+                        <df offset="0" bits="16" t="u16" id="0x1d0" visible="true" val="0x0bb8" />
+                        <boost offset="0" bits="16" t="u16" id="0x1d2" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x1d4" visible="true" val="0x00" />
+                    </RECORDEQ_band_para02>
+                    <RECORDEQ_band_para03>
+                        <f0 offset="0" bits="16" t="u16" id="0x1d6" visible="true" val="0x0fa0" />
+                        <df offset="0" bits="16" t="u16" id="0x1d8" visible="true" val="0x0fa0" />
+                        <boost offset="0" bits="16" t="u16" id="0x1da" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x1dc" visible="true" val="0x00" />
+                    </RECORDEQ_band_para03>
+                    <RECORDEQ_band_para04>
+                        <f0 offset="0" bits="16" t="u16" id="0x1de" visible="true" val="0x1388" />
+                        <df offset="0" bits="16" t="u16" id="0x1e0" visible="true" val="0x1388" />
+                        <boost offset="0" bits="16" t="u16" id="0x1e2" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x1e4" visible="true" val="0x00" />
+                    </RECORDEQ_band_para04>
+                    <RECORDEQ_band_para05>
+                        <f0 offset="0" bits="16" t="u16" id="0x1e6" visible="true" val="0x4e20" />
+                        <df offset="0" bits="16" t="u16" id="0x1e8" visible="true" val="0x4e20" />
+                        <boost offset="0" bits="16" t="u16" id="0x1ea" visible="true" val="0xffffffce" />
+                        <gain offset="0" bits="16" t="u16" id="0x1ec" visible="true" val="0x00" />
+                    </RECORDEQ_band_para05>
+                </eq>
+                <dp>
+                    <DP_sw_switch offset="0" bits="16" t="u16" id="0x1ee" visible="true" val="0x02" />
+                    <DP_input_gain offset="0" bits="16" t="u16" id="0x1f0" visible="false" val="0x07fb" />
+                    <DP_sdelay offset="0" bits="16" t="u16" id="0x1f2" visible="false" val="0x32" />
+                    <DP_limit_up offset="0" bits="16" t="u16" id="0x1f4" visible="true" val="0x00" />
+                    <DP_limit_down offset="0" bits="16" t="u16" id="0x1f6" visible="true" val="0xfffffd44" />
+                    <COMPRESSOR_threshold offset="0" bits="16" t="u16" id="0x1f8" visible="true" val="0xffffffe2" />
+                    <COMPRESSOR_ratio offset="0" bits="16" t="u16" id="0x1fa" visible="true" val="0x671f" />
+                    <COMPRESSOR_attack offset="0" bits="16" t="u16" id="0x1fc" visible="true" val="0x05" />
+                    <COMPRESSOR_hold offset="0" bits="16" t="u16" id="0x1fe" visible="true" val="0x32" />
+                    <COMPRESSOR_release offset="0" bits="16" t="u16" id="0x200" visible="true" val="0x64" />
+                    <EXPANDER_threshold offset="0" bits="16" t="u16" id="0x202" visible="true" val="0xfffffda8" />
+                    <EXPANDER_ratio offset="0" bits="16" t="u16" id="0x204" visible="true" val="0x5669" />
+                    <EXPANDER_attack offset="0" bits="16" t="u16" id="0x206" visible="true" val="0x05" />
+                    <EXPANDER_hold offset="0" bits="16" t="u16" id="0x208" visible="true" val="0x32" />
+                    <EXPANDER_release offset="0" bits="16" t="u16" id="0x20a" visible="true" val="0x64" />
+                    <DP_lcf_fp_l offset="0" bits="16" t="u16" id="0x20c" visible="false" val="0xc8" />
+                    <DP_lcf_fp_r offset="0" bits="16" t="u16" id="0x20e" visible="false" val="0xc8" />
+                    <DP_lcf_gain_l offset="0" bits="16" t="u16" id="0x210" visible="false" val="0x4000" />
+                    <DP_lcf_gain_r offset="0" bits="16" t="u16" id="0x212" visible="false" val="0x4000" />
+                </dp>
+                <nr>
+                    <nr_switch offset="0" bits="16" t="u16" id="0x214" visible="true" val="0x00" />
+                    <modu1_switch offset="0" bits="16" t="u16" id="0x216" visible="true" val="0x1111" />
+                    <modu2_switch offset="0" bits="16" t="u16" id="0x218" visible="true" val="0x2802" />
+                    <min_psne offset="0" bits="16" t="u16" id="0x21a" visible="true" val="0xffffe4a8" />
+                    <max_psne offset="0" bits="16" t="u16" id="0x21c" visible="true" val="0xffffee6c" />
+                    <nr_dgain offset="0" bits="16" t="u16" id="0x21e" visible="true" val="0x00" />
+                    <ns_limit offset="0" bits="16" t="u16" id="0x220" visible="true" val="0x04b0" />
+                    <ns_factor offset="0" bits="16" t="u16" id="0x222" visible="true" val="0x64" />
+                </nr>
+            </UnprocessRecord>
+            <VoiceRecognition>
+                <eq>
+                    <RECORDEQ_sw_switch offset="0" bits="16" t="u16" id="0x224" visible="true" val="0xff00" />
+                    <RECORDEQ_master_gain offset="0" bits="16" t="u16" id="0x226" visible="true" val="0x0400" />
+                    <RECORDEQ_band_para00>
+                        <f0 offset="0" bits="16" t="u16" id="0x228" visible="true" val="0x32" />
+                        <df offset="0" bits="16" t="u16" id="0x22a" visible="true" val="0x19" />
+                        <boost offset="0" bits="16" t="u16" id="0x22c" visible="true" val="0xfffffed4" />
+                        <gain offset="0" bits="16" t="u16" id="0x22e" visible="true" val="0x00" />
+                    </RECORDEQ_band_para00>
+                    <RECORDEQ_band_para01>
+                        <f0 offset="0" bits="16" t="u16" id="0x230" visible="true" val="0x32" />
+                        <df offset="0" bits="16" t="u16" id="0x232" visible="true" val="0x19" />
+                        <boost offset="0" bits="16" t="u16" id="0x234" visible="true" val="0xfffffed4" />
+                        <gain offset="0" bits="16" t="u16" id="0x236" visible="true" val="0x00" />
+                    </RECORDEQ_band_para01>
+                    <RECORDEQ_band_para02>
+                        <f0 offset="0" bits="16" t="u16" id="0x238" visible="true" val="0x32" />
+                        <df offset="0" bits="16" t="u16" id="0x23a" visible="true" val="0x19" />
+                        <boost offset="0" bits="16" t="u16" id="0x23c" visible="true" val="0xfffffed4" />
+                        <gain offset="0" bits="16" t="u16" id="0x23e" visible="true" val="0x00" />
+                    </RECORDEQ_band_para02>
+                    <RECORDEQ_band_para03>
+                        <f0 offset="0" bits="16" t="u16" id="0x240" visible="true" val="0x32" />
+                        <df offset="0" bits="16" t="u16" id="0x242" visible="true" val="0x19" />
+                        <boost offset="0" bits="16" t="u16" id="0x244" visible="true" val="0xfffffed4" />
+                        <gain offset="0" bits="16" t="u16" id="0x246" visible="true" val="0x00" />
+                    </RECORDEQ_band_para03>
+                    <RECORDEQ_band_para04>
+                        <f0 offset="0" bits="16" t="u16" id="0x248" visible="true" val="0x32" />
+                        <df offset="0" bits="16" t="u16" id="0x24a" visible="true" val="0x19" />
+                        <boost offset="0" bits="16" t="u16" id="0x24c" visible="true" val="0xfffffed4" />
+                        <gain offset="0" bits="16" t="u16" id="0x24e" visible="true" val="0x00" />
+                    </RECORDEQ_band_para04>
+                    <RECORDEQ_band_para05>
+                        <f0 offset="0" bits="16" t="u16" id="0x250" visible="true" val="0x32" />
+                        <df offset="0" bits="16" t="u16" id="0x252" visible="true" val="0x19" />
+                        <boost offset="0" bits="16" t="u16" id="0x254" visible="true" val="0xfffffed4" />
+                        <gain offset="0" bits="16" t="u16" id="0x256" visible="true" val="0x00" />
+                    </RECORDEQ_band_para05>
+                </eq>
+                <dp>
+                    <DP_sw_switch offset="0" bits="16" t="u16" id="0x258" visible="true" val="0x07" />
+                    <DP_input_gain offset="0" bits="16" t="u16" id="0x25a" visible="true" val="0x0fed" />
+                    <DP_sdelay offset="0" bits="16" t="u16" id="0x25c" visible="true" val="0x32" />
+                    <DP_limit_up offset="0" bits="16" t="u16" id="0x25e" visible="true" val="0x00" />
+                    <DP_limit_down offset="0" bits="16" t="u16" id="0x260" visible="true" val="0xfffffc7c" />
+                    <COMPRESSOR_threshold offset="0" bits="16" t="u16" id="0x262" visible="true" val="0xffffffe2" />
+                    <COMPRESSOR_ratio offset="0" bits="16" t="u16" id="0x264" visible="true" val="0x671f" />
+                    <COMPRESSOR_attack offset="0" bits="16" t="u16" id="0x266" visible="true" val="0x05" />
+                    <COMPRESSOR_hold offset="0" bits="16" t="u16" id="0x268" visible="true" val="0x32" />
+                    <COMPRESSOR_release offset="0" bits="16" t="u16" id="0x26a" visible="true" val="0x64" />
+                    <EXPANDER_threshold offset="0" bits="16" t="u16" id="0x26c" visible="true" val="0xfffffda8" />
+                    <EXPANDER_ratio offset="0" bits="16" t="u16" id="0x26e" visible="true" val="0x5669" />
+                    <EXPANDER_attack offset="0" bits="16" t="u16" id="0x270" visible="true" val="0x05" />
+                    <EXPANDER_hold offset="0" bits="16" t="u16" id="0x272" visible="true" val="0x32" />
+                    <EXPANDER_release offset="0" bits="16" t="u16" id="0x274" visible="true" val="0x64" />
+                    <DP_lcf_fp_l offset="0" bits="16" t="u16" id="0x276" visible="true" val="0x64" />
+                    <DP_lcf_fp_r offset="0" bits="16" t="u16" id="0x278" visible="true" val="0x64" />
+                    <DP_lcf_gain_l offset="0" bits="16" t="u16" id="0x27a" visible="true" val="0x4000" />
+                    <DP_lcf_gain_r offset="0" bits="16" t="u16" id="0x27c" visible="true" val="0x4000" />
+                </dp>
+                <nr>
+                    <nr_switch offset="0" bits="16" t="u16" id="0x27e" visible="true" val="0x00" />
+                    <modu1_switch offset="0" bits="16" t="u16" id="0x280" visible="true" val="0x1111" />
+                    <modu2_switch offset="0" bits="16" t="u16" id="0x282" visible="true" val="0x2802" />
+                    <min_psne offset="0" bits="16" t="u16" id="0x284" visible="true" val="0xffffe4a8" />
+                    <max_psne offset="0" bits="16" t="u16" id="0x286" visible="true" val="0xffffee6c" />
+                    <nr_dgain offset="0" bits="16" t="u16" id="0x288" visible="true" val="0x0258" />
+                    <ns_limit offset="0" bits="16" t="u16" id="0x28a" visible="true" val="0x04b0" />
+                    <ns_factor offset="0" bits="16" t="u16" id="0x28c" visible="true" val="0x64" />
+                </nr>
+            </VoiceRecognition>
+        </Headset>
+        <Handsfree>
+            <Record>
+                <eq>
+                    <RECORDEQ_sw_switch offset="0" bits="16" t="u16" id="0x28e" visible="true" val="0xff00" />
+                    <RECORDEQ_master_gain offset="0" bits="16" t="u16" id="0x290" visible="true" val="0x07fb" />
+                    <RECORDEQ_band_para00>
+                        <f0 offset="0" bits="16" t="u16" id="0x292" visible="true" val="0x03e8" />
+                        <df offset="0" bits="16" t="u16" id="0x294" visible="true" val="0x03e8" />
+                        <boost offset="0" bits="16" t="u16" id="0x296" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x298" visible="true" val="0x00" />
+                    </RECORDEQ_band_para00>
+                    <RECORDEQ_band_para01>
+                        <f0 offset="0" bits="16" t="u16" id="0x29a" visible="true" val="0x07d0" />
+                        <df offset="0" bits="16" t="u16" id="0x29c" visible="true" val="0x07d0" />
+                        <boost offset="0" bits="16" t="u16" id="0x29e" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x2a0" visible="true" val="0x00" />
+                    </RECORDEQ_band_para01>
+                    <RECORDEQ_band_para02>
+                        <f0 offset="0" bits="16" t="u16" id="0x2a2" visible="true" val="0x0bb8" />
+                        <df offset="0" bits="16" t="u16" id="0x2a4" visible="true" val="0x0bb8" />
+                        <boost offset="0" bits="16" t="u16" id="0x2a6" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x2a8" visible="true" val="0x00" />
+                    </RECORDEQ_band_para02>
+                    <RECORDEQ_band_para03>
+                        <f0 offset="0" bits="16" t="u16" id="0x2aa" visible="true" val="0x0fa0" />
+                        <df offset="0" bits="16" t="u16" id="0x2ac" visible="true" val="0x0fa0" />
+                        <boost offset="0" bits="16" t="u16" id="0x2ae" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x2b0" visible="true" val="0x00" />
+                    </RECORDEQ_band_para03>
+                    <RECORDEQ_band_para04>
+                        <f0 offset="0" bits="16" t="u16" id="0x2b2" visible="true" val="0x1388" />
+                        <df offset="0" bits="16" t="u16" id="0x2b4" visible="true" val="0x1388" />
+                        <boost offset="0" bits="16" t="u16" id="0x2b6" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x2b8" visible="true" val="0x00" />
+                    </RECORDEQ_band_para04>
+                    <RECORDEQ_band_para05>
+                        <f0 offset="0" bits="16" t="u16" id="0x2ba" visible="true" val="0x1770" />
+                        <df offset="0" bits="16" t="u16" id="0x2bc" visible="true" val="0x1770" />
+                        <boost offset="0" bits="16" t="u16" id="0x2be" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x2c0" visible="true" val="0x00" />
+                    </RECORDEQ_band_para05>
+                </eq>
+                <dp>
+                    <DP_sw_switch offset="0" bits="16" t="u16" id="0x2c2" visible="true" val="0x03" />
+                    <DP_input_gain offset="0" bits="16" t="u16" id="0x2c4" visible="false" val="0x07fb" />
+                    <DP_sdelay offset="0" bits="16" t="u16" id="0x2c6" visible="false" val="0x32" />
+                    <DP_limit_up offset="0" bits="16" t="u16" id="0x2c8" visible="true" val="0x00" />
+                    <DP_limit_down offset="0" bits="16" t="u16" id="0x2ca" visible="true" val="0xfffffd44" />
+                    <COMPRESSOR_threshold offset="0" bits="16" t="u16" id="0x2cc" visible="true" val="0xffffffe2" />
+                    <COMPRESSOR_ratio offset="0" bits="16" t="u16" id="0x2ce" visible="true" val="0x671f" />
+                    <COMPRESSOR_attack offset="0" bits="16" t="u16" id="0x2d0" visible="true" val="0x05" />
+                    <COMPRESSOR_hold offset="0" bits="16" t="u16" id="0x2d2" visible="true" val="0x32" />
+                    <COMPRESSOR_release offset="0" bits="16" t="u16" id="0x2d4" visible="true" val="0x64" />
+                    <EXPANDER_threshold offset="0" bits="16" t="u16" id="0x2d6" visible="true" val="0xfffffda8" />
+                    <EXPANDER_ratio offset="0" bits="16" t="u16" id="0x2d8" visible="true" val="0x5669" />
+                    <EXPANDER_attack offset="0" bits="16" t="u16" id="0x2da" visible="true" val="0x05" />
+                    <EXPANDER_hold offset="0" bits="16" t="u16" id="0x2dc" visible="true" val="0x32" />
+                    <EXPANDER_release offset="0" bits="16" t="u16" id="0x2de" visible="true" val="0x64" />
+                    <DP_lcf_fp_l offset="0" bits="16" t="u16" id="0x2e0" visible="false" val="0xc8" />
+                    <DP_lcf_fp_r offset="0" bits="16" t="u16" id="0x2e2" visible="false" val="0xc8" />
+                    <DP_lcf_gain_l offset="0" bits="16" t="u16" id="0x2e4" visible="false" val="0x4000" />
+                    <DP_lcf_gain_r offset="0" bits="16" t="u16" id="0x2e6" visible="false" val="0x4000" />
+                </dp>
+                <nr>
+                    <nr_switch offset="0" bits="16" t="u16" id="0x2e8" visible="true" val="0x01" />
+                    <modu1_switch offset="0" bits="16" t="u16" id="0x2ea" visible="true" val="0x1111" />
+                    <modu2_switch offset="0" bits="16" t="u16" id="0x2ec" visible="true" val="0x2802" />
+                    <min_psne offset="0" bits="16" t="u16" id="0x2ee" visible="true" val="0xffffe4a8" />
+                    <max_psne offset="0" bits="16" t="u16" id="0x2f0" visible="true" val="0xffffea84" />
+                    <nr_dgain offset="0" bits="16" t="u16" id="0x2f2" visible="true" val="0x00" />
+                    <ns_limit offset="0" bits="16" t="u16" id="0x2f4" visible="true" val="0x04b0" />
+                    <ns_factor offset="0" bits="16" t="u16" id="0x2f6" visible="true" val="0x64" />
+                </nr>
+            </Record>
+            <UnprocessRecord>
+                <eq>
+                    <RECORDEQ_sw_switch offset="0" bits="16" t="u16" id="0x2f8" visible="true" val="0x00" />
+                    <RECORDEQ_master_gain offset="0" bits="16" t="u16" id="0x2fa" visible="true" val="0x07fb" />
+                    <RECORDEQ_band_para00>
+                        <f0 offset="0" bits="16" t="u16" id="0x2fc" visible="true" val="0x03e8" />
+                        <df offset="0" bits="16" t="u16" id="0x2fe" visible="true" val="0x03e8" />
+                        <boost offset="0" bits="16" t="u16" id="0x300" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x302" visible="true" val="0x00" />
+                    </RECORDEQ_band_para00>
+                    <RECORDEQ_band_para01>
+                        <f0 offset="0" bits="16" t="u16" id="0x304" visible="true" val="0x07d0" />
+                        <df offset="0" bits="16" t="u16" id="0x306" visible="true" val="0x07d0" />
+                        <boost offset="0" bits="16" t="u16" id="0x308" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x30a" visible="true" val="0x00" />
+                    </RECORDEQ_band_para01>
+                    <RECORDEQ_band_para02>
+                        <f0 offset="0" bits="16" t="u16" id="0x30c" visible="true" val="0x0bb8" />
+                        <df offset="0" bits="16" t="u16" id="0x30e" visible="true" val="0x0bb8" />
+                        <boost offset="0" bits="16" t="u16" id="0x310" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x312" visible="true" val="0x00" />
+                    </RECORDEQ_band_para02>
+                    <RECORDEQ_band_para03>
+                        <f0 offset="0" bits="16" t="u16" id="0x314" visible="true" val="0x0fa0" />
+                        <df offset="0" bits="16" t="u16" id="0x316" visible="true" val="0x0fa0" />
+                        <boost offset="0" bits="16" t="u16" id="0x318" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x31a" visible="true" val="0x00" />
+                    </RECORDEQ_band_para03>
+                    <RECORDEQ_band_para04>
+                        <f0 offset="0" bits="16" t="u16" id="0x31c" visible="true" val="0x1388" />
+                        <df offset="0" bits="16" t="u16" id="0x31e" visible="true" val="0x1388" />
+                        <boost offset="0" bits="16" t="u16" id="0x320" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x322" visible="true" val="0x00" />
+                    </RECORDEQ_band_para04>
+                    <RECORDEQ_band_para05>
+                        <f0 offset="0" bits="16" t="u16" id="0x324" visible="true" val="0x1770" />
+                        <df offset="0" bits="16" t="u16" id="0x326" visible="true" val="0x1770" />
+                        <boost offset="0" bits="16" t="u16" id="0x328" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x32a" visible="true" val="0x00" />
+                    </RECORDEQ_band_para05>
+                </eq>
+                <dp>
+                    <DP_sw_switch offset="0" bits="16" t="u16" id="0x32c" visible="true" val="0x02" />
+                    <DP_input_gain offset="0" bits="16" t="u16" id="0x32e" visible="false" val="0x07fb" />
+                    <DP_sdelay offset="0" bits="16" t="u16" id="0x330" visible="false" val="0x32" />
+                    <DP_limit_up offset="0" bits="16" t="u16" id="0x332" visible="true" val="0x00" />
+                    <DP_limit_down offset="0" bits="16" t="u16" id="0x334" visible="true" val="0xfffffd44" />
+                    <COMPRESSOR_threshold offset="0" bits="16" t="u16" id="0x336" visible="true" val="0xffffffe2" />
+                    <COMPRESSOR_ratio offset="0" bits="16" t="u16" id="0x338" visible="true" val="0x671f" />
+                    <COMPRESSOR_attack offset="0" bits="16" t="u16" id="0x33a" visible="true" val="0x05" />
+                    <COMPRESSOR_hold offset="0" bits="16" t="u16" id="0x33c" visible="true" val="0x32" />
+                    <COMPRESSOR_release offset="0" bits="16" t="u16" id="0x33e" visible="true" val="0x64" />
+                    <EXPANDER_threshold offset="0" bits="16" t="u16" id="0x340" visible="true" val="0xfffffda8" />
+                    <EXPANDER_ratio offset="0" bits="16" t="u16" id="0x342" visible="true" val="0x5669" />
+                    <EXPANDER_attack offset="0" bits="16" t="u16" id="0x344" visible="true" val="0x05" />
+                    <EXPANDER_hold offset="0" bits="16" t="u16" id="0x346" visible="true" val="0x32" />
+                    <EXPANDER_release offset="0" bits="16" t="u16" id="0x348" visible="true" val="0x64" />
+                    <DP_lcf_fp_l offset="0" bits="16" t="u16" id="0x34a" visible="false" val="0xc8" />
+                    <DP_lcf_fp_r offset="0" bits="16" t="u16" id="0x34c" visible="false" val="0xc8" />
+                    <DP_lcf_gain_l offset="0" bits="16" t="u16" id="0x34e" visible="false" val="0x4000" />
+                    <DP_lcf_gain_r offset="0" bits="16" t="u16" id="0x350" visible="false" val="0x4000" />
+                </dp>
+                <nr>
+                    <nr_switch offset="0" bits="16" t="u16" id="0x352" visible="true" val="0x00" />
+                    <modu1_switch offset="0" bits="16" t="u16" id="0x354" visible="true" val="0x1111" />
+                    <modu2_switch offset="0" bits="16" t="u16" id="0x356" visible="true" val="0x2802" />
+                    <min_psne offset="0" bits="16" t="u16" id="0x358" visible="true" val="0xffffe4a8" />
+                    <max_psne offset="0" bits="16" t="u16" id="0x35a" visible="true" val="0xffffea84" />
+                    <nr_dgain offset="0" bits="16" t="u16" id="0x35c" visible="true" val="0x00" />
+                    <ns_limit offset="0" bits="16" t="u16" id="0x35e" visible="true" val="0x04b0" />
+                    <ns_factor offset="0" bits="16" t="u16" id="0x360" visible="true" val="0x64" />
+                </nr>
+            </UnprocessRecord>
+            <VoiceRecognition>
+                <eq>
+                    <RECORDEQ_sw_switch offset="0" bits="16" t="u16" id="0x362" visible="true" val="0xff00" />
+                    <RECORDEQ_master_gain offset="0" bits="16" t="u16" id="0x364" visible="true" val="0x0400" />
+                    <RECORDEQ_band_para00>
+                        <f0 offset="0" bits="16" t="u16" id="0x366" visible="true" val="0x28" />
+                        <df offset="0" bits="16" t="u16" id="0x368" visible="true" val="0x14" />
+                        <boost offset="0" bits="16" t="u16" id="0x36a" visible="true" val="0xfffffda8" />
+                        <gain offset="0" bits="16" t="u16" id="0x36c" visible="true" val="0x00" />
+                    </RECORDEQ_band_para00>
+                    <RECORDEQ_band_para01>
+                        <f0 offset="0" bits="16" t="u16" id="0x36e" visible="true" val="0x64" />
+                        <df offset="0" bits="16" t="u16" id="0x370" visible="true" val="0x21" />
+                        <boost offset="0" bits="16" t="u16" id="0x372" visible="true" val="0xfffffe70" />
+                        <gain offset="0" bits="16" t="u16" id="0x374" visible="true" val="0x00" />
+                    </RECORDEQ_band_para01>
+                    <RECORDEQ_band_para02>
+                        <f0 offset="0" bits="16" t="u16" id="0x376" visible="true" val="0x01f4" />
+                        <df offset="0" bits="16" t="u16" id="0x378" visible="true" val="0x01f4" />
+                        <boost offset="0" bits="16" t="u16" id="0x37a" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x37c" visible="true" val="0x00" />
+                    </RECORDEQ_band_para02>
+                    <RECORDEQ_band_para03>
+                        <f0 offset="0" bits="16" t="u16" id="0x37e" visible="true" val="0x0fa0" />
+                        <df offset="0" bits="16" t="u16" id="0x380" visible="true" val="0x07d0" />
+                        <boost offset="0" bits="16" t="u16" id="0x382" visible="true" val="0x64" />
+                        <gain offset="0" bits="16" t="u16" id="0x384" visible="true" val="0x00" />
+                    </RECORDEQ_band_para03>
+                    <RECORDEQ_band_para04>
+                        <f0 offset="0" bits="16" t="u16" id="0x386" visible="true" val="0x2328" />
+                        <df offset="0" bits="16" t="u16" id="0x388" visible="true" val="0x0708" />
+                        <boost offset="0" bits="16" t="u16" id="0x38a" visible="true" val="0xffffff38" />
+                        <gain offset="0" bits="16" t="u16" id="0x38c" visible="true" val="0x00" />
+                    </RECORDEQ_band_para04>
+                    <RECORDEQ_band_para05>
+                        <f0 offset="0" bits="16" t="u16" id="0x38e" visible="true" val="0x4e20" />
+                        <df offset="0" bits="16" t="u16" id="0x390" visible="true" val="0x1a0b" />
+                        <boost offset="0" bits="16" t="u16" id="0x392" visible="true" val="0x64" />
+                        <gain offset="0" bits="16" t="u16" id="0x394" visible="true" val="0x00" />
+                    </RECORDEQ_band_para05>
+                </eq>
+                <dp>
+                    <DP_sw_switch offset="0" bits="16" t="u16" id="0x396" visible="true" val="0x02" />
+                    <DP_input_gain offset="0" bits="16" t="u16" id="0x398" visible="true" val="0x0400" />
+                    <DP_sdelay offset="0" bits="16" t="u16" id="0x39a" visible="true" val="0x32" />
+                    <DP_limit_up offset="0" bits="16" t="u16" id="0x39c" visible="true" val="0x00" />
+                    <DP_limit_down offset="0" bits="16" t="u16" id="0x39e" visible="true" val="0xfffffd44" />
+                    <COMPRESSOR_threshold offset="0" bits="16" t="u16" id="0x3a0" visible="true" val="0xffffffe2" />
+                    <COMPRESSOR_ratio offset="0" bits="16" t="u16" id="0x3a2" visible="true" val="0x671f" />
+                    <COMPRESSOR_attack offset="0" bits="16" t="u16" id="0x3a4" visible="true" val="0x05" />
+                    <COMPRESSOR_hold offset="0" bits="16" t="u16" id="0x3a6" visible="true" val="0x32" />
+                    <COMPRESSOR_release offset="0" bits="16" t="u16" id="0x3a8" visible="true" val="0x64" />
+                    <EXPANDER_threshold offset="0" bits="16" t="u16" id="0x3aa" visible="true" val="0xfffffda8" />
+                    <EXPANDER_ratio offset="0" bits="16" t="u16" id="0x3ac" visible="true" val="0x5669" />
+                    <EXPANDER_attack offset="0" bits="16" t="u16" id="0x3ae" visible="true" val="0x05" />
+                    <EXPANDER_hold offset="0" bits="16" t="u16" id="0x3b0" visible="true" val="0x32" />
+                    <EXPANDER_release offset="0" bits="16" t="u16" id="0x3b2" visible="true" val="0x64" />
+                    <DP_lcf_fp_l offset="0" bits="16" t="u16" id="0x3b4" visible="true" val="0xc8" />
+                    <DP_lcf_fp_r offset="0" bits="16" t="u16" id="0x3b6" visible="true" val="0xc8" />
+                    <DP_lcf_gain_l offset="0" bits="16" t="u16" id="0x3b8" visible="true" val="0x4000" />
+                    <DP_lcf_gain_r offset="0" bits="16" t="u16" id="0x3ba" visible="true" val="0x4000" />
+                </dp>
+                <nr>
+                    <nr_switch offset="0" bits="16" t="u16" id="0x3bc" visible="true" val="0x00" />
+                    <modu1_switch offset="0" bits="16" t="u16" id="0x3be" visible="true" val="0x1111" />
+                    <modu2_switch offset="0" bits="16" t="u16" id="0x3c0" visible="true" val="0x2802" />
+                    <min_psne offset="0" bits="16" t="u16" id="0x3c2" visible="true" val="0xffffe4a8" />
+                    <max_psne offset="0" bits="16" t="u16" id="0x3c4" visible="true" val="0xffffee6c" />
+                    <nr_dgain offset="0" bits="16" t="u16" id="0x3c6" visible="true" val="0x00" />
+                    <ns_limit offset="0" bits="16" t="u16" id="0x3c8" visible="true" val="0x04b0" />
+                    <ns_factor offset="0" bits="16" t="u16" id="0x3ca" visible="true" val="0x64" />
+                </nr>
+            </VoiceRecognition>
+        </Handsfree>
+        <Bluetooth>
+            <Record>
+                <eq>
+                    <RECORDEQ_sw_switch offset="0" bits="16" t="u16" id="0x3cc" visible="true" val="0xff00" />
+                    <RECORDEQ_master_gain offset="0" bits="16" t="u16" id="0x3ce" visible="true" val="0x0400" />
+                    <RECORDEQ_band_para00>
+                        <f0 offset="0" bits="16" t="u16" id="0x3d0" visible="true" val="0x03e8" />
+                        <df offset="0" bits="16" t="u16" id="0x3d2" visible="true" val="0x03e8" />
+                        <boost offset="0" bits="16" t="u16" id="0x3d4" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x3d6" visible="true" val="0x00" />
+                    </RECORDEQ_band_para00>
+                    <RECORDEQ_band_para01>
+                        <f0 offset="0" bits="16" t="u16" id="0x3d8" visible="true" val="0x07d0" />
+                        <df offset="0" bits="16" t="u16" id="0x3da" visible="true" val="0x07d0" />
+                        <boost offset="0" bits="16" t="u16" id="0x3dc" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x3de" visible="true" val="0x00" />
+                    </RECORDEQ_band_para01>
+                    <RECORDEQ_band_para02>
+                        <f0 offset="0" bits="16" t="u16" id="0x3e0" visible="true" val="0x0bb8" />
+                        <df offset="0" bits="16" t="u16" id="0x3e2" visible="true" val="0x0bb8" />
+                        <boost offset="0" bits="16" t="u16" id="0x3e4" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x3e6" visible="true" val="0x00" />
+                    </RECORDEQ_band_para02>
+                    <RECORDEQ_band_para03>
+                        <f0 offset="0" bits="16" t="u16" id="0x3e8" visible="true" val="0x0fa0" />
+                        <df offset="0" bits="16" t="u16" id="0x3ea" visible="true" val="0x0fa0" />
+                        <boost offset="0" bits="16" t="u16" id="0x3ec" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x3ee" visible="true" val="0x00" />
+                    </RECORDEQ_band_para03>
+                    <RECORDEQ_band_para04>
+                        <f0 offset="0" bits="16" t="u16" id="0x3f0" visible="true" val="0x1388" />
+                        <df offset="0" bits="16" t="u16" id="0x3f2" visible="true" val="0x1388" />
+                        <boost offset="0" bits="16" t="u16" id="0x3f4" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x3f6" visible="true" val="0x00" />
+                    </RECORDEQ_band_para04>
+                    <RECORDEQ_band_para05>
+                        <f0 offset="0" bits="16" t="u16" id="0x3f8" visible="true" val="0x1770" />
+                        <df offset="0" bits="16" t="u16" id="0x3fa" visible="true" val="0x1770" />
+                        <boost offset="0" bits="16" t="u16" id="0x3fc" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x3fe" visible="true" val="0x00" />
+                    </RECORDEQ_band_para05>
+                </eq>
+                <dp>
+                    <DP_sw_switch offset="0" bits="16" t="u16" id="0x400" visible="true" val="0x07" />
+                    <DP_input_gain offset="0" bits="16" t="u16" id="0x402" visible="false" val="0x07fb" />
+                    <DP_sdelay offset="0" bits="16" t="u16" id="0x404" visible="false" val="0x32" />
+                    <DP_limit_up offset="0" bits="16" t="u16" id="0x406" visible="true" val="0x00" />
+                    <DP_limit_down offset="0" bits="16" t="u16" id="0x408" visible="true" val="0xfffffc7c" />
+                    <COMPRESSOR_threshold offset="0" bits="16" t="u16" id="0x40a" visible="true" val="0xffffffe2" />
+                    <COMPRESSOR_ratio offset="0" bits="16" t="u16" id="0x40c" visible="true" val="0x671f" />
+                    <COMPRESSOR_attack offset="0" bits="16" t="u16" id="0x40e" visible="true" val="0x05" />
+                    <COMPRESSOR_hold offset="0" bits="16" t="u16" id="0x410" visible="true" val="0x32" />
+                    <COMPRESSOR_release offset="0" bits="16" t="u16" id="0x412" visible="true" val="0x64" />
+                    <EXPANDER_threshold offset="0" bits="16" t="u16" id="0x414" visible="true" val="0xfffffda8" />
+                    <EXPANDER_ratio offset="0" bits="16" t="u16" id="0x416" visible="true" val="0x5669" />
+                    <EXPANDER_attack offset="0" bits="16" t="u16" id="0x418" visible="true" val="0x05" />
+                    <EXPANDER_hold offset="0" bits="16" t="u16" id="0x41a" visible="true" val="0x32" />
+                    <EXPANDER_release offset="0" bits="16" t="u16" id="0x41c" visible="true" val="0x64" />
+                    <DP_lcf_fp_l offset="0" bits="16" t="u16" id="0x41e" visible="false" val="0xc8" />
+                    <DP_lcf_fp_r offset="0" bits="16" t="u16" id="0x420" visible="false" val="0xc8" />
+                    <DP_lcf_gain_l offset="0" bits="16" t="u16" id="0x422" visible="false" val="0x4000" />
+                    <DP_lcf_gain_r offset="0" bits="16" t="u16" id="0x424" visible="false" val="0x4000" />
+                </dp>
+                <nr>
+                    <nr_switch offset="0" bits="16" t="u16" id="0x426" visible="true" val="0x01" />
+                    <modu1_switch offset="0" bits="16" t="u16" id="0x428" visible="true" val="0x1111" />
+                    <modu2_switch offset="0" bits="16" t="u16" id="0x42a" visible="true" val="0x2802" />
+                    <min_psne offset="0" bits="16" t="u16" id="0x42c" visible="true" val="0xffffe4a8" />
+                    <max_psne offset="0" bits="16" t="u16" id="0x42e" visible="true" val="0xffffee6c" />
+                    <nr_dgain offset="0" bits="16" t="u16" id="0x430" visible="true" val="0x0258" />
+                    <ns_limit offset="0" bits="16" t="u16" id="0x432" visible="true" val="0x04b0" />
+                    <ns_factor offset="0" bits="16" t="u16" id="0x434" visible="true" val="0x64" />
+                </nr>
+            </Record>
+        </Bluetooth>
+        <TypeC_Digital>
+            <Record>
+                <eq>
+                    <RECORDEQ_sw_switch offset="0" bits="16" t="u16" id="0x436" visible="true" val="0xff00" />
+                    <RECORDEQ_master_gain offset="0" bits="16" t="u16" id="0x438" visible="true" val="0x0ca6" />
+                    <RECORDEQ_band_para00>
+                        <f0 offset="0" bits="16" t="u16" id="0x43a" visible="true" val="0x03e8" />
+                        <df offset="0" bits="16" t="u16" id="0x43c" visible="true" val="0x03e8" />
+                        <boost offset="0" bits="16" t="u16" id="0x43e" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x440" visible="true" val="0x00" />
+                    </RECORDEQ_band_para00>
+                    <RECORDEQ_band_para01>
+                        <f0 offset="0" bits="16" t="u16" id="0x442" visible="true" val="0x07d0" />
+                        <df offset="0" bits="16" t="u16" id="0x444" visible="true" val="0x07d0" />
+                        <boost offset="0" bits="16" t="u16" id="0x446" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x448" visible="true" val="0x00" />
+                    </RECORDEQ_band_para01>
+                    <RECORDEQ_band_para02>
+                        <f0 offset="0" bits="16" t="u16" id="0x44a" visible="true" val="0x0bb8" />
+                        <df offset="0" bits="16" t="u16" id="0x44c" visible="true" val="0x0bb8" />
+                        <boost offset="0" bits="16" t="u16" id="0x44e" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x450" visible="true" val="0x00" />
+                    </RECORDEQ_band_para02>
+                    <RECORDEQ_band_para03>
+                        <f0 offset="0" bits="16" t="u16" id="0x452" visible="true" val="0x0fa0" />
+                        <df offset="0" bits="16" t="u16" id="0x454" visible="true" val="0x0fa0" />
+                        <boost offset="0" bits="16" t="u16" id="0x456" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x458" visible="true" val="0x00" />
+                    </RECORDEQ_band_para03>
+                    <RECORDEQ_band_para04>
+                        <f0 offset="0" bits="16" t="u16" id="0x45a" visible="true" val="0x1388" />
+                        <df offset="0" bits="16" t="u16" id="0x45c" visible="true" val="0x1388" />
+                        <boost offset="0" bits="16" t="u16" id="0x45e" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x460" visible="true" val="0x00" />
+                    </RECORDEQ_band_para04>
+                    <RECORDEQ_band_para05>
+                        <f0 offset="0" bits="16" t="u16" id="0x462" visible="true" val="0x1770" />
+                        <df offset="0" bits="16" t="u16" id="0x464" visible="true" val="0x1770" />
+                        <boost offset="0" bits="16" t="u16" id="0x466" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x468" visible="true" val="0x00" />
+                    </RECORDEQ_band_para05>
+                </eq>
+                <dp>
+                    <DP_sw_switch offset="0" bits="16" t="u16" id="0x46a" visible="true" val="0x03" />
+                    <DP_input_gain offset="0" bits="16" t="u16" id="0x46c" visible="false" val="0x07fb" />
+                    <DP_sdelay offset="0" bits="16" t="u16" id="0x46e" visible="false" val="0x32" />
+                    <DP_limit_up offset="0" bits="16" t="u16" id="0x470" visible="true" val="0x00" />
+                    <DP_limit_down offset="0" bits="16" t="u16" id="0x472" visible="true" val="0xfffffc7c" />
+                    <COMPRESSOR_threshold offset="0" bits="16" t="u16" id="0x474" visible="true" val="0xffffffe2" />
+                    <COMPRESSOR_ratio offset="0" bits="16" t="u16" id="0x476" visible="true" val="0x671f" />
+                    <COMPRESSOR_attack offset="0" bits="16" t="u16" id="0x478" visible="true" val="0x05" />
+                    <COMPRESSOR_hold offset="0" bits="16" t="u16" id="0x47a" visible="true" val="0x32" />
+                    <COMPRESSOR_release offset="0" bits="16" t="u16" id="0x47c" visible="true" val="0x64" />
+                    <EXPANDER_threshold offset="0" bits="16" t="u16" id="0x47e" visible="true" val="0xfffffda8" />
+                    <EXPANDER_ratio offset="0" bits="16" t="u16" id="0x480" visible="true" val="0x5669" />
+                    <EXPANDER_attack offset="0" bits="16" t="u16" id="0x482" visible="true" val="0x05" />
+                    <EXPANDER_hold offset="0" bits="16" t="u16" id="0x484" visible="true" val="0x32" />
+                    <EXPANDER_release offset="0" bits="16" t="u16" id="0x486" visible="true" val="0x64" />
+                    <DP_lcf_fp_l offset="0" bits="16" t="u16" id="0x488" visible="false" val="0xc8" />
+                    <DP_lcf_fp_r offset="0" bits="16" t="u16" id="0x48a" visible="false" val="0xc8" />
+                    <DP_lcf_gain_l offset="0" bits="16" t="u16" id="0x48c" visible="false" val="0x4000" />
+                    <DP_lcf_gain_r offset="0" bits="16" t="u16" id="0x48e" visible="false" val="0x4000" />
+                </dp>
+                <nr>
+                    <nr_switch offset="0" bits="16" t="u16" id="0x490" visible="true" val="0x01" />
+                    <modu1_switch offset="0" bits="16" t="u16" id="0x492" visible="true" val="0x1111" />
+                    <modu2_switch offset="0" bits="16" t="u16" id="0x494" visible="true" val="0x2802" />
+                    <min_psne offset="0" bits="16" t="u16" id="0x496" visible="true" val="0xffffe4a8" />
+                    <max_psne offset="0" bits="16" t="u16" id="0x498" visible="true" val="0xffffea84" />
+                    <nr_dgain offset="0" bits="16" t="u16" id="0x49a" visible="true" val="0x0258" />
+                    <ns_limit offset="0" bits="16" t="u16" id="0x49c" visible="true" val="0x04b0" />
+                    <ns_factor offset="0" bits="16" t="u16" id="0x49e" visible="true" val="0x64" />
+                </nr>
+            </Record>
+            <UnprocessRecord>
+                <eq>
+                    <RECORDEQ_sw_switch offset="0" bits="16" t="u16" id="0x4a0" visible="true" val="0xff00" />
+                    <RECORDEQ_master_gain offset="0" bits="16" t="u16" id="0x4a2" visible="true" val="0x0ca6" />
+                    <RECORDEQ_band_para00>
+                        <f0 offset="0" bits="16" t="u16" id="0x4a4" visible="true" val="0x03e8" />
+                        <df offset="0" bits="16" t="u16" id="0x4a6" visible="true" val="0x03e8" />
+                        <boost offset="0" bits="16" t="u16" id="0x4a8" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x4aa" visible="true" val="0x00" />
+                    </RECORDEQ_band_para00>
+                    <RECORDEQ_band_para01>
+                        <f0 offset="0" bits="16" t="u16" id="0x4ac" visible="true" val="0x07d0" />
+                        <df offset="0" bits="16" t="u16" id="0x4ae" visible="true" val="0x07d0" />
+                        <boost offset="0" bits="16" t="u16" id="0x4b0" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x4b2" visible="true" val="0x00" />
+                    </RECORDEQ_band_para01>
+                    <RECORDEQ_band_para02>
+                        <f0 offset="0" bits="16" t="u16" id="0x4b4" visible="true" val="0x0bb8" />
+                        <df offset="0" bits="16" t="u16" id="0x4b6" visible="true" val="0x0bb8" />
+                        <boost offset="0" bits="16" t="u16" id="0x4b8" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x4ba" visible="true" val="0x00" />
+                    </RECORDEQ_band_para02>
+                    <RECORDEQ_band_para03>
+                        <f0 offset="0" bits="16" t="u16" id="0x4bc" visible="true" val="0x0fa0" />
+                        <df offset="0" bits="16" t="u16" id="0x4be" visible="true" val="0x0fa0" />
+                        <boost offset="0" bits="16" t="u16" id="0x4c0" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x4c2" visible="true" val="0x00" />
+                    </RECORDEQ_band_para03>
+                    <RECORDEQ_band_para04>
+                        <f0 offset="0" bits="16" t="u16" id="0x4c4" visible="true" val="0x1388" />
+                        <df offset="0" bits="16" t="u16" id="0x4c6" visible="true" val="0x1388" />
+                        <boost offset="0" bits="16" t="u16" id="0x4c8" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x4ca" visible="true" val="0x00" />
+                    </RECORDEQ_band_para04>
+                    <RECORDEQ_band_para05>
+                        <f0 offset="0" bits="16" t="u16" id="0x4cc" visible="true" val="0x1770" />
+                        <df offset="0" bits="16" t="u16" id="0x4ce" visible="true" val="0x1770" />
+                        <boost offset="0" bits="16" t="u16" id="0x4d0" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x4d2" visible="true" val="0x00" />
+                    </RECORDEQ_band_para05>
+                </eq>
+                <dp>
+                    <DP_sw_switch offset="0" bits="16" t="u16" id="0x4d4" visible="true" val="0x03" />
+                    <DP_input_gain offset="0" bits="16" t="u16" id="0x4d6" visible="false" val="0x07fb" />
+                    <DP_sdelay offset="0" bits="16" t="u16" id="0x4d8" visible="false" val="0x32" />
+                    <DP_limit_up offset="0" bits="16" t="u16" id="0x4da" visible="true" val="0x00" />
+                    <DP_limit_down offset="0" bits="16" t="u16" id="0x4dc" visible="true" val="0xfffffc7c" />
+                    <COMPRESSOR_threshold offset="0" bits="16" t="u16" id="0x4de" visible="true" val="0xffffffe2" />
+                    <COMPRESSOR_ratio offset="0" bits="16" t="u16" id="0x4e0" visible="true" val="0x671f" />
+                    <COMPRESSOR_attack offset="0" bits="16" t="u16" id="0x4e2" visible="true" val="0x05" />
+                    <COMPRESSOR_hold offset="0" bits="16" t="u16" id="0x4e4" visible="true" val="0x32" />
+                    <COMPRESSOR_release offset="0" bits="16" t="u16" id="0x4e6" visible="true" val="0x64" />
+                    <EXPANDER_threshold offset="0" bits="16" t="u16" id="0x4e8" visible="true" val="0xfffffda8" />
+                    <EXPANDER_ratio offset="0" bits="16" t="u16" id="0x4ea" visible="true" val="0x5669" />
+                    <EXPANDER_attack offset="0" bits="16" t="u16" id="0x4ec" visible="true" val="0x05" />
+                    <EXPANDER_hold offset="0" bits="16" t="u16" id="0x4ee" visible="true" val="0x32" />
+                    <EXPANDER_release offset="0" bits="16" t="u16" id="0x4f0" visible="true" val="0x64" />
+                    <DP_lcf_fp_l offset="0" bits="16" t="u16" id="0x4f2" visible="false" val="0xc8" />
+                    <DP_lcf_fp_r offset="0" bits="16" t="u16" id="0x4f4" visible="false" val="0xc8" />
+                    <DP_lcf_gain_l offset="0" bits="16" t="u16" id="0x4f6" visible="false" val="0x4000" />
+                    <DP_lcf_gain_r offset="0" bits="16" t="u16" id="0x4f8" visible="false" val="0x4000" />
+                </dp>
+                <nr>
+                    <nr_switch offset="0" bits="16" t="u16" id="0x4fa" visible="true" val="0x01" />
+                    <modu1_switch offset="0" bits="16" t="u16" id="0x4fc" visible="true" val="0x1111" />
+                    <modu2_switch offset="0" bits="16" t="u16" id="0x4fe" visible="true" val="0x2802" />
+                    <min_psne offset="0" bits="16" t="u16" id="0x500" visible="true" val="0xffffe4a8" />
+                    <max_psne offset="0" bits="16" t="u16" id="0x502" visible="true" val="0xffffea84" />
+                    <nr_dgain offset="0" bits="16" t="u16" id="0x504" visible="true" val="0x0258" />
+                    <ns_limit offset="0" bits="16" t="u16" id="0x506" visible="true" val="0x04b0" />
+                    <ns_factor offset="0" bits="16" t="u16" id="0x508" visible="true" val="0x64" />
+                </nr>
+            </UnprocessRecord>
+            <VoiceRecognition>
+                <eq>
+                    <RECORDEQ_sw_switch offset="0" bits="16" t="u16" id="0x50a" visible="true" val="0x7f00" />
+                    <RECORDEQ_master_gain offset="0" bits="16" t="u16" id="0x50c" visible="true" val="0x0400" />
+                    <RECORDEQ_band_para00>
+                        <f0 offset="0" bits="16" t="u16" id="0x50e" visible="true" val="0x03e8" />
+                        <df offset="0" bits="16" t="u16" id="0x510" visible="true" val="0x03e8" />
+                        <boost offset="0" bits="16" t="u16" id="0x512" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x514" visible="true" val="0x00" />
+                    </RECORDEQ_band_para00>
+                    <RECORDEQ_band_para01>
+                        <f0 offset="0" bits="16" t="u16" id="0x516" visible="true" val="0x07d0" />
+                        <df offset="0" bits="16" t="u16" id="0x518" visible="true" val="0x07d0" />
+                        <boost offset="0" bits="16" t="u16" id="0x51a" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x51c" visible="true" val="0x00" />
+                    </RECORDEQ_band_para01>
+                    <RECORDEQ_band_para02>
+                        <f0 offset="0" bits="16" t="u16" id="0x51e" visible="true" val="0x0bb8" />
+                        <df offset="0" bits="16" t="u16" id="0x520" visible="true" val="0x0bb8" />
+                        <boost offset="0" bits="16" t="u16" id="0x522" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x524" visible="true" val="0x00" />
+                    </RECORDEQ_band_para02>
+                    <RECORDEQ_band_para03>
+                        <f0 offset="0" bits="16" t="u16" id="0x526" visible="true" val="0x0fa0" />
+                        <df offset="0" bits="16" t="u16" id="0x528" visible="true" val="0x0fa0" />
+                        <boost offset="0" bits="16" t="u16" id="0x52a" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x52c" visible="true" val="0x00" />
+                    </RECORDEQ_band_para03>
+                    <RECORDEQ_band_para04>
+                        <f0 offset="0" bits="16" t="u16" id="0x52e" visible="true" val="0x1388" />
+                        <df offset="0" bits="16" t="u16" id="0x530" visible="true" val="0x1388" />
+                        <boost offset="0" bits="16" t="u16" id="0x532" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x534" visible="true" val="0x00" />
+                    </RECORDEQ_band_para04>
+                    <RECORDEQ_band_para05>
+                        <f0 offset="0" bits="16" t="u16" id="0x536" visible="true" val="0x1770" />
+                        <df offset="0" bits="16" t="u16" id="0x538" visible="true" val="0x1770" />
+                        <boost offset="0" bits="16" t="u16" id="0x53a" visible="true" val="0x00" />
+                        <gain offset="0" bits="16" t="u16" id="0x53c" visible="true" val="0x00" />
+                    </RECORDEQ_band_para05>
+                </eq>
+                <dp>
+                    <DP_sw_switch offset="0" bits="16" t="u16" id="0x53e" visible="true" val="0x02" />
+                    <DP_input_gain offset="0" bits="16" t="u16" id="0x540" visible="true" val="0x0400" />
+                    <DP_sdelay offset="0" bits="16" t="u16" id="0x542" visible="true" val="0x32" />
+                    <DP_limit_up offset="0" bits="16" t="u16" id="0x544" visible="true" val="0x00" />
+                    <DP_limit_down offset="0" bits="16" t="u16" id="0x546" visible="true" val="0xfffffd44" />
+                    <COMPRESSOR_threshold offset="0" bits="16" t="u16" id="0x548" visible="true" val="0xffffffe2" />
+                    <COMPRESSOR_ratio offset="0" bits="16" t="u16" id="0x54a" visible="true" val="0x671f" />
+                    <COMPRESSOR_attack offset="0" bits="16" t="u16" id="0x54c" visible="true" val="0x05" />
+                    <COMPRESSOR_hold offset="0" bits="16" t="u16" id="0x54e" visible="true" val="0x32" />
+                    <COMPRESSOR_release offset="0" bits="16" t="u16" id="0x550" visible="true" val="0x64" />
+                    <EXPANDER_threshold offset="0" bits="16" t="u16" id="0x552" visible="true" val="0xfffffda8" />
+                    <EXPANDER_ratio offset="0" bits="16" t="u16" id="0x554" visible="true" val="0x5669" />
+                    <EXPANDER_attack offset="0" bits="16" t="u16" id="0x556" visible="true" val="0x05" />
+                    <EXPANDER_hold offset="0" bits="16" t="u16" id="0x558" visible="true" val="0x32" />
+                    <EXPANDER_release offset="0" bits="16" t="u16" id="0x55a" visible="true" val="0x64" />
+                    <DP_lcf_fp_l offset="0" bits="16" t="u16" id="0x55c" visible="true" val="0xc8" />
+                    <DP_lcf_fp_r offset="0" bits="16" t="u16" id="0x55e" visible="true" val="0xc8" />
+                    <DP_lcf_gain_l offset="0" bits="16" t="u16" id="0x560" visible="true" val="0x4000" />
+                    <DP_lcf_gain_r offset="0" bits="16" t="u16" id="0x562" visible="true" val="0x4000" />
+                </dp>
+                <nr>
+                    <nr_switch offset="0" bits="16" t="u16" id="0x564" visible="true" val="0x00" />
+                    <modu1_switch offset="0" bits="16" t="u16" id="0x566" visible="true" val="0x1111" />
+                    <modu2_switch offset="0" bits="16" t="u16" id="0x568" visible="true" val="0x2802" />
+                    <min_psne offset="0" bits="16" t="u16" id="0x56a" visible="true" val="0xffffe4a8" />
+                    <max_psne offset="0" bits="16" t="u16" id="0x56c" visible="true" val="0xffffee6c" />
+                    <nr_dgain offset="0" bits="16" t="u16" id="0x56e" visible="true" val="0x00" />
+                    <ns_limit offset="0" bits="16" t="u16" id="0x570" visible="true" val="0x04b0" />
+                    <ns_factor offset="0" bits="16" t="u16" id="0x572" visible="true" val="0x64" />
+                </nr>
+            </VoiceRecognition>
+        </TypeC_Digital>
+    </Music>
+    <Loopback>
+        <Handset>
+            <Loop1>
+                <type offset="0" bits="16" t="u16" id="0x59c" visible="true" val="0x01" />
+                <mode offset="0" bits="16" t="u16" id="0x59e" visible="true" val="0" />
+                <delay offset="0" bits="16" Description="" t="u16" id="0x5a0" visible="true" val="0x07d0" />
+            </Loop1>
+        </Handset>
+        <Handsfree>
+            <Loop1>
+                <type offset="0" bits="16" t="u16" id="0x5a2" visible="true" val="0x01" />
+                <mode offset="0" bits="16" t="u16" id="0x5a4" visible="true" val="0" />
+                <delay offset="0" bits="16" Description="" t="u16" id="0x5a6" visible="true" val="0x07d0" />
+            </Loop1>
+        </Handsfree>
+        <Headset4P>
+            <Loop1>
+                <type offset="0" bits="16" t="u16" id="0x5a8" visible="true" val="1" />
+                <mode offset="0" bits="16" t="u16" id="0x5aa" visible="true" val="0" />
+                <delay offset="0" bits="16" Description="" t="u16" id="0x5ac" visible="true" val="0x07d0" />
+            </Loop1>
+        </Headset4P>
+        <Headset3P>
+            <Loop1>
+                <type offset="0" bits="16" t="u16" id="0x5ae" visible="true" val="1" />
+                <mode offset="0" bits="16" t="u16" id="0x5b0" visible="true" val="0" />
+                <delay offset="0" bits="16" Description="" t="u16" id="0x5b2" visible="true" val="0x07d0" />
+            </Loop1>
+        </Headset3P>
+    </Loopback>
+</audio_process>

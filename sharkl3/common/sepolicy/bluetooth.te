@@ -1,0 +1,19 @@
+
+
+#allow bluetooth wcnd:unix_stream_socket { connectto sendto };
+allow bluetooth serial_device:chr_file { read write open ioctl };
+allow bluetooth prod_file:dir search;
+allow bluetooth prod_file:file { read write open rw_file_perms setattr };
+#allow bluetooth sysfs:file { read write open ioctl };
+allow bluetooth ylog:unix_stream_socket { connectto sendto };
+allow bluetooth input_device:dir { search };
+allow bluetooth bt_prop:file {read open getattr};
+allow bluetooth ctl_default_prop:property_service set;
+allow bluetooth ylog_prop:file { read getattr open };
+allow bluetooth media_prop:file { read };
+allow bluetooth vendor_sys_prop:file { read };
+allow bluetooth sysfs_bluetooth_file:file { read write open };
+# add for CCSA
+allow bluetooth security_service:service_manager { find };
+allow vendor_init sysfs:file { relabelfrom };
+allow vendor_init sysfs_bluetooth_file:file { relabelfrom relabelto };

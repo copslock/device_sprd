@@ -1,0 +1,6 @@
+#Property info:software version
+ro.version.software=L1693.6.01.01.00
+
+#Property info:hardware version
+ro.boot.hardware.revision=V1.00
+

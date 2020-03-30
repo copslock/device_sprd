@@ -1,0 +1,8 @@
+# add for CCSA
+allow mediaprovider security_service:service_manager { find };
+
+allow mediaprovider shell_data_file:dir { getattr };
+allow mediaprovider vendor_sys_prop:file { read };
+allow mediaprovider power_ex_service:service_manager { find };
+allow mediaprovider ylog_file:dir { getattr };
+allow mediaprovider storage_stub_file:dir { getattr };

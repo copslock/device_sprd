@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<device name="Android">
+  <!-- Most values are the incremental current used by a feature,
+       in mA (measured at nominal voltage).
+       The default values are deliberately incorrect dummy values.
+       OEM's must measure and provide actual values before
+       shipping a device.
+       Example real-world values are given in comments, but they
+       are totally dependent on the platform and can vary
+       significantly, so should be measured on the shipping platform
+       with a power meter. -->
+  <item name="none">0</item>
+  <item name="screen.on">51.597</item>  <!-- ~200mA -->
+  <item name="screen.full">267.071</item>  <!-- ~300mA -->
+  <item name="bluetooth.active">83</item> <!-- Bluetooth data transfer, ~10mA -->
+  <item name="bluetooth.on">1.9</item>  <!-- Bluetooth on & connectable, but not connected, ~0.1mA -->
+  <item name="wifi.on">4</item>  <!-- ~3mA -->
+  <item name="wifi.active">40</item>  <!-- WIFI data transfer, ~200mA -->
+  <item name="wifi.scan">98</item>  <!-- WIFI network scanning, ~100mA -->
+  <item name="dsp.audio">3.003</item> <!-- ~10mA -->
+  <item name="dsp.video">28.799</item> <!-- ~50mA -->
+  <item name="camera.flashlight">160</item> <!-- Avg. power for camera flash, ~160mA -->
+  <item name="camera.avg">126.56</item> <!-- Avg. power use of camera in standard usecases, ~550mA -->
+  <item name="gps.on">55</item> <!-- ~50mA -->
+
+  <!-- Radio related values. For modems without energy reporting support in firmware, use
+       radio.active, radio.scanning, and radio.on. -->
+  <item name="radio.active">220</item> <!-- ~200mA -->
+  <item name="radio.scanning">5.4</item> <!-- cellular radio scanning for signal, ~10mA -->
+  <!-- Current consumed by the radio at different signal strengths, when paging -->
+  <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
+      <value>2.4</value> <!-- ~2mA -->
+      <value>2.4</value> <!-- ~1mA -->
+  </array>
+
+  <item name="bluetooth.controller.idle">1.276</item>
+  <item name="bluetooth.controller.rx">30.779</item>
+  <item name="bluetooth.controller.tx">30.769</item>
+  <item name="bluetooth.controller.voltage">40</item>
+
+  <!-- A list of heterogeneous CPU clusters, where the value for each cluster represents the
+       number of CPU cores for that cluster.
+
+       Ex:
+       <array name="cpu.clusters.cores">
+         <value>4</value> // cluster 0 has cpu0, cpu1, cpu2, cpu3
+         <value>2</value> // cluster 1 has cpu4, cpu5
+       </array> -->
+  <array name="cpu.clusters.cores">
+      <value>4</value> <!-- cluster 0 has cpu0 -->
+  </array>
+
+    <!-- Different CPU speeds for cluster 0 as reported in
+       /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies.
+
+       There must be one of these for each cluster, labeled:
+       cpu.speeds.cluster0, cpu.speeds.cluster1, etc... -->
+  <array name="cpu.core_speeds.cluster0">
+      <value>768000</value> <!-- 768 MHz CPU speed -->
+      <value>900000</value>
+      <value>1000000</value>
+      <value>1100000</value>
+      <value>1150000</value>
+      <value>1200000</value>
+      <value>1300000</value>
+  </array>
+
+  <!-- Current at each CPU speed for cluster 0, as per 'cpu.speeds.cluster0'.
+       Like cpu.speeds.cluster0, there must be one of these present for
+       each heterogeneous CPU cluster. -->
+  <array name="cpu.core_power.cluster0">
+      <value>86</value>  <!-- ~100mA -->
+      <value>92</value>
+      <value>96</value>
+      <value>103</value>
+      <value>110</value>
+      <value>118</value>
+      <value>124</value>
+  </array>
+
+  <!-- Power consumption when CPU is suspended -->
+  <item name="cpu.suspend">1.654</item>
+  <!-- Additional power consumption when CPU is in a kernel idle loop -->
+  <item name="cpu.idle">12.939</item>
+
+  <!-- Additional power consumption by CPU excluding cluster and core when
+       running -->
+  <item name="cpu.active">0</item>
+
+  <!-- Additional power consumption by CPU cluster0 itself when running
+       excluding cores in it -->
+  <item name="cpu.cluster_power.cluster0">6.478</item>
+
+
+  <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
+  <item name="battery.capacity">2900</item>
+
+  <!-- Wifi related values. -->
+  <!-- Idle Receive current for wifi radio in mA. 0 by default-->
+  <item name="wifi.controller.idle">2.85</item>
+  <!-- Rx current for wifi radio in mA. 0 by default-->
+  <item name="wifi.controller.rx">42.57</item>
+  <!-- Tx current for wifi radio in mA. 0 by default-->
+  <item name="wifi.controller.tx">99.919</item>
+  <!-- Current at each of the wifi Tx levels in mA. The number of tx levels varies per device
+       and is available only of wifi chipsets which support the tx level reporting. Use
+        wifi.tx for other chipsets. none by default -->
+  <array name="wifi.controller.tx_levels"> <!-- mA -->
+  </array>
+  <!-- Operating volatage for wifi radio in mV. 0 by default-->
+  <item name="wifi.controller.voltage">40</item>
+
+  <array name="wifi.batchedscan"> <!-- mA -->
+    <value>.0002</value> <!-- 1-8/hr -->
+    <value>.002</value>  <!-- 9-64/hr -->
+    <value>.02</value>   <!-- 65-512/hr -->
+    <value>.2</value>    <!-- 513-4,096/hr -->
+    <value>2</value>    <!-- 4097-/hr -->
+  </array>
+
+<!--modify for Improved Batterystats Bug #911341 start -->
+<!-- Cellular modem related values. Default is 0.-->
+  <item name="modem.controller.sleep">0</item>
+  <item name="modem.controller.idle">0.839</item>
+  <item name="modem.controller.rx">97.422</item>
+  <array name="modem.controller.tx"> <!-- Strength 0 to 4 -->
+    <value>11</value>
+    <value>110</value>
+    <value>210</value>
+    <value>340</value>
+    <value>506</value>
+  </array>
+  <item name="modem.controller.voltage">3700</item>
+
+  <!-- GPS related values. Default is 0.-->
+  <array name="gps.signalqualitybased"> <!-- Strength 0 to 1 -->
+    <value>27.22</value>
+    <value>19.699</value>
+  </array>
+  <item name="gps.voltage">3700</item>
+<!--modify for Improved Batterystats Bug #911341 end -->
+
+</device>

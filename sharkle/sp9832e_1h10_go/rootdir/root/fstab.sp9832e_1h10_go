@@ -1,0 +1,20 @@
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+# <src>                                         <mnt_point>  <type>  <mnt_flags and options>             <fs_mgr_flags>
+
+system /system ext4 ro,barrier=1 wait,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+vendor /vendor ext4 ro,barrier=1 wait,logical,first_stage_mount
+product /product ext4 ro,barrier=1 wait,logical,first_stage_mount
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/userdata /data        ext4 noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,check,fileencryption=aes-256-xts
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/metadata /metadata    ext4 nodev,noatime,nosuid,errors=panic wait,formattable,first_stage_mount
+/devices/platform/soc/soc:ap-ahb/20200000.usb/musb-hdrc.*.auto/usb*      auto         vfat defaults voldmanaged=usbdisk:auto
+/devices/platform/soc/soc:ap-ahb/20300000.sdio/mmc_host/mmc1/mmc1:*/block/mmcblk1      auto         vfat defaults voldmanaged=sdcard0:auto,noemulatedsd,encryptable=footer
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/prodnv   /mnt/vendor ext4 noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,check
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/cache    /cache       ext4 noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,check
+# Should after mount prodnv for prodnv wholly occupying /mnt/vendor
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/socko /mnt/vendor/socko ext4 ro,noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,avb=socko,check
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/odmko /mnt/vendor/odmko ext4 ro,noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,avb=odmko,check
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/misc     /misc        emmc    defaults    defaults
+#/dev/block/memdisk.0    /system      ext4 rw,barrier=1                          wait
+#/dev/block/memdisk.1    /data        ext4 noatime,nosuid,nodev,noauto_da_alloc,journal_async_commit,errors=panic wait

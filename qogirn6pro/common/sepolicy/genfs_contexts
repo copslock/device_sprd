@@ -1,0 +1,139 @@
+# proc for WCN BT Marlin
+genfscon proc /bluetooth/sleep/btwrite u:object_r:proc_bluetooth_writable:s0
+genfscon proc /cptl/mini_dump u:object_r:proc_mini_dump:s0
+genfscon proc /cptl/pubcp-iram u:object_r:proc_pubcpiram:s0
+genfscon proc /cptl/aon-iram u:object_r:proc_aoniram:s0
+genfscon proc /pmic/mem u:object_r:proc_pmicmem:s0
+# exfat
+#genfscon exfat / u:object_r:vfat:s0
+
+# For stat
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71100000.sdio/mmc_host/mmc1/mmc1:aaaa/block/mmcblk1/mmcblk1p1/stat    u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71100000.sdio/mmc_host/mmc1/mmc1:aaaa/block/mmcblk1/mmcblk1p2/stat    u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71100000.sdio/mmc_host/mmc1/mmc1:aaaa/block/mmcblk1/stat              u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p22/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p12/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p40/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p30/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p9/stat    u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p20/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p10/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p39/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p29/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p7/stat    u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p19/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p37/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p27/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p5/stat    u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0boot0/stat u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p17/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0rpmb/stat  u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p35/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p25/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p3/stat    u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p15/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p33/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p23/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p1/stat    u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p13/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/stat              u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p41/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p31/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p21/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p11/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p8/stat    u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p38/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p28/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p6/stat    u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0boot1/stat u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p18/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p36/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p26/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p4/stat    u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p16/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p34/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p24/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p2/stat    u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p14/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p42/stat   u:object_r:sysfs_stat:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p32/stat   u:object_r:sysfs_stat:s0
+
+#for iodebug
+genfscon debugfs /iodebug  u:object_r:debugfs_tracing:s0
+
+#For gnss
+genfscon sysfs /devices/virtual/misc/gnss_common_ctl  u:object_r:sysfs_gnss:s0
+
+#for bluetooth
+genfscon sysfs /devices/platform/wcn_bt/dumpmem    u:object_r:sysfs_bluetooth_file:s0
+
+#lcd for flash
+genfscon sysfs /devices/platform/soc/soc:mm/63000000.dispc/display/dispc0/disable_timeout    u:object_r:sysfs_lcd:s0
+genfscon sysfs /devices/platform/soc/soc:mm/63000000.dispc/display/dispc0/bg_color    u:object_r:sysfs_lcd:s0
+genfscon sysfs /devices/platform/soc/soc:mm/63000000.dispc/display/dispc0/disable_flip    u:object_r:sysfs_lcd:s0
+
+#for binder
+genfscon debugfs /kernel/debug/binder   u:object_r:debugfs_binder:s0
+
+#for sensor
+genfscon sysfs /class/xr-gsensor/device/gsensor   u:object_r:sysfs_sensor:s0
+genfscon sysfs /class/xr-gsensor/device/delay_acc   u:object_r:sysfs_sensor:s0
+genfscon sysfs /class/xr-pls/device/als         u:object_r:sysfs_sensor:s0
+genfscon sysfs /class/xr-pls/device/proximity   u:object_r:sysfs_sensor:s0
+genfscon sysfs /class/sprd_sensorhub/sensor_hub/calibrator_cmd u:object_r:sysfs_sensor:s0
+genfscon sysfs /devices/virtual/sprd_sensorhub/sensor_hub/calibrator_cmd u:object_r:sysfs_sensor:s0
+
+genfscon sysfs /devices/virtual/misc/sprd_flash/test   u:object_r:sysfs_sensor:s0
+
+#for sipc
+genfscon debugfs /kernel/debug/sipc  u:object_r:debugfs_sipc:s0
+
+#add for rtc permission
+genfscon sysfs /devices/platform/soc/soc:aon/32100000.spi/spi_master/spi4/spi4.0/sc27xx-rtc/rtc/rtc0     u:object_r:sysfs_rtc:s0
+
+#for ddr dfs
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/dfs_on_off u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/auto_dfs_on_off u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/ddrinfo_cur_freq u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/ddrinfo_cp_freq u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/ddrinfo_ap_freq u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/ddrinfo_freq_table u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/scaling_force_ddr_freq u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/scaling_overflow u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/scaling_underflow u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/scenario_dfs u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/exit_scene u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/scene_dfs_list u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/scene_boost_dfs u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/scene_freq_set u:object_r:sysfs_ddr_dfs:s0
+genfscon sysfs /devices/platform/scene-frequency/devfreq/scene-frequency/sprd_governor/backdoor u:object_r:sysfs_ddr_dfs:s0
+
+#add for EngineerMode to set ipa
+genfscon sysfs /devices/virtual/thermal/thermal_zone0/thm_enable  u:object_r:sysfs_ipa:s0
+
+#add for leds
+genfscon sysfs /class/leds/sc27xx:blue   u:object_r:sysfs_leds:s0
+genfscon sysfs /class/leds/sc27xx:green  u:object_r:sysfs_leds:s0
+genfscon sysfs /class/leds/sc27xx:red    u:object_r:sysfs_leds:s0
+
+#add for ota update emmc boot0&1 partition
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0boot0/force_ro u:object_r:sysfs_emmcboot_forcero:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/71400000.sdio/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0boot1/force_ro u:object_r:sysfs_emmcboot_forcero:s0
+
+#add for ims_bridged
+genfscon sysfs /module/ims_bridge/parameters/tcpdump_enable	u:object_r:sysfs_imsbrd:s0
+genfscon sysfs /module/ims_bridge/parameters/vowifi_in_mark	u:object_r:sysfs_imsbrd:s0
+genfscon sysfs /module/ims_bridge/parameters/volte_video_apsk	u:object_r:sysfs_imsbrd:s0
+
+#add for EngineerMode to set mipi
+genfscon sysfs /class/modem/debug-log/channel   u:object_r:sysfs_mipi:s0
+
+#add for charger
+genfscon sysfs /class/power_supply  u:object_r:sysfs_power:s0
+
+#add for healthd
+genfscon sysfs /devices/platform/battery/power_supply  u:object_r:sysfs_power:s0
+genfscon sysfs /devices/platform/charger-manager/power_supply  u:object_r:sysfs_power:s0
+genfscon sysfs /devices/platform/soc/soc:aon/32060000.i2c/i2c-5/5-004c/sc2703-charger/power_supply  u:object_r:sysfs_power:s0
+genfscon sysfs /devices/platform/soc/soc:ap-apb/70700000.i2c/i2c-4/4-006a/power_supply/fan54015_charger  u:object_r:sysfs_power:s0

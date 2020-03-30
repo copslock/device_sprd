@@ -1,0 +1,24 @@
+
+allow hal_wifi_default rootfs:system { module_load };
+allow hal_wifi_default rootfs:file { read open getattr };
+allow hal_wifi_default hal_wifi_default:capability { sys_module  };
+#allow hal_wifi_default wifi_data_file:dir { search };
+#allow hal_wifi_default wifi_data_file:file { open read write };
+allow hal_wifi_default proc_modules:file { open read getattr };
+allow hal_wifi_default kernel:system { module_request };
+allow hal_wifi_default exported_default_prop:file { open read getattr };
+allow hal_wifi_default exported_overlay_prop:file { open read getattr };
+allow hal_wifi_default exported_system_prop:file { open read getattr };
+allow hal_wifi_default exported_vold_prop:file { open read getattr };
+allow hal_wifi_default exported_wifi_prop:file { open read getattr };
+allow hal_wifi_default exported2_default_prop:file { open read getattr };
+#allow hal_wifi_default exported2_system_prop:file { open read getattr };
+#allow hal_wifi_default exported3_default_prop:file { open read getattr };
+#allow hal_wifi_default exported3_system_prop:file { open read getattr };
+allow hal_wifi_default vendor_default_prop:file { open read getattr };
+allow hal_wifi_default vendor_file:system { module_load };
+allow hal_wifi_default mnt_vendor_file:dir { search };
+allow hal_wifi_default vendor_data_file:dir { search write add_name remove_name open create getattr};
+allow hal_wifi_default vendor_data_file:file { create open read write };
+allow hal_wifi_default prod_file:dir { search };
+allow hal_wifi_default prod_file:file { open read getattr };

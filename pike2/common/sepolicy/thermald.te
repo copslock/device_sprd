@@ -1,0 +1,18 @@
+type thermald, domain;
+type thermald_exec, exec_type,file_type,vendor_file_type;
+init_daemon_domain(thermald)
+
+
+allow thermald tmpfs:file write;
+set_prop(thermald, vendor_thermald_prop)
+allow thermald init:unix_stream_socket { connectto };
+allow thermald thermald_data_file:file { open read write create unlink getattr };
+allow thermald thermald_data_file:dir { open read write search remove_name add_name getattr rmdir };
+allow thermald sysfs:file { open read write getattr ioctl };
+allow thermald hal_extRadio_hwservice:hwservice_manager { find };
+allow thermald thermald:netlink_kobject_uevent_socket { create setopt getopt bind read };
+allow thermald rild:binder call;
+allow thermald system_file:dir { open read };
+allow thermald sysfs_power:dir { search };
+allow thermald sysfs_power:file { read open write };
+allow thermald powerctl_prop:property_service { set };

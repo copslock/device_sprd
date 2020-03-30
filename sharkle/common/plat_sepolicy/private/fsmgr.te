@@ -1,0 +1,4 @@
+typeattribute fsmgr coredomain;
+
+init_daemon_domain(fsmgr)
+

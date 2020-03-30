@@ -1,0 +1,2 @@
+type sprd_networkcontrol, domain;
+type sprd_networkcontrol_exec, exec_type, file_type,system_file_type;

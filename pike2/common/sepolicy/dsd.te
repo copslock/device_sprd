@@ -1,0 +1,16 @@
+allow dsd shell_exec:file { read open execute execute_no_trans getattr };
+allow dsd property_socket:sock_file write;
+allow dsd init:unix_stream_socket connectto;
+allow dsd system_file:file {execute_no_trans lock};
+allow dsd fuse:dir search;
+allow dsd fuse:file { open append getattr };
+allow dsd dsd:rawip_socket { create getopt setopt };
+allow dsd dsd:udp_socket create;
+#allow dsd dsd:capability { net_raw net_admin dac_override };
+allow dsd system_app_data_file:dir { search write add_name };
+##allow dsd system_app_data_file:file { append open getattr create read write };
+allow dsd system_app_data_file:file { append getattr read write };
+allow dsd proc_net:file { read open getattr };
+allow dsd device:dir { write };
+allow dsd toolbox_exec:file { read open execute execute_no_trans getattr };
+allow dsd system_prop:property_service { set };
